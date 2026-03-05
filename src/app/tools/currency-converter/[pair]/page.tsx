@@ -56,6 +56,39 @@ export default async function CurrencyPairPage({ params }: Props) {
                     Convert {fromName} ({from}) to {toName} ({to}) with institutional-grade accuracy.
                     Current mid-market rate: <b>1 {from} = {rate.toFixed(4)} {to}</b>.
                 </p>
+                <StructuredData data={{
+                    "@context": "https://schema.org",
+                    "@type": "SoftwareApplication",
+                    "name": `${from} to ${to} Currency Converter`,
+                    "operatingSystem": "All",
+                    "applicationCategory": "FinanceApplication",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    },
+                    "description": `Real-time ${from} to ${to} converter with institutional mid-market rates.`,
+                    "featureList": [
+                        "Real-time exchange rates",
+                        "Institutional mid-market data",
+                        "Zero hidden fees",
+                        "Instant calculations"
+                    ]
+                }} />
+                <StructuredData data={{
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": `What is the best rate for ${from} to ${to}?`,
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": `The current mid-market exchange rate is 1 ${from} = ${rate.toFixed(4)} ${to}.`
+                            }
+                        }
+                    ]
+                }} />
             </header>
 
             <div className="tool-layout">

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import OptimizerComponent from './OptimizerComponent';
 import { ShieldCheck, Zap, Globe, HardDrive } from 'lucide-react';
+import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
     title: "Image Optimizer - Compress & Convert to WebP Online | Shadow ToolHub",
@@ -17,6 +18,47 @@ export default function ImageOptimizerPage() {
                     Speed up your website by optimizing your images. Use our next-gen WebP compression
                     to reduce file sizes by up to 90% while maintaining crystal-clear quality.
                 </p>
+                <StructuredData data={{
+                    "@context": "https://schema.org",
+                    "@type": "SoftwareApplication",
+                    "name": "Image Optimizer Pro",
+                    "operatingSystem": "All",
+                    "applicationCategory": "MultimediaApplication",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    },
+                    "description": "Professional-grade image compression and WebP conversion tool.",
+                    "featureList": [
+                        "Lossless and lossy compression",
+                        "WebP, PNG, JPEG support",
+                        "Bulk optimization",
+                        "Lightning fast browser-side processing"
+                    ]
+                }} />
+                <StructuredData data={{
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "How much can I reduce image size?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Our optimizer can reduce file sizes by up to 90% depending on the format and quality settings, especially when converting to WebP."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Is my data safe?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes, our image optimizer uses browser-side processing, meaning your images are never uploaded to our servers. Your privacy is 100% guaranteed."
+                            }
+                        }
+                    ]
+                }} />
             </header>
 
             <OptimizerComponent />

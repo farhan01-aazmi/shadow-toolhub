@@ -66,15 +66,21 @@ export default async function CoinDetailPage({ params }: Props) {
                         <span className="stat-label">24h Volume</span>
                         <span className="stat-value">${coin.total_volume.toLocaleString()}</span>
                     </div>
-                    <div className="stat-card">
-                        <span className="stat-label">24h High</span>
-                        <span className="stat-value text-up">${coin.high_24h.toLocaleString()}</span>
-                    </div>
-                    <div className="stat-card">
-                        <span className="stat-label">24h Low</span>
-                        <span className="stat-value text-down">${coin.low_24h.toLocaleString()}</span>
-                    </div>
                 </div>
+                <StructuredData data={{
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": `What is the current price of ${coin.name}?`,
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": `The current live price of ${coin.name} (${coin.symbol.toUpperCase()}) is $${coin.current_price.toLocaleString()}.`
+                            }
+                        }
+                    ]
+                }} />
             </header>
 
             <div className="tool-layout">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StructuredData from "@/components/seo/StructuredData";
 import {
   Zap,
   ArrowRight,
@@ -12,6 +13,35 @@ import {
 } from "lucide-react";
 
 export default function Home() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Shadow Event ToolHub",
+    "url": "https://nevy.in",
+    "logo": "https://nevy.in/logo.png",
+    "sameAs": [
+      "https://twitter.com/nevy_in",
+      "https://github.com/farhan01-aazmi"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "contact@nevy.in"
+    }
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Shadow Event ToolHub",
+    "url": "https://nevy.in",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://nevy.in/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   const featuredTools = [
     {
       name: "Currency Converter",
@@ -45,6 +75,8 @@ export default function Home() {
 
   return (
     <div className="home-container">
+      <StructuredData data={organizationSchema} />
+      <StructuredData data={websiteSchema} />
       {/* Hero Section */}
       <section className="hero">
         <div className="badge glass">
