@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import LoanCalculatorComponent from './LoanCalculatorComponent';
 import { ShieldCheck, TrendingUp, DollarSign, Calculator } from 'lucide-react';
+import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
     title: "Loan & Mortgage Calculator - Monthly Payment Estimator | Shadow ToolHub",
@@ -17,6 +18,38 @@ export default function LoanCalculatorPage() {
                     Plan your financial future with precision. Calculate monthly payments for home, auto, or personal loans
                     and visualize the impact of interest rates and loan terms on your total cost.
                 </p>
+                <StructuredData data={{
+                    "@context": "https://schema.org",
+                    "@type": "SoftwareApplication",
+                    "name": "Professional Loan & Mortgage Calculator",
+                    "operatingSystem": "All",
+                    "applicationCategory": "FinanceApplication",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    },
+                    "description": "Accurate loan payment estimator for mortgages and auto loans.",
+                    "featureList": [
+                        "Monthly payment calculation",
+                        "Total interest projection",
+                        "Payoff schedule visualization"
+                    ]
+                }} />
+                <StructuredData data={{
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "How is monthly loan payment calculated?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Monthly payments are calculated using the standard amortization formula, taking into account the principal amount, annual interest rate, and the loan term in months."
+                            }
+                        }
+                    ]
+                }} />
             </header>
 
             <LoanCalculatorComponent />
