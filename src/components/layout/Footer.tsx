@@ -3,12 +3,12 @@ import { Shield, Info, Mail, Github, Twitter, Zap } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="footer glass">
+    <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
           <Link href="/" className="logo">
-            <Zap className="logo-icon" />
-            <span className="gradient-text">SHADOW TOOLHUB</span>
+            <Zap className="logo-icon" size={24} strokeWidth={2.5} />
+            <span style={{ fontFamily: 'var(--font-display)', fontWeight: '800' }}>SHADOW <span style={{ color: 'var(--primary)' }}>TOOLHUB</span></span>
           </Link>
           <p className="footer-desc">
             A premium suite of high-performance tools and calculators optimized for speed and SEO.
@@ -20,16 +20,18 @@ export default function Footer() {
         </div>
 
         <div className="footer-section">
-          <h4>Legal</h4>
-          <Link href="/privacy-policy"><Shield size={16} /> Privacy Policy</Link>
-          <Link href="/terms"><Info size={16} /> Terms of Service</Link>
-          <Link href="/about"><Info size={16} /> About Us</Link>
+          <h4>Explore Tools</h4>
+          <Link href="/tools/currency-converter">Currency Converter</Link>
+          <Link href="/tools/crypto-tracker">Crypto Tracker</Link>
+          <Link href="/tools/image-optimizer">Image Optimizer</Link>
+          <Link href="/tools/word-counter">Word Counter</Link>
         </div>
 
         <div className="footer-section">
-          <h4>Support</h4>
-          <Link href="/contact"><Mail size={16} /> Contact Support</Link>
-          <Link href="/faq"><Info size={16} /> FAQ</Link>
+          <h4>Resources</h4>
+          <Link href="/blog">Expert Insights</Link>
+          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/terms">Terms of Service</Link>
         </div>
       </div>
 

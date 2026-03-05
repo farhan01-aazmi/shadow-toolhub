@@ -3,11 +3,11 @@ import { Search, Menu, Calculator, Coins, Image as ImageIcon, Code, Zap } from '
 
 export default function Navbar() {
   return (
-    <nav className="navbar glass">
+    <nav className="navbar">
       <div className="navbar-content">
         <Link href="/" className="logo">
-          <Zap className="logo-icon" />
-          <span className="gradient-text">SHADOW TOOLHUB</span>
+          <Zap className="logo-icon" size={24} strokeWidth={2.5} />
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: '800' }}>SHADOW <span style={{ color: 'var(--primary)' }}>TOOLHUB</span></span>
         </Link>
 
         <div className="nav-search">

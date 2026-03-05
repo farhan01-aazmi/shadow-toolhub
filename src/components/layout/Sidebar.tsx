@@ -13,35 +13,25 @@ import {
 
 const categories = [
     {
-        name: 'Finance',
-        icon: <Calculator size={18} />,
+        name: 'Finance Tools',
+        icon: <Calculator size={16} />,
         tools: [
             { name: 'Currency Converter', href: '/tools/currency-converter' },
             { name: 'Loan Calculator', href: '/tools/loan-calculator' },
-            { name: 'Mortgage Calculator', href: '/tools/mortgage-calculator' },
         ]
     },
     {
-        name: 'Crypto',
-        icon: <Coins size={18} />,
+        name: 'Digital Assets',
+        icon: <Coins size={16} />,
         tools: [
-            { name: 'Live Crypto Prices', href: '/tools/crypto-tracker' },
-            { name: 'Crypto Converter', href: '/tools/crypto-converter' },
+            { name: 'Live Crypto Tracker', href: '/tools/crypto-tracker' },
         ]
     },
     {
-        name: 'Software/Web',
-        icon: <Code size={18} />,
+        name: 'Web & Media',
+        icon: <Code size={16} />,
         tools: [
             { name: 'Image Optimizer', href: '/tools/image-optimizer' },
-            { name: 'JSON Formatter', href: '/tools/json-formatter' },
-            { name: 'HTML Minifier', href: '/tools/html-minifier' },
-        ]
-    },
-    {
-        name: 'SEO/Marketing',
-        icon: <BarChart3 size={18} />,
-        tools: [
             { name: 'Word Counter', href: '/tools/word-counter' },
             { name: 'Meta Tag Generator', href: '/tools/meta-generator' },
         ]
@@ -50,7 +40,7 @@ const categories = [
 
 export default function Sidebar() {
     return (
-        <aside className="sidebar glass">
+        <aside className="sidebar">
             <div className="sidebar-inner">
                 {categories.map((category) => (
                     <div key={category.name} className="sidebar-section">
@@ -70,6 +60,15 @@ export default function Sidebar() {
                         </ul>
                     </div>
                 ))}
+
+                <div className="expert-vault-sidebar card" style={{ marginTop: 'auto', padding: '16px', fontSize: '12px' }}>
+                    <div style={{ color: 'var(--primary)', fontWeight: '700', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <Zap size={14} /> EXPERT VAULT
+                    </div>
+                    <p style={{ color: 'var(--text-muted)', lineHeight: '1.4' }}>
+                        Tools built for performance and accuracy. No tracking, 100% private.
+                    </p>
+                </div>
             </div>
 
         </aside>
