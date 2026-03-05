@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://shadow-toolhub.com/sitemap.xml',
+        sitemap: 'https://nevy.in/sitemap.xml',
     };
 }

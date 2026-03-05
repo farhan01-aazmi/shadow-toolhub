@@ -4,7 +4,7 @@ import { getTopCoins } from '@/lib/api/crypto';
 import { getProgrammaticPosts } from '@/lib/blog/generator';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = 'https://shadow-toolhub.com'; // Replace with actual domain
+    const baseUrl = 'https://nevy.in';
 
     // Static routes
     const staticRoutes = [
