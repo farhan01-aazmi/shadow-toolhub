@@ -4,7 +4,7 @@
  */
 
 const SOCIAL_CONFIG = {
-    baseUrl: 'https://shadow-toolhub2-pkkbzn3qe-farhan01-aazmis-projects.vercel.app',
+    baseUrl: 'https://nevy.in',
     redditSubreddits: ['personalfinance', 'webdev', 'SEO'],
     pinterestBoards: ['Professional Tools', 'Finance Hacks']
 };

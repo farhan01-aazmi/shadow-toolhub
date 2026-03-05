@@ -1,0 +1,29 @@
+name: Autonomous Growth Engine
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Every day at midnight UTC
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  grow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      
+      - name: Run Growth Cycle
+        run: node scripts/autonomous-governor.js
+        env:
+          SITE_URL: https://nevy.in
+
+      - name: Commit Growth Logs
+        run: |
+          git config --global user.name "Shadow-Bot"
+          git config --global user.email "bot@nevy.in"
+          git add automation_output/
+          git commit -m "Auto-Growth Cycle: $(date)" || echo "No changes to commit"
+          git push

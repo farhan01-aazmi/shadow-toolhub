@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseUrl = 'https://shadow-toolhub2-pkkbzn3qe-farhan01-aazmis-projects.vercel.app';
+const baseUrl = 'https://nevy.in';
 
 const pins = [
     {
