@@ -2,6 +2,16 @@
   {
     "subreddit": "r/personalfinance",
     "title": "I built an ad-free loan calculator to help visualize interest costs",
-    "body": "Tired of cluttered finance sites, I made a clean tool to help people see their principal/interest breakdown. Hope it helps someone here! https://shadow-event-toolhub.vercel.app/tools/loan-calculator"
+    "body": "Tired of cluttered finance sites, I made a clean tool to help people see their principal/interest breakdown. Hope it helps someone here! https://shadow-toolhub2-pkkbzn3qe-farhan01-aazmis-projects.vercel.app/tools/loan-calculator"
+  },
+  {
+    "subreddit": "r/webdev",
+    "title": "Showoff Saturday: A minimalist toolhub for developers and finance folks",
+    "body": "I was tired of generic, ad-heavy tools, so I built Shadow ToolHub. Includes an image optimizer, meta generator, and currency trackers. No tracking, just utility. https://shadow-toolhub2-pkkbzn3qe-farhan01-aazmis-projects.vercel.app"
+  },
+  {
+    "subreddit": "r/SEO",
+    "title": "Free tool to generate 2026 optimized Meta Tags",
+    "body": "Created a simple utility for my own projects to handle meta tags with CTR previews. Shared it here if anyone needs a fast, ad-free alternative. https://shadow-toolhub2-pkkbzn3qe-farhan01-aazmis-projects.vercel.app/tools/meta-generator"
   }
 ]
