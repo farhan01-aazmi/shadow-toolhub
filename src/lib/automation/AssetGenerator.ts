@@ -17,7 +17,7 @@ export interface RedditTemplate {
 export class AssetGenerator {
     private baseUrl: string;
 
-    constructor(baseUrl: string = 'https://shadow-event-toolhub.vercel.app') {
+    constructor(baseUrl: string = 'https://nevy.in') {
         this.baseUrl = baseUrl;
     }
 

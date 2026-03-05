@@ -93,7 +93,7 @@ export async function GET(req: NextRequest) {
                             color: '#475569',
                         }}
                     >
-                        shadow-toolhub.com
+                        nevy.in
                     </div>
                 </div>
             ),
