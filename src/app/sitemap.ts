@@ -3,22 +3,31 @@ import { commonCurrencies } from '@/lib/api/currency';
 import { getTopCoins } from '@/lib/api/crypto';
 import { getProgrammaticPosts } from '@/lib/blog/generator';
 
+// Force fresh generation every hour — prevents stale cache
+export const revalidate = 3600;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+    // CRITICAL: This MUST be nevy.in — the verified domain in Google Search Console
     const baseUrl = 'https://nevy.in';
 
-    // Static routes
+    // Static routes — includes ALL pages on the site
     const staticRoutes = [
         '',
         '/tools/currency-converter',
         '/tools/crypto-tracker',
         '/tools/image-optimizer',
         '/tools/loan-calculator',
+        '/tools/word-counter',
+        '/tools/meta-generator',
         '/blog',
+        '/about',
+        '/privacy',
+        '/terms',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
         changeFrequency: 'daily' as const,
-        priority: 1,
+        priority: route === '' ? 1 : 0.9,
     }));
 
     // Blog posts
