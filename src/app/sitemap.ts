@@ -3,14 +3,15 @@ import { commonCurrencies } from '@/lib/api/currency';
 import { getTopCoins } from '@/lib/api/crypto';
 import { getProgrammaticPosts } from '@/lib/blog/generator';
 
-// Force fresh generation every hour — prevents stale cache
-export const revalidate = 3600;
+// Force dynamic — NEVER serve stale cached sitemap
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    // CRITICAL: This MUST be nevy.in — the verified domain in Google Search Console
+    // CRITICAL: This MUST match the verified domain in Google Search Console
     const baseUrl = 'https://nevy.in';
 
-    // Static routes — includes ALL pages on the site
+    // Static routes — includes ALL pages
     const staticRoutes = [
         '',
         '/tools/currency-converter',
@@ -39,7 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
     }));
 
-    // Currency pairs (top 20 pairs for efficiency in sitemap)
+    // Currency pairs
     const currencyPairs = commonCurrencies.flatMap((from) =>
         commonCurrencies.filter(to => to !== from).slice(0, 3).map((to) => ({
             url: `${baseUrl}/tools/currency-converter/${from.toLowerCase()}-to-${to.toLowerCase()}`,

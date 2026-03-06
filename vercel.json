@@ -6,6 +6,7 @@
     "outputDirectory": ".next",
     "installCommand": "npm install",
     "env": {
-        "FREE_CURRENCY_API_KEY": "fca_live_9YtWInp8sHclInoB3v2Jcshz78sX8z1vS1D3uBvL"
+        "FREE_CURRENCY_API_KEY": "fca_live_9YtWInp8sHclInoB3v2Jcshz78sX8z1vS1D3uBvL",
+        "VERCEL_FORCE_NO_BUILD_CACHE": "1"
     }
 }
