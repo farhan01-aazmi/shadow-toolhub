@@ -18,6 +18,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
         title: `${coin.name} (${coin.symbol.toUpperCase()}) Price - Live Market Cap & Stats | Shadow ToolHub`,
         description: `Get the real-time ${coin.name} price, market cap, trading volume, and 24h change. Comprehensive ${coin.symbol.toUpperCase()} analysis with institutional-grade data.`,
+        alternates: {
+            canonical: `https://nevy.in/tools/crypto-tracker/${coinId}`,
+        },
+        openGraph: {
+            images: [
+                {
+                    url: `https://nevy.in/og/og-crypto-${coinId}.png`,
+                    width: 1200,
+                    height: 630,
+                    alt: `${coin.name} Price Chart`,
+                }
+            ],
+        }
     };
 }
 

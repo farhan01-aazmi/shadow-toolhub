@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Privacy Policy | Shadow ToolHub",
-    description: "Learn how Shadow ToolHub handles your data and ensures your privacy while using our digital tools.",
+    title: "Privacy Policy | Nevy.in",
+    description: "Learn how Nevy.in handles your data and ensures your privacy while using our digital tools.",
 };
 
 export default function PrivacyPage() {
@@ -17,7 +17,7 @@ export default function PrivacyPage() {
                 <section className="legal-section">
                     <h2>1. Information We Collect</h2>
                     <p>
-                        At Shadow ToolHub, we prioritize your privacy. For most of our tools (like the Image Optimizer and Loan Calculator),
+                        At Nevy.in, we prioritize your privacy. For most of our tools (like the Image Optimizer and Loan Calculator),
                         data is processed locally in your browser and is never sent to our servers. We do not require account registration.
                     </p>
                 </section>

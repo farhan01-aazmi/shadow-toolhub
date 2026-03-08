@@ -4,9 +4,12 @@ import CryptoDashboard from './CryptoDashboard';
 import { Shield, TrendingUp, BarChart3, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Live Crypto Prices & Market Tracker | Shadow ToolHub",
+    title: "Live Crypto Prices & Market Tracker | Nevy.in",
     description: "Track live cryptocurrency prices, market cap, and 24h changes for Bitcoin, Ethereum, and 50+ altcoins. Premium crypto dashboard with real-time accuracy.",
     keywords: ["crypto tracker", "bitcoin price", "ethereum price", "live crypto rates", "crypto market cap", "altcoin tracker"],
+    alternates: {
+        canonical: "https://nevy.in/tools/crypto-tracker",
+    },
 };
 
 export default async function CryptoTrackerPage() {
@@ -50,6 +53,33 @@ export default async function CryptoTrackerPage() {
                     <Shield className="text-accent" />
                     <h3>Free & Secure</h3>
                     <p>Analyze thousands of coins with no login required. Your data and searches remain private and secure.</p>
+                </div>
+            </section>
+
+            <section className="seo-content card glass mt-8">
+                <div className="pro-content">
+                    <h3>Institutional Market Analysis</h3>
+                    <p>
+                        The cryptocurrency market, led by <b>Bitcoin (BTC)</b> and <b>Ethereum (ETH)</b>, has evolved
+                        into a trillion-dollar asset class. Unlike traditional fiat currencies, the value of digital
+                        assets is determined by protocol utility, decentralized consensus, and global liquidity flows.
+                    </p>
+                    <p>
+                        Our <b>Crypto Tracker</b> provides the precision required for institutional-level
+                        monitoring. By tracking metrics like Market Capitalization (the total value of all
+                        mined coins) and 24-hour volume, traders can identify liquidity trends and
+                        market sentiment shifts before they happen.
+                    </p>
+                    <p>
+                        Whether you're monitoring <b>Stablecoins</b> for ecosystem stability or tracking
+                        the growth of Layer-2 scaling solutions, Nevy.in delivers raw,
+                        high-frequency data without the noise of typical news-driven trackers.
+                    </p>
+                    <ul>
+                        <li><b>Market Dominance:</b> Real-time tracking of Bitcoin vs Altcoin ratios.</li>
+                        <li><b>USA Market Focus:</b> Optimized for high-CPC trading keywords.</li>
+                        <li><b>Data Integrity:</b> Sourced from decentralized price aggregators.</li>
+                    </ul>
                 </div>
             </section>
 

@@ -6,7 +6,7 @@ export const runtime = 'edge';
 export async function GET(req: NextRequest) {
     try {
         const { searchParams } = new URL(req.url);
-        const title = searchParams.get('title') || 'Shadow ToolHub';
+        const title = searchParams.get('title') || 'Nevy.in';
         const description = searchParams.get('desc') || 'Premium Automated Tools';
         const type = searchParams.get('type') || 'tool';
 
@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
                             display: 'flex',
                         }}
                     >
-                        SHADOW TOOLHUB
+                        Nevy.in
                     </div>
 
                     {/* Type Badge */}

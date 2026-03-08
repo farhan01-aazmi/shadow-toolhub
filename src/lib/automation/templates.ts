@@ -13,7 +13,7 @@ export const pinterestTemplates = {
     }),
     crypto: (name: string, symbol: string, price: number) => ({
         title: `Is ${name} (${symbol}) a Buy Today?`,
-        description: `Live ${name} price update! 🚀 Currently trading at $${price.toLocaleString()}. track all movements on Shadow ToolHub. #crypto #bitcoin #investing #blockchain`,
+        description: `Live ${name} price update! 🚀 Currently trading at $${price.toLocaleString()}. track all movements on Nevy.in. #crypto #bitcoin #investing #blockchain`,
         overlayText: `${symbol} @ $${price.toLocaleString()}`,
     }),
     optimizer: () => ({

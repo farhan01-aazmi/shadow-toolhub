@@ -21,6 +21,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
         title: `${from} to ${to} Currency Converter - Live ${from}/${to} Exchange Rate`,
         description: `Convert ${from} to ${to} with real-time exchange rates. Get the latest ${from}/${to} mid-market rate, historical data, and analysis for free.`,
+        alternates: {
+            canonical: `https://nevy.in/tools/currency-converter/${(await params).pair}`,
+        },
+        openGraph: {
+            images: [
+                {
+                    url: `https://nevy.in/og/og-currency-${from.toLowerCase()}-to-${to.toLowerCase()}.png`,
+                    width: 1200,
+                    height: 630,
+                    alt: `${from} to ${to} Conversion`,
+                }
+            ],
+        }
     };
 }
 

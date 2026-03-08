@@ -1,31 +1,30 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import { Bricolage_Grotesque, DM_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
-import Sidebar from "@/components/layout/Sidebar";
-import Footer from "@/components/layout/Footer";
 
-const inter = Inter({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-bricolage",
+  display: 'swap',
 });
 
-const montserrat = Montserrat({
+const dmMono = DM_Mono({
+  weight: ['400', '500'],
   subsets: ["latin"],
-  variable: "--font-montserrat",
-  weight: ["400", "700", "800"],
+  variable: "--font-dm-mono",
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nevy.in'),
   title: {
-    default: "Shadow Event ToolHub | Premium Tools & Utilities",
-    template: "%s | Shadow Event ToolHub"
+    default: "Nevy.in — Tools that work.",
+    template: "%s | Nevy.in"
   },
-  description: "A premium suite of high-performance online tools for developers, designers, and financial analysis. Optimized for USA speed and SEO.",
-  keywords: ["online tools", "currency converter", "crypto tracker", "image optimizer", "loan calculator", "seo tools", "developer tools"],
-  authors: [{ name: "Shadow Event Team" }],
-  viewport: "width=device-width, initial-scale=1",
+  description: "150+ free online tools for images, PDFs, text, calculators, and more. No signup. No fees. Ever.",
+  keywords: ["free online tools", "image compressor", "pdf to word", "emi calculator", "password generator", "word counter", "json formatter"],
+  authors: [{ name: "nevy.in" }],
   robots: {
     index: true,
     follow: true,
@@ -41,26 +40,26 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://nevy.in",
-    siteName: "Shadow Event ToolHub",
-    title: "Shadow Event ToolHub | Premium Tools & Utilities",
-    description: "High-performance, ad-free utility tools for Finance, Crypto, and SEO.",
+    siteName: "nevy.in",
+    title: "Nevy.in — 150+ Free Online Tools",
+    description: "Image, PDF, text, calculators, security — all tools in one place. No signup required. No fees.",
     images: [
       {
         url: "/api/og",
         width: 1200,
         height: 630,
-        alt: "Shadow Event ToolHub Preview",
+        alt: "Nevy.in — Tools that work",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shadow Event ToolHub | Premium Tools & Utilities",
-    description: "High-performance, ad-free utility tools for Finance, Crypto, and SEO.",
+    title: "Nevy.in — 150+ Free Online Tools",
+    description: "Image, PDF, text, calculators, security — free tools that work.",
     images: ["/api/og"],
   },
   alternates: {
-    canonical: "https://nevy.in",
+    canonical: "./",
   }
 };
 
@@ -70,17 +69,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${bricolage.variable} ${dmMono.variable}`}>
+      <body>
         <Navbar />
-        <div className="layout-container">
-          <Sidebar />
-          <main className="main-content">
-            {children}
-            <Footer />
-          </main>
-        </div>
-
+        {children}
       </body>
     </html>
   );

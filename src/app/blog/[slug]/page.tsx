@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import StructuredData from "@/components/seo/StructuredData";
 import { getPostBySlug, getProgrammaticPosts } from '@/lib/blog/generator';
 import { ArrowLeft, Calendar, User, Tag, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
 
@@ -16,6 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: `${post.title} | Shadow ToolHub Blog`,
         description: post.excerpt,
         keywords: post.tags,
+        alternates: {
+            canonical: `https://nevy.in/blog/${post.slug}`,
+        }
     };
 }
 
@@ -30,8 +34,59 @@ export default async function BlogDetailPage({ params }: Props) {
     const post = await getPostBySlug((await params).slug);
     if (!post) notFound();
 
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.excerpt,
+        "author": {
+            "@type": "Organization",
+            "name": post.author
+        },
+        "datePublished": post.date,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://nevy.in/blog/${post.slug}`
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Shadow Event ToolHub",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://nevy.in/logo.png"
+            }
+        }
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://nevy.in"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://nevy.in/blog"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": post.title,
+                "item": `https://nevy.in/blog/${post.slug}`
+            }
+        ]
+    };
+
     return (
         <div className="article-container">
+            <StructuredData data={articleSchema} />
+            <StructuredData data={breadcrumbSchema} />
             <nav className="breadcrumb">
                 <Link href="/">Home</Link> / <Link href="/blog">Blog</Link> / <span>{post.title}</span>
             </nav>

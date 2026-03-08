@@ -4,9 +4,22 @@ import { ShieldCheck, Zap, Globe, HardDrive } from 'lucide-react';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-    title: "Image Optimizer - Compress & Convert to WebP Online | Shadow ToolHub",
+    title: "Image Optimizer - Compress & Convert to WebP Online | Nevy.in",
     description: "Free online image optimizer to compress and convert images to WebP, JPEG, or PNG. Boost your website speed and USA SEO ranking without losing quality.",
     keywords: ["image optimizer", "compress image", "webp converter", "online image compressor", "resize image online", "speed up website"],
+    alternates: {
+        canonical: "https://nevy.in/tools/image-optimizer",
+    },
+    openGraph: {
+        images: [
+            {
+                url: 'https://nevy.in/og/og-image-optimizer.png',
+                width: 1200,
+                height: 630,
+                alt: 'Image Optimizer',
+            }
+        ],
+    }
 };
 
 export default function ImageOptimizerPage() {
@@ -108,6 +121,33 @@ export default function ImageOptimizerPage() {
                         <h4>Download</h4>
                         <p>Instantly download your optimized image and use it on your website or social media.</p>
                     </div>
+                </div>
+            </section>
+
+            <section className="seo-content card glass mt-8">
+                <div className="pro-content">
+                    <h3>Professional Image Strategy for Web Mastery</h3>
+                    <p>
+                        In the era of <b>Core Web Vitals</b>, image optimization is no longer optional.
+                        Large, unoptimized images are the leading cause of high <b>Largest Contentful Paint (LCP)</b>
+                        scores, which directly negatively impact your USA Google rankings.
+                    </p>
+                    <p>
+                        Our <b>Image Optimizer Pro</b> leverages the power of the <b>WebP</b> format.
+                        WebP is a modern image format that provides superior lossless and lossy
+                        compression for images on the web. Using WebP, webmasters can create
+                        smaller, richer images that make the web faster.
+                    </p>
+                    <p>
+                        Beyond simple compression, we provide institutional-grade conversion
+                        algorithms that preserve the <b>Visual Fidelity</b> of your assets while
+                        stripping unnecessary metadata that adds weight to your pages.
+                    </p>
+                    <ul>
+                        <li><b>WebP Conversion:</b> Standard for modern browser performance.</li>
+                        <li><b>Client-Side Processing:</b> Secure, fast, and no server latency.</li>
+                        <li><b>SEO Optimized:</b> Built to help you hit those 99+ Lighthouse scores.</li>
+                    </ul>
                 </div>
             </section>
 

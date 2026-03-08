@@ -31,7 +31,7 @@ export class AssetGenerator {
             return {
                 title: `Instant ${from} to ${to} Conversion - 100% Free Tool`,
                 description: `Need to convert ${from} to ${to}? Use our lightning-fast Currency Converter for real-time rates. No hidden fees. Optimized for mobile. #CurrencyExchange #Finance #Tools`,
-                altText: `Graphic showing ${from} to ${to} exchange rate on Shadow Event ToolHub`,
+                altText: `Graphic showing ${from} to ${to} exchange rate on Nevy.in`,
                 link: `${this.baseUrl}/tools/currency-converter/${from.toLowerCase()}-${to.toLowerCase()}`
             };
         });

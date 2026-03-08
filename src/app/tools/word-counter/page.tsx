@@ -3,9 +3,22 @@ import WordCounterClient from './WordCounterClient';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-    title: "Professional Word Counter - Analyze Content Depth | Shadow ToolHub",
+    title: "Professional Word Counter - Analyze Content Depth | Nevy.in",
     description: "Free online word counter to analyze text length, character density, and reading time. Optimized for bloggers, students, and SEO content writers in 2026.",
     keywords: ["word counter", "character counter", "sentence counter", "reading time calculator", "content analyzer"],
+    alternates: {
+        canonical: "https://nevy.in/tools/word-counter",
+    },
+    openGraph: {
+        images: [
+            {
+                url: 'https://nevy.in/og/og-word-counter.png',
+                width: 1200,
+                height: 630,
+                alt: 'Word Counter',
+            }
+        ],
+    }
 };
 
 export default function WordCounterPage() {

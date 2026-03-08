@@ -5,9 +5,12 @@ import ConverterComponent from './ConverterComponent';
 import { ArrowRight, Star, BarChart3, ShieldCheck, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Currency Converter - Real-Time Exchange Rates | Shadow ToolHub",
+  title: "Currency Converter - Real-Time Exchange Rates | Nevy.in",
   description: "Convert 150+ currencies with real-time exchange rates. Precise, fast, and free global currency conversion with historical insights.",
   keywords: ["currency converter", "exchange rates", "usd to inr", "forex rates", "money converter", "real time currency"],
+  alternates: {
+    canonical: "https://nevy.in/tools/currency-converter",
+  },
 };
 
 export default async function CurrencyConverterPage() {
@@ -49,7 +52,7 @@ export default async function CurrencyConverterPage() {
           <ConverterComponent initialRates={data.rates} />
 
           <section className="seo-content card glass">
-            <h2>Why use Shadow ToolHub for Currency Conversion?</h2>
+            <h2>Why use Nevy.in for Currency Conversion?</h2>
             <div className="features-grid">
               <div className="feature-item">
                 <Zap size={20} className="text-primary" />
@@ -72,6 +75,27 @@ export default async function CurrencyConverterPage() {
                   <p>Our tools are 100% free with no hidden tracking or subscription required.</p>
                 </div>
               </div>
+            </div>
+
+            <div className="pro-content">
+              <h3>Expert Financial Context</h3>
+              <p>
+                In the modern global economy, currency fluctuations are driven by complex geopolitical factors,
+                Central Bank interest rate decisions (FED, ECB, RBI), and international trade balances.
+                Our <b>Currency Converter</b> doesn't just show numbers; it provides a gateway to
+                understanding these market dynamics.
+              </p>
+              <p>
+                We use the <b>Mid-Market Rate</b>, which is the midpoint between the buy and sell rates
+                from global currency markets. Unlike banks or currency exchange booths that add a
+                significant markup (often called "the spread"), we provide the raw, transparent data
+                you need for accurate financial planning, remittances, and business forecasting.
+              </p>
+              <ul>
+                <li><b>Real-time Processing:</b> Powered by high-speed APIs for zero latency.</li>
+                <li><b>Global Coverage:</b> Supporting 150+ fiat currencies and exotic pairs.</li>
+                <li><b>SEO Architecture:</b> Programmatic pages built for high CPC finance keywords.</li>
+              </ul>
             </div>
           </section>
         </div>

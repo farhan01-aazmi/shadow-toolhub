@@ -30,13 +30,15 @@ export default function Footer() {
         <div className="footer-section">
           <h4>Resources</h4>
           <Link href="/blog">Expert Insights</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/contact">Contact Us</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Shadow ToolHub. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Nevy.in. All rights reserved.</p>
       </div>
 
     </footer>

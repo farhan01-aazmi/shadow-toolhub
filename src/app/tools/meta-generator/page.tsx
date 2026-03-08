@@ -3,9 +3,22 @@ import MetaGeneratorClient from './MetaGeneratorClient';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-    title: "Meta Tag Generator - SEO & Social Preview Tool | Shadow ToolHub",
+    title: "Meta Tag Generator - SEO & Social Preview Tool | Nevy.in",
     description: "Create high-performance meta tags for SEO and social media. Includes live Google preview, Open Graph, and Twitter card generation for 2026 search engines.",
     keywords: ["meta tag generator", "seo tags", "open graph generator", "twitter card generator", "google preview tool"],
+    alternates: {
+        canonical: "https://nevy.in/tools/meta-generator",
+    },
+    openGraph: {
+        images: [
+            {
+                url: 'https://nevy.in/og/og-meta-generator.png',
+                width: 1200,
+                height: 630,
+                alt: 'Meta Tag Generator',
+            }
+        ],
+    }
 };
 
 export default function MetaGeneratorPage() {
