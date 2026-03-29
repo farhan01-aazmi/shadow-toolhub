@@ -1,46 +1,67 @@
 import Link from 'next/link';
-import { Shield, Info, Mail, Github, Twitter, Zap } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <div className="footer-section">
+    <footer className="footer-bp">
+      <div className="foot-line"></div>
+      <div className="foot-inner">
+        <div className="foot-brand">
           <Link href="/" className="logo">
-            <Zap className="logo-icon" size={24} strokeWidth={2.5} />
-            <span style={{ fontFamily: 'var(--font-display)', fontWeight: '800' }}>SHADOW <span style={{ color: 'var(--primary)' }}>TOOLHUB</span></span>
+            <div className="logo-mark">
+              <svg viewBox="0 0 34 34" fill="none">
+                <rect width="34" height="34" fill="#141414" />
+                <path d="M8 8L17 8L26 17L17 26L8 26Z" fill="none" stroke="#f0a500" strokeWidth="1.5" />
+                <circle cx="17" cy="17" r="3" fill="#f0a500" />
+              </svg>
+            </div>
+            <span className="logo-word">nevy<em>.in</em></span>
           </Link>
-          <p className="footer-desc">
-            A premium suite of high-performance tools and calculators optimized for speed and SEO.
-          </p>
-          <div className="social-links">
-            <Link href="https://twitter.com" target="_blank"><Twitter size={20} /></Link>
-            <Link href="https://github.com" target="_blank"><Github size={20} /></Link>
+          <p>150+ free online tools — image, PDF, text, calculators, security. No signup required. No fees. Ever.</p>
+          <div className="socials">
+            <a className="soc" href="https://x.com" target="_blank" rel="noopener noreferrer">𝕏</a>
+            <a className="soc" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">in</a>
+            <a className="soc" href="https://youtube.com" target="_blank" rel="noopener noreferrer">▶</a>
+            <a className="soc" href="https://facebook.com" target="_blank" rel="noopener noreferrer">📘</a>
           </div>
         </div>
 
-        <div className="footer-section">
+        <div className="foot-col">
           <h4>Explore Tools</h4>
-          <Link href="/tools/currency-converter">Currency Converter</Link>
-          <Link href="/tools/crypto-tracker">Crypto Tracker</Link>
-          <Link href="/tools/image-optimizer">Image Optimizer</Link>
-          <Link href="/tools/word-counter">Word Counter</Link>
+          <Link href="/all-tools/">All Tools</Link>
+          <Link href="/tools/word-counter/">Word Counter</Link>
+          <Link href="/tools/image-optimizer/">Image Optimizer</Link>
+          <Link href="/tools/currency-converter/">Currency Converter</Link>
+          <Link href="/tools/loan-calculator/">EMI Calculator</Link>
+          <Link href="/tools/us-income-tax-calculator/">US Tax Calculator</Link>
         </div>
 
-        <div className="footer-section">
+        <div className="foot-col">
           <h4>Resources</h4>
-          <Link href="/blog">Expert Insights</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/contact">Contact Us</Link>
-          <Link href="/privacy">Privacy Policy</Link>
-          <Link href="/terms">Terms of Service</Link>
+          <Link href="/blog/">Blog & News</Link>
+          <Link href="/about/">About Us</Link>
+          <Link href="/contact/">Contact Us</Link>
+          <Link href="/contact/">Advertise</Link>
+          <Link href="/contact/">Submit Tool</Link>
+        </div>
+
+        <div className="foot-col">
+          <h4>Legal</h4>
+          <Link href="/privacy-policy/">Privacy Policy</Link>
+          <Link href="/terms-of-service/">Terms of Service</Link>
+          <Link href="/disclaimer/">Disclaimer</Link>
+          <Link href="/privacy-policy/">Cookie Policy</Link>
         </div>
       </div>
 
-      <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Nevy.in. All rights reserved.</p>
+      <div className="foot-bottom">
+        <p>© {new Date().getFullYear()} nevy.in — All rights reserved</p>
+        <div className="foot-links">
+          <Link href="/privacy-policy/">Privacy</Link>
+          <Link href="/terms-of-service/">Terms</Link>
+          <Link href="/disclaimer/">Disclaimer</Link>
+          <Link href="/contact/">Contact</Link>
+        </div>
       </div>
-
     </footer>
   );
 }

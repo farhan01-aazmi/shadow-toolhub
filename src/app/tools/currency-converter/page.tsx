@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Convert 150+ currencies with real-time exchange rates. Precise, fast, and free global currency conversion with historical insights.",
   keywords: ["currency converter", "exchange rates", "usd to inr", "forex rates", "money converter", "real time currency"],
   alternates: {
-    canonical: "https://nevy.in/tools/currency-converter",
+    canonical: "https://www.nevy.in/tools/currency-converter",
   },
 };
 

@@ -7,10 +7,13 @@ export const metadata: Metadata = {
     title: "Loan & Mortgage Calculator - Monthly Payment Estimator | Nevy.in",
     description: "Free online loan calculator to estimate monthly payments, total interest, and complete payoff schedules for mortgages, auto loans, and personal loans.",
     keywords: ["loan calculator", "mortgage calculator", "monthly payment estimator", "interest rate calculator", "personal loan calculator", "auto loan calculator"],
+    alternates: {
+        canonical: 'https://www.nevy.in/tools/loan-calculator',
+    },
     openGraph: {
         images: [
             {
-                url: 'https://nevy.in/og/og-loan-calculator.png',
+                url: 'https://www.nevy.in/og/og-loan-calculator.png',
                 width: 1200,
                 height: 630,
                 alt: 'Loan Calculator',

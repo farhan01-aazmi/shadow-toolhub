@@ -8,12 +8,12 @@ export const metadata: Metadata = {
     description: "Free online image optimizer to compress and convert images to WebP, JPEG, or PNG. Boost your website speed and USA SEO ranking without losing quality.",
     keywords: ["image optimizer", "compress image", "webp converter", "online image compressor", "resize image online", "speed up website"],
     alternates: {
-        canonical: "https://nevy.in/tools/image-optimizer",
+        canonical: "https://www.nevy.in/tools/image-optimizer",
     },
     openGraph: {
         images: [
             {
-                url: 'https://nevy.in/og/og-image-optimizer.png',
+                url: 'https://www.nevy.in/og/og-image-optimizer.png',
                 width: 1200,
                 height: 630,
                 alt: 'Image Optimizer',

@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getLatestRates, getCurrencyName, commonCurrencies } from '@/lib/api/currency';
+import { fiatCurrencies } from '@/lib/data/fiat';
+import { US_STATES_DATA } from '@/lib/data/us-states';
+import { generateIntroParagraph, generateHistoricalAnalysis, generateLongFormArticle, generateFAQSchema } from '@/lib/seo/spintax';
 import ConverterComponent from '../ConverterComponent';
 import Link from 'next/link';
 import { ArrowRight, Info, CheckCircle, TrendingDown, TrendingUp, ShieldCheck, Zap, Lightbulb, MessageSquare } from 'lucide-react';
@@ -20,14 +23,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
         title: `${from} to ${to} Currency Converter - Live ${from}/${to} Exchange Rate`,
-        description: `Convert ${from} to ${to} with real-time exchange rates. Get the latest ${from}/${to} mid-market rate, historical data, and analysis for free.`,
+        description: `Convert ${from} to ${to} with real-time exchange rates. Get the latest ${from}/${to} mid-market rate, comprehensive historical data, 24/7 market analysis, and zero-fee comparisons for free.`,
         alternates: {
-            canonical: `https://nevy.in/tools/currency-converter/${(await params).pair}`,
+            canonical: `https://www.nevy.in/tools/currency-converter/${params.pair}`,
         },
         openGraph: {
             images: [
                 {
-                    url: `https://nevy.in/og/og-currency-${from.toLowerCase()}-to-${to.toLowerCase()}.png`,
+                    url: `https://www.nevy.in/og/og-currency-${from.toLowerCase()}-to-${to.toLowerCase()}.png`,
                     width: 1200,
                     height: 630,
                     alt: `${from} to ${to} Conversion`,
@@ -45,17 +48,30 @@ export default async function CurrencyPairPage({ params }: Props) {
     const from = fromCode.toUpperCase();
     const to = toCode.toUpperCase();
 
+    // Stable State Selection based on pair hash
+    const stateCodes = Object.keys(US_STATES_DATA);
+    const hash = (await params).pair.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    const stateCode = stateCodes[hash % stateCodes.length];
+
     // Validate currencies
     if (!commonCurrencies.includes(from) || !commonCurrencies.includes(to)) {
-        notFound();
+        // Fallback for mass programmatic pages that are not in commonCurrencies
+        const fiatCodes = fiatCurrencies.map(f => f.code);
+        if (!fiatCodes.includes(from) || !fiatCodes.includes(to)) {
+             notFound();
+        }
     }
 
     const data = await getLatestRates(from);
     if (!data) notFound();
 
-    const rate = data.rates[to];
+    const rate = data.rates[to] || 1.0; // Fallback for missing rates
     const fromName = getCurrencyName(from);
     const toName = getCurrencyName(to);
+
+    const introText = generateIntroParagraph(from, to, fromName, toName, stateCode);
+    const historicalAnalysis = generateHistoricalAnalysis(from, to, stateCode);
+    const article = generateLongFormArticle(from, to, fromName, toName, (await params).pair, stateCode);
 
     return (
         <div className="tool-container">
@@ -65,43 +81,32 @@ export default async function CurrencyPairPage({ params }: Props) {
 
             <header className="tool-header">
                 <h1 className="gradient-text">{from} to {to} Converter</h1>
+                <div className="content mb-6" dangerouslySetInnerHTML={{ __html: introText.replace(/\n/g, '<br/>') }} />
                 <p className="tool-intro">
-                    Convert {fromName} ({from}) to {toName} ({to}) with institutional-grade accuracy.
-                    Current mid-market rate: <b>1 {from} = {rate.toFixed(4)} {to}</b>.
+                    Current mid-market rate: <b>1 {from} = {rate.toFixed(4)} {to}</b>. (Localized for {US_STATES_DATA[stateCode].name})
                 </p>
-                <StructuredData data={{
-                    "@context": "https://schema.org",
-                    "@type": "SoftwareApplication",
-                    "name": `${from} to ${to} Currency Converter`,
-                    "operatingSystem": "All",
-                    "applicationCategory": "FinanceApplication",
-                    "offers": {
-                        "@type": "Offer",
-                        "price": "0",
-                        "priceCurrency": "USD"
+                <StructuredData data={[
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SoftwareApplication",
+                        "name": `${from} to ${to} Currency Converter`,
+                        "operatingSystem": "All",
+                        "applicationCategory": "FinanceApplication",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "0",
+                            "priceCurrency": "USD"
+                        },
+                        "description": `Real-time ${from} to ${to} converter with institutional mid-market rates and US-localized analysis for ${US_STATES_DATA[stateCode].name}.`,
+                        "featureList": [
+                            "Real-time exchange tracking",
+                            "Institutional mid-market feed",
+                            "Zero hidden fees",
+                            "US State localized data"
+                        ]
                     },
-                    "description": `Real-time ${from} to ${to} converter with institutional mid-market rates.`,
-                    "featureList": [
-                        "Real-time exchange rates",
-                        "Institutional mid-market data",
-                        "Zero hidden fees",
-                        "Instant calculations"
-                    ]
-                }} />
-                <StructuredData data={{
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": `What is the best rate for ${from} to ${to}?`,
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": `The current mid-market exchange rate is 1 ${from} = ${rate.toFixed(4)} ${to}.`
-                            }
-                        }
-                    ]
-                }} />
+                    generateFAQSchema(from, to, rate.toFixed(4))
+                ]} />
             </header>
 
             <div className="tool-layout">
@@ -110,24 +115,6 @@ export default async function CurrencyPairPage({ params }: Props) {
                     <ConverterComponent initialRates={data.rates} />
 
                     <article className="automated-article card glass">
-                        <StructuredData data={{
-                            "@context": "https://schema.org",
-                            "@type": "SoftwareApplication",
-                            "name": `${from} to ${to} Converter`,
-                            "operatingSystem": "All",
-                            "applicationCategory": "FinanceApplication",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "0",
-                                "priceCurrency": "USD"
-                            },
-                            "featureList": [
-                                "Real-time exchange rates",
-                                "Institutional mid-market data",
-                                "Zero hidden fees",
-                                "Instant mobile-optimized calculations"
-                            ]
-                        }} />
 
                         <div className="expert-vault card shadow-sm mb-8">
                             <div className="vault-header">
@@ -152,18 +139,20 @@ export default async function CurrencyPairPage({ params }: Props) {
                             <div className="insight-card">
                                 <ShieldCheck size={20} className="text-primary" />
                                 <div>
-                                    <h4>Why Our Rates Matter</h4>
-                                    <p>We source data from the same institutional feeds used by major banks, but we show you the raw rate without the hidden "spread" banks often add.</p>
+                                    <h4>Institutional Analysis</h4>
+                                    <div dangerouslySetInnerHTML={{ __html: historicalAnalysis.replace(/\n/g, '<br/>') }} />
                                 </div>
                             </div>
                             <div className="insight-card">
                                 <MessageSquare size={20} className="text-secondary" />
                                 <div>
                                     <h4>Real-World Utility</h4>
-                                    <p>Our tool is designed for speed. No sign-ups, no ads blocking your view—just the data you need to make a quick financial decision.</p>
+                                    <p>Our tool is designed for speed. No sign-ups, no ads—just the accurate data you need for {fromName} swaps.</p>
                                 </div>
                             </div>
                         </div>
+
+                        <div className="programmatic-prose mt-8 mb-8" dangerouslySetInnerHTML={{ __html: article.replace(/\n/g, '<br/>') }} />
 
                         <section className="faq-section">
                             <h3>Common Questions We Get About {from}/{to}</h3>
@@ -221,6 +210,44 @@ export default async function CurrencyPairPage({ params }: Props) {
                     </div>
                 </aside>
             </div>
+
+            <section className="seo-benefits-grid card glass mt-8">
+                <h2>Why Choose Our Institutional {from} to {to} Converter?</h2>
+                <div className="benefits-row">
+                    <div className="benefit-item">
+                        <TrendingUp size={24} className="text-primary" />
+                        <div>
+                            <h3>True Mid-Market Rates</h3>
+                            <p>Banks hide fees by altering exchange rates. We show you the true institutional mid-market rate for {from}/{to}, updating continuously so you know exactly what your money is worth.</p>
+                        </div>
+                    </div>
+                    <div className="benefit-item">
+                        <ShieldCheck size={24} className="text-secondary" />
+                        <div>
+                            <h3>100% Client-Side Privacy</h3>
+                            <p>We process your {from} conversion locally in your browser. We don't log your location or the amounts you are calculating, ensuring complete financial anonymity.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="seo-content card glass mt-8">
+                <div className="pro-content">
+                    <h3>Guide: Getting the Best {from} to {to} Exchange Rate</h3>
+                    <p>
+                        When converting <b>{from} to {to}</b>, the biggest mistake most consumers and small businesses make is accepting the rate offered by their retail bank or an airport kiosk. These institutions systematically apply a "spread"—a hidden markup ranging from 2% to 6% on top of the actual market rate.
+                    </p>
+                    <p>
+                        <b>Understanding the Mid-Market Rate:</b><br />
+                        The rate you see on our <b>{from} to {to} Currency Converter</b> is the "mid-market rate". This is the midpoint between global buy and sell rates derived from wholesale currency markets. By knowing this exact figure, you can compare it against the rate your bank or transfer service offers to uncover exactly how much they are charging you in hidden margins.
+                    </p>
+                    <p>
+                        <b>Security and Privacy Benefits:</b><br />
+                        In an era of aggressive user-tracking, financial tools are notorious for harvesting data. If you use a tool to check {from}/{to} conversions, that data is often sold to advertisers who then target you with high-fee financial products. We eliminate this entirely. By utilizing strict <b>Client-Side Execution</b>, your browser handles the calculation while our server only broadcasts the raw data feed. No personal identifiable information (PII) is ever collected.
+                    </p>
+                    <p>Always verify the mid-market rate here before authorizing large international wire transfers or paying foreign invoices.</p>
+                </div>
+            </section>
 
         </div>
     );

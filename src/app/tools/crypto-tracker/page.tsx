@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "Track live cryptocurrency prices, market cap, and 24h changes for Bitcoin, Ethereum, and 50+ altcoins. Premium crypto dashboard with real-time accuracy.",
     keywords: ["crypto tracker", "bitcoin price", "ethereum price", "live crypto rates", "crypto market cap", "altcoin tracker"],
     alternates: {
-        canonical: "https://nevy.in/tools/crypto-tracker",
+        canonical: "https://www.nevy.in/tools/crypto-tracker",
     },
 };
 

@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -15,6 +18,32 @@ const WEB_TOPICS = ['Image Optimization', 'Meta Tag SEO', 'Word Density', 'Core 
 
 export async function getProgrammaticPosts(): Promise<BlogPost[]> {
   const posts: BlogPost[] = [];
+
+  // --- Dynamic Authority Articles (JSON files) ---
+  try {
+    const authorityDir = path.join(process.cwd(), 'src', 'lib', 'blog', 'authority');
+    if (fs.existsSync(authorityDir)) {
+      const files = fs.readdirSync(authorityDir).filter(f => f.endsWith('.json'));
+      for (const file of files) {
+        const filePath = path.join(authorityDir, file);
+        const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+
+        posts.push({
+          slug: data.slug,
+          title: data.title,
+          excerpt: data.excerpt,
+          content: data.content,
+          category: 'Authority Insights',
+          date: data.generated_at ? data.generated_at.split('T')[0] : new Date().toISOString().split('T')[0],
+          author: 'Nevy.in Security Team',
+          tags: data.tags || [],
+        });
+      }
+    }
+  } catch (error) {
+    console.error("Error loading dynamic articles:", error);
+  }
+  // ----------------------------------------------
 
   // 0. High-Value Featured Articles for AdSense Approval
   posts.push({

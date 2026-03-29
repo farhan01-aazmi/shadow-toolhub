@@ -17,7 +17,7 @@ export interface RedditTemplate {
 export class AssetGenerator {
     private baseUrl: string;
 
-    constructor(baseUrl: string = 'https://nevy.in') {
+    constructor(baseUrl: string = 'https://www.nevy.in') {
         this.baseUrl = baseUrl;
     }
 

@@ -7,7 +7,20 @@
     "env": {
         "FREE_CURRENCY_API_KEY": "fca_live_9YtWInp8sHclInoB3v2Jcshz78sX8z1vS1D3uBvL",
         "VERCEL_FORCE_NO_BUILD_CACHE": "1",
-        "NEXT_PUBLIC_SITE_URL": "https://nevy.in",
-        "SITE_URL": "https://nevy.in"
-    }
+        "NEXT_PUBLIC_SITE_URL": "https://www.nevy.in",
+        "SITE_URL": "https://www.nevy.in"
+    },
+    "redirects": [
+        {
+            "source": "/(.*)",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "nevy.in"
+                }
+            ],
+            "destination": "https://www.nevy.in/$1",
+            "permanent": true
+        }
+    ]
 }

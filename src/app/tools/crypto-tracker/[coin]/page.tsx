@@ -19,12 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: `${coin.name} (${coin.symbol.toUpperCase()}) Price - Live Market Cap & Stats | Shadow ToolHub`,
         description: `Get the real-time ${coin.name} price, market cap, trading volume, and 24h change. Comprehensive ${coin.symbol.toUpperCase()} analysis with institutional-grade data.`,
         alternates: {
-            canonical: `https://nevy.in/tools/crypto-tracker/${coinId}`,
+            canonical: `https://www.nevy.in/tools/crypto-tracker/${coinId}`,
         },
         openGraph: {
             images: [
                 {
-                    url: `https://nevy.in/og/og-crypto-${coinId}.png`,
+                    url: `https://www.nevy.in/og/og-crypto-${coinId}.png`,
                     width: 1200,
                     height: 630,
                     alt: `${coin.name} Price Chart`,
@@ -193,6 +193,44 @@ export default async function CoinDetailPage({ params }: Props) {
                     </div>
                 </aside>
             </div>
+
+            <section className="seo-benefits-grid card glass mt-8">
+                <h2>Why Use Our Institutional Crypto Tracker?</h2>
+                <div className="benefits-row">
+                    <div className="benefit-item">
+                        <TrendingUp size={24} className="text-primary" />
+                        <div>
+                            <h3>Real-Time Precision</h3>
+                            <p>We source our data directly from the most liquid exchanges to provide you with the most accurate mid-market rates for {coin.name} ({coin.symbol.toUpperCase()}). Stay ahead of whales with 24/7 live updates.</p>
+                        </div>
+                    </div>
+                    <div className="benefit-item">
+                        <ShieldCheck size={24} className="text-accent" />
+                        <div>
+                            <h3>Privacy First</h3>
+                            <p>Unlike exchange dashboards, we don't track your IP or require signups. Analyze {coin.symbol.toUpperCase()} charts entirely anonymously. Your financial interests remain your own.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="seo-content card glass mt-8">
+                <div className="pro-content">
+                    <h3>How to Analyze {coin.name} Like a Pro</h3>
+                    <p>
+                        The cryptocurrency market is highly volatile, making real-time, accurate data the most valuable asset you can have. Our <b>{coin.name} Live Tracker</b> is designed for institutional-grade clarity, stripping away social media noise and focusing entirely on objective market metrics.
+                    </p>
+                    <p>
+                        <b>1. Monitor 24H Volume:</b> Volume is the ultimate indicator of market conviction. A high volume associated with a price increase suggests strong momentum for {coin.symbol}. Conversely, a price spike on low volume is often a "bull trap" orchestrated by low-liquidity market makers. Always check the volume before executing a trade.
+                    </p>
+                    <p>
+                        <b>2. Market Cap Context:</b> While the price of {coin.name} might look high or low, the <b>Market Capitalization</b> (Price × Circulating Supply) gives you the true valuation relative to other assets. A coin with a $1B market cap takes significantly less capital to move 10% than a coin with a $100B market cap.
+                    </p>
+                    <p>
+                        <b>3. Security & Safety:</b> In 2026, client-side tools are the standard. Our tracker uses the CoinGecko API strictly in read-only mode, fetching data dynamically to your browser. This <b>Zero-Knowledge Architecture</b> means we have zero insight into what assets you are researching. We believe your portfolio analysis is strictly confidential. No Cookies. No Trackers.
+                    </p>
+                </div>
+            </section>
 
         </div>
     );

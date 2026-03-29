@@ -31,13 +31,13 @@ export default function Navbar() {
 
         <div className="nav-links">
           <Link href="/">Home</Link>
-          <Link href="#tools-section">Tools</Link>
-          <Link href="#blog-section">Blog</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/all-tools/">Tools</Link>
+          <Link href="/blog/">Blog</Link>
+          <Link href="/about/">About</Link>
+          <Link href="/contact/">Contact</Link>
         </div>
 
-        <Link href="#tools-section" className="nav-cta" style={{ display: mobileOpen ? 'none' : undefined }}>
+        <Link href="/all-tools/" className="nav-cta" style={{ display: mobileOpen ? 'none' : undefined }}>
           All Tools →
         </Link>
 
@@ -57,9 +57,15 @@ export default function Navbar() {
 
       {mobileOpen && (
         <div className="mobile-menu">
-          {['Home', 'Tools', 'Blog', 'About', 'Contact'].map(item => (
-            <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} onClick={() => setMobileOpen(false)}>
-              {item}
+          {[
+            { name: 'Home', path: '/' },
+            { name: 'Tools', path: '/all-tools/' },
+            { name: 'Blog', path: '/blog/' },
+            { name: 'About', path: '/about/' },
+            { name: 'Contact', path: '/contact/' }
+          ].map(item => (
+            <Link key={item.name} href={item.path} onClick={() => setMobileOpen(false)}>
+              {item.name}
             </Link>
           ))}
         </div>

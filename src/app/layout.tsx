@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, DM_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -17,7 +18,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nevy.in'),
+  metadataBase: new URL('https://www.nevy.in'),
   title: {
     default: "Nevy.in — Tools that work.",
     template: "%s | Nevy.in"
@@ -39,8 +40,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://nevy.in",
-    siteName: "nevy.in",
+    url: "https://www.nevy.in",
+    siteName: "www.nevy.in",
     title: "Nevy.in — 150+ Free Online Tools",
     description: "Image, PDF, text, calculators, security — all tools in one place. No signup required. No fees.",
     images: [
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
     images: ["/api/og"],
   },
   alternates: {
-    canonical: "./",
+    canonical: "https://www.nevy.in",
   }
 };
 
@@ -70,9 +71,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${bricolage.variable} ${dmMono.variable}`}>
+      <head>
+        <script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2623046574772198"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
       <body>
         <Navbar />
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

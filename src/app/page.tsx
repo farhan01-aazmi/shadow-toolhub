@@ -13,6 +13,7 @@ const TOOLS = [
   { num: '06', ico: '₿', name: 'Crypto Tracker', cat: 'Finance', desc: 'Live cryptocurrency prices, market cap, volume, and 24h change tracking', uses: '55K/mo', tag: 'Finance', link: '/tools/crypto-tracker' },
   { num: '07', ico: '🏷️', name: 'Meta Tag Generator', cat: 'SEO', desc: 'Generate SEO meta tags, Open Graph, and Twitter cards automatically', uses: '43K/mo', tag: 'SEO', link: '/tools/meta-generator' },
   { num: '08', ico: '🎨', name: 'Image Optimizer', cat: 'Image', desc: 'Optimize images for web — reduce file size while maintaining visual quality', uses: '38K/mo', tag: 'Image', link: '/tools/image-optimizer' },
+  { num: '09', ico: '🇺🇸', name: 'US Tax Calculator', cat: 'Finance', desc: 'Calculate 2024-2025 federal income tax liability with latest IRS brackets', uses: 'New', tag: 'High CPC', link: '/tools/us-income-tax-calculator' },
 ];
 
 const TABS = ['All', 'Text', 'Image', 'PDF', 'Security', 'Dev', 'Finance', 'Design'];
@@ -97,10 +98,37 @@ export default function Home() {
 
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "nevy.in",
-    "url": "https://nevy.in",
-    "description": "150+ free online tools for images, PDFs, text, calculators and more."
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.nevy.in/#organization",
+        "name": "nevy.in",
+        "url": "https://www.nevy.in",
+        "logo": "https://www.nevy.in/logo.png",
+        "description": "150+ free online tools for images, PDFs, text, calculators and more. No signup required. No fees.",
+        "sameAs": [
+          "https://x.com/nevy_in",
+          "https://linkedin.com/company/nevy-in",
+          "https://youtube.com/@nevy-in"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.nevy.in/#website",
+        "url": "https://www.nevy.in",
+        "name": "Nevy.in",
+        "description": "The Ultimate Free Online Utility Hub",
+        "publisher": { "@id": "https://www.nevy.in/#organization" },
+        "potentialAction": [{
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.nevy.in/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }]
+      }
+    ]
   };
 
   return (
@@ -282,64 +310,6 @@ export default function Home() {
         </aside>
       </div>
 
-      {/* ── FOOTER ── */}
-      <footer className="footer-bp">
-        <div className="foot-line"></div>
-        <div className="foot-inner">
-          <div className="foot-brand">
-            <Link href="/" className="logo">
-              <div className="logo-mark">
-                <svg viewBox="0 0 34 34" fill="none">
-                  <rect width="34" height="34" fill="#141414" />
-                  <path d="M8 8L17 8L26 17L17 26L8 26Z" fill="none" stroke="#f0a500" strokeWidth="1.5" />
-                  <circle cx="17" cy="17" r="3" fill="#f0a500" />
-                </svg>
-              </div>
-              <span className="logo-word">nevy<em>.in</em></span>
-            </Link>
-            <p>150+ free online tools — image, PDF, text, calculators, security. No signup required. No fees. Ever.</p>
-            <div className="socials">
-              <a className="soc" href="#">𝕏</a>
-              <a className="soc" href="#">in</a>
-              <a className="soc" href="#">▶</a>
-              <a className="soc" href="#">📘</a>
-            </div>
-          </div>
-          <div className="foot-col">
-            <h4>Tools</h4>
-            <Link href="/tools/word-counter">Text Tools</Link>
-            <Link href="/tools/image-optimizer">Image Tools</Link>
-            <Link href="/tools/currency-converter">PDF Tools</Link>
-            <Link href="/tools/loan-calculator">Calculators</Link>
-            <Link href="/tools/meta-generator">Dev Tools</Link>
-            <Link href="/tools/meta-generator">Security</Link>
-          </div>
-          <div className="foot-col">
-            <h4>Company</h4>
-            <Link href="/about">About Us</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/contact">Contact Us</Link>
-            <Link href="/contact">Advertise</Link>
-            <Link href="/contact">Submit Tool</Link>
-          </div>
-          <div className="foot-col">
-            <h4>Legal</h4>
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms of Service</Link>
-            <Link href="/terms">Disclaimer</Link>
-            <Link href="/privacy">Cookie Policy</Link>
-          </div>
-        </div>
-        <div className="foot-bottom">
-          <p>© 2025 nevy.in — All rights reserved</p>
-          <div className="foot-links">
-            <Link href="/privacy">Privacy</Link>
-            <Link href="/terms">Terms</Link>
-            <Link href="/terms">Disclaimer</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }

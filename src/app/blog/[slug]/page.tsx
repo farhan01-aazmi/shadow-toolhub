@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: post.excerpt,
         keywords: post.tags,
         alternates: {
-            canonical: `https://nevy.in/blog/${post.slug}`,
+            canonical: `https://www.nevy.in/blog/${post.slug}`,
         }
     };
 }

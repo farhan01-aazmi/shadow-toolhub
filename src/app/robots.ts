@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://nevy.in/sitemap.xml',
+        sitemap: 'https://www.nevy.in/sitemap.xml',
     };
 }
