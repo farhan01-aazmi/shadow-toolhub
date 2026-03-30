@@ -174,8 +174,7 @@ export default function Home() {
       </section>
 
       {/* ── AD 728x90 ── */}
-      <div className="ad-bar">
-        <span className="ad-lbl">Ad</span>
+      <div className="ad-bar" style={{ display: 'none' }}>
         <div className="ad728 ad-slot"></div>
       </div>
 
@@ -278,8 +277,8 @@ export default function Home() {
 
         {/* SIDEBAR */}
         <aside className="sidebar-bp rv">
-          <div className="sw">
-            <div className="sw-hd">Advertisement</div>
+          <div className="sw" style={{ display: 'none' }}>
+            <div className="sw-hd"></div>
             <div className="sw-bd"><div className="ad300 ad-slot"></div></div>
           </div>
           <div className="sw">
