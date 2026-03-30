@@ -14,6 +14,9 @@ const TOOLS = [
   { num: '07', ico: '🏷️', name: 'Meta Tag Generator', cat: 'SEO', desc: 'Generate SEO meta tags, Open Graph, and Twitter cards automatically', uses: '43K/mo', tag: 'SEO', link: '/tools/meta-generator/' },
   { num: '08', ico: '🎨', name: 'Image Optimizer', cat: 'Image', desc: 'Optimize images for web — reduce file size while maintaining visual quality', uses: '38K/mo', tag: 'Image', link: '/tools/image-optimizer/' },
   { num: '09', ico: '🇺🇸', name: 'US Tax Calculator', cat: 'Finance', desc: 'Calculate 2026 federal income tax liability with latest IRS brackets', uses: 'New', tag: 'High CPC', link: '/tools/us-income-tax-calculator/' },
+  { num: '10', ico: '📄', name: 'PDF to Word', cat: 'PDF', desc: 'Convert PDF documents to editable Microsoft Word files accurately', uses: '45K', tag: 'Hot', link: '/tools/pdf-to-word/' },
+  { num: '11', ico: '🔢', name: 'JSON Formatter', cat: 'Dev', desc: 'Clean, format, and validate JSON data with syntax highlighting', uses: '32K', tag: 'Dev', link: '/tools/json-formatter/' },
+  { num: '12', ico: '⏰', name: 'Pomodoro Timer', cat: 'Design', desc: 'Boost productivity with 25/5 work-break cycles and audio alerts', uses: '28K', tag: 'Utility', link: '/tools/pomodoro-timer/' },
 ];
 
 const TABS = ['All', 'Text', 'Image', 'PDF', 'Security', 'Dev', 'Finance', 'Design'];
@@ -223,7 +226,7 @@ export default function Home() {
           ))}
         </div>
         <div className="ttable">
-          {TOOLS.map(tool => (
+          {TOOLS.filter(tool => activeTab === 'All' || tool.cat === activeTab).map(tool => (
             <Link key={tool.num} className="trow" href={tool.link}>
               <span className="tnum">{tool.num}</span>
               <div style={{ display: 'flex', alignItems: 'center', gap: '13px' }}>
@@ -238,6 +241,11 @@ export default function Home() {
               <div className="ttag">{tool.tag}</div>
             </Link>
           ))}
+          {TOOLS.filter(tool => activeTab === 'All' || tool.cat === activeTab).length === 0 && (
+            <div style={{ padding: '40px', textAlign: 'center', color: 'var(--sub)' }}>
+              No tools found in this category yet. We are adding more daily!
+            </div>
+          )}
         </div>
       </div>
 
