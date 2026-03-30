@@ -62,7 +62,7 @@ export default function Home() {
             if (!start) start = ts;
             const p = Math.min((ts - start) / 1800, 1);
             const ease = 1 - Math.pow(1 - p, 4);
-            el.textContent = Math.floor(ease * 150) + '+';
+            el.textContent = Math.floor(ease * 70) + '+';
             if (p < 1) requestAnimationFrame(run);
           };
           requestAnimationFrame(run);
@@ -108,7 +108,7 @@ export default function Home() {
         "name": "nevy.in",
         "url": "https://www.nevy.in",
         "logo": "https://www.nevy.in/logo.png",
-        "description": "150+ free online tools for images, PDFs, text, calculators and more. No signup required. No fees.",
+        "description": "70+ free online tools for images, PDFs, text, calculators and more. No signup required. No fees.",
         "sameAs": [
           "https://x.com/nevy_in",
           "https://linkedin.com/company/nevy-in",
@@ -152,7 +152,7 @@ export default function Home() {
           </div>
           <div className="hero-right rv">
             <p className="hero-desc">
-              150+ free tools for image compression, PDF conversion, password generation, EMI calculation, and more. No signup. No fees. Ever.
+              70+ free tools for image compression, PDF conversion, password generation, EMI calculation, and more. No signup. No fees. Ever.
             </p>
             <div className="hero-search">
               <input type="text" placeholder="Search tools or guides..." />
@@ -166,8 +166,8 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-stats rv">
-          <div className="hs"><div className="hs-n amber" ref={counterRef}>150+</div><div className="hs-l">Free Tools</div></div>
-          <div className="hs"><div className="hs-n stroke">2M+</div><div className="hs-l">Monthly Users</div></div>
+          <div className="hs"><div className="hs-n amber" ref={counterRef}>70+</div><div className="hs-l">Free Tools</div></div>
+          <div className="hs"><div className="hs-n stroke">New</div><div className="hs-l">Fast Growing</div></div>
           <div className="hs"><div className="hs-n amber">10+</div><div className="hs-l">Categories</div></div>
           <div className="hs"><div className="hs-n stroke">$0</div><div className="hs-l">Always Free</div></div>
         </div>
@@ -213,9 +213,9 @@ export default function Home() {
         <div className="sec-head">
           <div>
             <div className="sec-lbl">// tools</div>
-            <div className="sec-ttl">Popular Tools</div>
+            <h2 className="sec-ttl" style={{ fontSize: '1.4rem' }}>Popular Tools</h2>
           </div>
-          <Link href="/all-tools/" className="link-all">All 150+ Tools</Link>
+          <Link href="/all-tools" className="link-all" style={{ opacity: 0.7 }}>All 70+ Tools →</Link>
         </div>
         <div className="tabs">
           {TABS.map(tab => (
