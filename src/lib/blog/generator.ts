@@ -212,12 +212,12 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
     });
   });
 
-  // 3. Generate 70+ variations for SEO reach
-  for (let i = 1; i <= 80; i++) {
-    const topic = WEB_TOPICS[i % WEB_TOPICS.length];
+  // 3. Generate SEO reach articles
+  WEB_TOPICS.forEach((topic, i) => {
+    const index = i + 1;
     posts.push({
-      slug: `expert-guide-to-${topic.toLowerCase().replace(/ /g, '-')}-${i}`,
-      title: `Expert Guide: Professional ${topic} Mastery (Part ${i})`,
+      slug: `expert-guide-to-${topic.toLowerCase().replace(/ /g, '-')}`,
+      title: `Expert Guide: Professional ${topic} Mastery`,
       excerpt: `Learn how to master ${topic} for high-performance websites in 2026. Architectural precision for SEO.`,
       category: 'Web',
       date: '2026-03-03',
@@ -243,7 +243,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
         </article>
       `
     });
-  }
+  });
 
   return posts;
 }
