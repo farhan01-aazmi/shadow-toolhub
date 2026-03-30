@@ -78,9 +78,15 @@ body {
 }
 
 .logo-mark svg {
-  width: 34px;
-  height: 34px;
-  display: block
+  width: 42px;
+  height: 42px;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(240, 165, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-mark svg {
+  transform: rotate(5deg) scale(1.05);
 }
 
 .logo-word {
@@ -732,9 +738,6 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 48px 72px;
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 48px;
 }
 
 .blog-hd {
