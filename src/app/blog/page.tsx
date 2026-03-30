@@ -4,7 +4,7 @@ import { getProgrammaticPosts } from '@/lib/blog/generator';
 import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Nevy.in Blog - Insights, Tips & Tutorials",
+    title: "Tech Resolutions Blog - Insights, Tips & Tutorials",
     description: "Stay updated with the latest trends in finance, crypto, and web performance. Expert guides on how to use our tools for maximum benefit.",
     alternates: {
         canonical: "https://www.nevy.in/blog",

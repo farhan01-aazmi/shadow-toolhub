@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Ip Address Lookup Free Online | Nevy.in',
+    title: 'Ip Address Lookup Free Online | Tech Resolutions',
     description: 'Free online Ip Address Lookup tool. No signup required, works instantly in your browser.',
 };
 

@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Text To Speech Free Online | Nevy.in',
+    title: 'Text To Speech Free Online | Tech Resolutions',
     description: 'Free online Text To Speech tool. No signup required, works instantly in your browser.',
 };
 

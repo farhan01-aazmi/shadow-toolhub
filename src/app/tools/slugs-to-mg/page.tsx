@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Slugs To Mg - Free Online Universal Converter | Nevy.in',
+    title: 'Slugs To Mg - Free Online Universal Converter | Tech Resolutions',
     description: 'Convert Slugs to Mg instantly with our free online tool. High accuracy, no signup required, 100% private.',
 };
 

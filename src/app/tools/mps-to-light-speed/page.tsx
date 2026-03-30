@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Mps To Light Speed - Free Online Universal Converter | Nevy.in',
+    title: 'Mps To Light Speed - Free Online Universal Converter | Tech Resolutions',
     description: 'Convert Mps to Light Speed instantly with our free online tool. High accuracy, no signup required, 100% private.',
 };
 

@@ -4,7 +4,7 @@ import { ShieldCheck, Zap, Globe, HardDrive } from 'lucide-react';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-    title: "Image Optimizer - Compress & Convert to WebP Online | Nevy.in",
+    title: "Image Optimizer - Compress & Convert to WebP Online | Tech Resolutions",
     description: "Free online image optimizer to compress and convert images to WebP, JPEG, or PNG. Boost your website speed and USA SEO ranking without losing quality.",
     keywords: ["image optimizer", "compress image", "webp converter", "online image compressor", "resize image online", "speed up website"],
     alternates: {

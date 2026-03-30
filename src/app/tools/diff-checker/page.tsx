@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Diff Checker Free Online | Nevy.in',
+    title: 'Diff Checker Free Online | Tech Resolutions',
     description: 'Free online Diff Checker tool. No signup required, works instantly in your browser.',
 };
 

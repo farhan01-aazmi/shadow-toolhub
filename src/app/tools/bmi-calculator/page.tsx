@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Bmi Calculator Free Online | Nevy.in',
+    title: 'Bmi Calculator Free Online | Tech Resolutions',
     description: 'Free online Bmi Calculator tool. No signup required, works instantly in your browser.',
 };
 

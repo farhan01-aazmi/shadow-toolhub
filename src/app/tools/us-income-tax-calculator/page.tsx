@@ -4,7 +4,7 @@ import { ShieldCheck, TrendingUp, DollarSign, Calculator, HelpCircle } from 'luc
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-    title: "US Income Tax Calculator 2024-2025 - Free Federal Estimator | Nevy.in",
+    title: "US Income Tax Calculator 2024-2025 - Free Federal Estimator | Tech Resolutions",
     description: "Calculate your 2024 federal income tax liability with our free US tax estimator. Includes standard deduction, marginal rates, and effective tax rate for the 2025 filing season.",
     keywords: ["us income tax calculator", "federal tax estimator", "2024 tax brackets", "irs income tax calculator", "online tax calculator usa", "marginal tax rate", "effective tax rate", "take home pay calculator"],
     alternates: {
@@ -88,7 +88,7 @@ export default function USTaxCalculatorPage() {
                         Why Use Our Tax Estimator?
                     </h3>
                     <p>
-                        Navigating the complex world of the Internal Revenue Service (IRS) can be daunting for even the most financially savvy individuals. Our US Income Tax Calculator is designed to simplify this process, offering a clear and transparent view of your potential federal tax liability. Unlike complex software that requires long signups, Nevy.in provides an instant, client-side calculation that ensures your sensitive financial data never leaves your device.
+                        Navigating the complex world of the Internal Revenue Service (IRS) can be daunting for even the most financially savvy individuals. Our US Income Tax Calculator is designed to simplify this process, offering a clear and transparent view of your potential federal tax liability. Unlike complex software that requires long signups, Tech Resolutions provides an instant, client-side calculation that ensures your sensitive financial data never leaves your device.
                     </p>
                     <p className="mt-4">
                         By inputting your annual gross income and filing status, you can see exactly how the federal progressive tax system applies to your situation. This transparency allows for better financial planning throughout the year, preventing unpleasant surprises during the April filing season.
@@ -114,10 +114,10 @@ export default function USTaxCalculatorPage() {
                         Private & Secure by Design
                     </h3>
                     <p>
-                        Financial privacy is a fundamental right. At Nevy.in, we believe you shouldn't have to trade your personal information for a simple calculation. Our US Income Tax Calculator runs entirely in your browser using JavaScript. No information—not your salary, not your filing status—is ever sent to our servers.
+                        Financial privacy is a fundamental right. At Tech Resolutions, we believe you shouldn't have to trade your personal information for a simple calculation. Our US Income Tax Calculator runs entirely in your browser using JavaScript. No information—not your salary, not your filing status—is ever sent to our servers.
                     </p>
                     <p className="mt-4">
-                        This approach not only provides the fastest experience possible but also the most secure one. In an era of data breaches and intrusive tracking, Nevy.in stands as a privacy-first hub for all your financial utility needs.
+                        This approach not only provides the fastest experience possible but also the most secure one. In an era of data breaches and intrusive tracking, Tech Resolutions stands as a privacy-first hub for all your financial utility needs.
                     </p>
                 </article>
             </div>
@@ -148,7 +148,7 @@ export default function USTaxCalculatorPage() {
                             While our tool focuses on **Federal Income Tax**, it is important to remember that many states also levy their own income tax. These rates vary wildly, from 0% in states like Florida, Texas, and Washington, to over 13% in California. Generally, state taxes are calculated on your Adjusted Gross Income (AGI). 
                         </p>
                         <p className="mt-4">
-                            We are currently expanding Nevy.in to include state-specific calculators for all 50 US states. Monitoring your total tax burden—both federal and state—is the first step toward true financial freedom and optimized investment strategies.
+                            We are currently expanding Tech Resolutions to include state-specific calculators for all 50 US states. Monitoring your total tax burden—both federal and state—is the first step toward true financial freedom and optimized investment strategies.
                         </p>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'All Free Online Tools | Nevy.in - 150+ Utility Tools',
+    title: 'All Free Online Tools | Tech Resolutions - 150+ Utility Tools',
     description: 'Browse 150+ free online tools — image compressor, PDF converter, EMI calculator, password generator, word counter, crypto tracker and more. No signup required.',
     alternates: {
         canonical: 'https://www.nevy.in/all-tools',
@@ -171,7 +171,7 @@ export default function ToolsDirectory() {
             <div style={{ marginTop: '80px', textAlign: 'center', padding: '40px', background: 'rgba(255,255,255,0.02)', borderRadius: '20px' }}>
                 <h3 style={{ marginBottom: '15px' }}>Need a specific tool?</h3>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '25px' }}>
-                    We are constantly adding new utilities to Nevy.in. Contact us to request a custom tool.
+                    We are constantly adding new utilities to Tech Resolutions. Contact us to request a custom tool.
                 </p>
                 <Link href="/contact/" className="btn-a" style={{ padding: '12px 30px' }}>
                     Contact Support

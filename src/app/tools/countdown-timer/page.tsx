@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Countdown Timer Free Online | Nevy.in',
+    title: 'Countdown Timer Free Online | Tech Resolutions',
     description: 'Free online Countdown Timer tool. No signup required, works instantly in your browser.',
 };
 

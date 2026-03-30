@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!post) return { title: 'Article Not Found' };
 
     return {
-        title: `${post.title} | Shadow ToolHub Blog`,
+        title: `${post.title} | Tech Resolutions Blog`,
         description: post.excerpt,
         keywords: post.tags,
         alternates: {

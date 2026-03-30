@@ -4,7 +4,7 @@ import CryptoDashboard from './CryptoDashboard';
 import { Shield, TrendingUp, BarChart3, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Live Crypto Prices & Market Tracker | Nevy.in",
+    title: "Live Crypto Prices & Market Tracker | Tech Resolutions",
     description: "Track live cryptocurrency prices, market cap, and 24h changes for Bitcoin, Ethereum, and 50+ altcoins. Premium crypto dashboard with real-time accuracy.",
     keywords: ["crypto tracker", "bitcoin price", "ethereum price", "live crypto rates", "crypto market cap", "altcoin tracker"],
     alternates: {
@@ -72,7 +72,7 @@ export default async function CryptoTrackerPage() {
                     </p>
                     <p>
                         Whether you're monitoring <b>Stablecoins</b> for ecosystem stability or tracking
-                        the growth of Layer-2 scaling solutions, Nevy.in delivers raw,
+                        the growth of Layer-2 scaling solutions, Tech Resolutions delivers raw,
                         high-frequency data without the noise of typical news-driven trackers.
                     </p>
                     <ul>

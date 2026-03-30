@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Inches To Cm Free Online | Nevy.in',
+    title: 'Inches To Cm Free Online | Tech Resolutions',
     description: 'Free online Inches To Cm tool. No signup required, works instantly in your browser.',
 };
 

@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Liters To Gallons Free Online | Nevy.in',
+    title: 'Liters To Gallons Free Online | Tech Resolutions',
     description: 'Free online Liters To Gallons tool. No signup required, works instantly in your browser.',
 };
 

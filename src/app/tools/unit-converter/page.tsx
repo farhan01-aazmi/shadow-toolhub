@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Unit Converter Free Online | Nevy.in',
+    title: 'Unit Converter Free Online | Tech Resolutions',
     description: 'Free online Unit Converter tool. No signup required, works instantly in your browser.',
 };
 

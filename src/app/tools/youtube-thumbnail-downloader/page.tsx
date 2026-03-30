@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Youtube Thumbnail Downloader Free Online | Nevy.in',
+    title: 'Youtube Thumbnail Downloader Free Online | Tech Resolutions',
     description: 'Free online Youtube Thumbnail Downloader tool. No signup required, works instantly in your browser.',
 };
 

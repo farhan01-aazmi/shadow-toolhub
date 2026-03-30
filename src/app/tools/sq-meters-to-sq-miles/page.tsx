@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Sq Meters To Sq Miles - Free Online Universal Converter | Nevy.in',
+    title: 'Sq Meters To Sq Miles - Free Online Universal Converter | Tech Resolutions',
     description: 'Convert Sq Meters to Sq Miles instantly with our free online tool. High accuracy, no signup required, 100% private.',
 };
 

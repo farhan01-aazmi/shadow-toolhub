@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Regex Tester Free Online | Nevy.in',
+    title: 'Regex Tester Free Online | Tech Resolutions',
     description: 'Free online Regex Tester tool. No signup required, works instantly in your browser.',
 };
 

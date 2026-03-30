@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Age Calculator Free Online | Nevy.in',
+    title: 'Age Calculator Free Online | Tech Resolutions',
     description: 'Free online Age Calculator tool. No signup required, works instantly in your browser.',
 };
 

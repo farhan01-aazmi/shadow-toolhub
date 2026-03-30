@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Character Counter Free Online | Nevy.in',
+    title: 'Character Counter Free Online | Tech Resolutions',
     description: 'Free online Character Counter tool. No signup required, works instantly in your browser.',
 };
 

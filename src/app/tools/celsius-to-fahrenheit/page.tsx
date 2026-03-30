@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Celsius To Fahrenheit Free Online | Nevy.in',
+    title: 'Celsius To Fahrenheit Free Online | Tech Resolutions',
     description: 'Free online Celsius To Fahrenheit tool. No signup required, works instantly in your browser.',
 };
 

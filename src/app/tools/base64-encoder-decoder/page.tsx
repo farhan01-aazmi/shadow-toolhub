@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Base64 Encoder Decoder Free Online | Nevy.in',
+    title: 'Base64 Encoder Decoder Free Online | Tech Resolutions',
     description: 'Free online Base64 Encoder Decoder tool. No signup required, works instantly in your browser.',
 };
 

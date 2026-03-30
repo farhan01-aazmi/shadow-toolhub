@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Kg To Pounds Free Online | Nevy.in',
+    title: 'Kg To Pounds Free Online | Tech Resolutions',
     description: 'Free online Kg To Pounds tool. No signup required, works instantly in your browser.',
 };
 

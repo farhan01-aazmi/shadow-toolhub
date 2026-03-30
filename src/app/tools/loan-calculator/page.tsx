@@ -4,7 +4,7 @@ import { ShieldCheck, TrendingUp, DollarSign, Calculator } from 'lucide-react';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-    title: "Loan & Mortgage Calculator - Monthly Payment Estimator | Nevy.in",
+    title: "Loan & Mortgage Calculator - Monthly Payment Estimator | Tech Resolutions",
     description: "Free online loan calculator to estimate monthly payments, total interest, and complete payoff schedules for mortgages, auto loans, and personal loans.",
     keywords: ["loan calculator", "mortgage calculator", "monthly payment estimator", "interest rate calculator", "personal loan calculator", "auto loan calculator"],
     alternates: {

@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Youtube Title Generator Free Online | Nevy.in',
+    title: 'Youtube Title Generator Free Online | Tech Resolutions',
     description: 'Free online Youtube Title Generator tool. No signup required, works instantly in your browser.',
 };
 

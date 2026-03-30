@@ -13,7 +13,7 @@ export default function Logo({ size = 34 }: { size?: number }) {
                 </svg>
             </div>
             <span className="text-[1.2rem] font-bold tracking-[-0.04em] text-text-p leading-none">
-                nevy<em className="text-amber not-italic">.in</em>
+                Tech Resolutions<em className="text-amber not-italic">.in</em>
             </span>
         </div>
     );

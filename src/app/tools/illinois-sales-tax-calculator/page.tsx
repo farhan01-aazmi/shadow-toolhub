@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Illinois Sales Tax Calculator - Free Online Universal Converter | Nevy.in',
+    title: 'Illinois Sales Tax Calculator - Free Online Universal Converter | Tech Resolutions',
     description: 'Convert Illinois Sales Tax Calculator instantly with our free online tool. High accuracy, no signup required, 100% private.',
 };
 

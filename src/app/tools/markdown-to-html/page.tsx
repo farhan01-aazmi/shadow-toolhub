@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Markdown To Html Free Online | Nevy.in',
+    title: 'Markdown To Html Free Online | Tech Resolutions',
     description: 'Free online Markdown To Html tool. No signup required, works instantly in your browser.',
 };
 

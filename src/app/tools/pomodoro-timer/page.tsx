@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Pomodoro Timer Free Online | Nevy.in',
+    title: 'Pomodoro Timer Free Online | Tech Resolutions',
     description: 'Free online Pomodoro Timer tool. No signup required, works instantly in your browser.',
 };
 

@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Case Converter Free Online | Nevy.in',
+    title: 'Case Converter Free Online | Tech Resolutions',
     description: 'Free online Case Converter tool. No signup required, works instantly in your browser.',
 };
 

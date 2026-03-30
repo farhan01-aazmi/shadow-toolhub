@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Px To Em Free Online | Nevy.in',
+    title: 'Px To Em Free Online | Tech Resolutions',
     description: 'Free online Px To Em tool. No signup required, works instantly in your browser.',
 };
 

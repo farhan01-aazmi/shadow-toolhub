@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Knots To Mps - Free Online Universal Converter | Nevy.in',
+    title: 'Knots To Mps - Free Online Universal Converter | Tech Resolutions',
     description: 'Convert Knots to Mps instantly with our free online tool. High accuracy, no signup required, 100% private.',
 };
 

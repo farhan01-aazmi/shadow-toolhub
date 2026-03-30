@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Binary To Text Free Online | Nevy.in',
+    title: 'Binary To Text Free Online | Tech Resolutions',
     description: 'Free online Binary To Text tool. No signup required, works instantly in your browser.',
 };
 

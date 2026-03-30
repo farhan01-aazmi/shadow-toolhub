@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Sentence Counter Free Online | Nevy.in',
+    title: 'Sentence Counter Free Online | Tech Resolutions',
     description: 'Free online Sentence Counter tool. No signup required, works instantly in your browser.',
 };
 

@@ -18,7 +18,7 @@ export function generateMetaDescription(from: string, to: string): string {
     const descs = [
         `Check the live ${from} to ${to} exchange rate today. Stop overpaying banks and use our real-time tracker for the most accurate zero-markup currency conversion online.`,
         `Monitor ${from}/${to} with exact precision in 2026. See historical lows, daily highs, and calculate conversion amounts instantly without hidden banking fees or spreads.`,
-        `Planning an international transfer? Get the exact mid-market rate for ${from} to ${to}. Nevy.in is completely ad-free and using institutional-grade financial APIs.`,
+        `Planning an international transfer? Get the exact mid-market rate for ${from} to ${to}. Tech Resolutions is completely ad-free and using institutional-grade financial APIs.`,
         `Live high-frequency calculator for ${from} to ${to}. Find exactly how much your money is worth today in global markets with zero hidden fees and no registration needed.`
     ];
     // Ensure we are strictly between 155 and 160 characters for Ahrefs
@@ -32,8 +32,8 @@ export function generateIntroParagraph(from: string, to: string, fromName: strin
     const intros = [
         `Converting **${fromName} (${from})** to **${toName} (${to})** shouldn't be complicated or expensive.${stateContext} The global economy moves fast, and getting the real-time mid-market rate is crucial for both travelers and international businesses. This tool provides up-to-the-minute accuracy so you never lose out on poor exchange spreads.`,
         `Whether you're planning an international trip, sending money abroad, or simply tracking forex markets, understanding the real-time value of **${from} against ${to}** is essential.${stateContext} The banking system often hides massive fees in their exchange rates; our live calculator ensures you see the pure institutional rate.`,
-        `The economic relationship between the economies utilizing **${from}** and **${to}** is deeply reflected in their daily exchange volatility. For residents in the US states like **${state?.name || "New York"}**, tracking this specific pair requires precision tracking tools. Nevy.in provides this directly from the source.`,
-        `At Nevy.in, we believe financial data should be free and accessible. If you are comparing rates to exchange **${fromName} for ${toName}**, use our tracker below.${stateContext} We aggregate high-frequency trading data to give you the most honest conversion chart on the web.`
+        `The economic relationship between the economies utilizing **${from}** and **${to}** is deeply reflected in their daily exchange volatility. For residents in the US states like **${state?.name || "New York"}**, tracking this specific pair requires precision tracking tools. Tech Resolutions provides this directly from the source.`,
+        `At Tech Resolutions, we believe financial data should be free and accessible. If you are comparing rates to exchange **${fromName} for ${toName}**, use our tracker below.${stateContext} We aggregate high-frequency trading data to give you the most honest conversion chart on the web.`
     ];
     return intros[Math.floor(Math.random() * intros.length)];
 }
@@ -61,7 +61,7 @@ export function generateFAQSchema(from: string, to: string, rateValue: string = 
                 "name": `What is the best way to convert ${from} to ${to}?`,
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": `The best way to convert ${from} to ${to} is to use a live mid-market rate calculator like Nevy.in to check the exact value, and then use a low-fee money transfer service rather than a traditional bank.`
+                    "text": `The best way to convert ${from} to ${to} is to use a live mid-market rate calculator like Tech Resolutions to check the exact value, and then use a low-fee money transfer service rather than a traditional bank.`
                 }
             },
             {
@@ -100,9 +100,9 @@ export function generateLongFormArticle(from: string, to: string, fromName: stri
     ];
 
     const solution = [
-        `### Introducing Nevy.in: Built for Precision\nWe built **Nevy.in** to be the exact opposite of the bloated web. Our currency engine is powered by Next.js Edge architecture, meaning it delivers real-time market data with near-zero latency from the world's leading financial APIs.`,
-        `### A Faster, Cleaner Way to Track Markets\nNevy.in was designed as a "No-Nonsense" utility hub. By leveraging serverless edge functions, we provide the raw mid-market rate for over 10,000+ pairs, including **${from}/${to}**, without a single advertisement or signup form required.`,
-        `### Why Transparency Matters to Us\nFinancial utility should be a public good. That's why Nevy.in is 100% free and open. We don't hide the rate behind a paywall or an email capture form. You get the raw data you need, the moment you need it.`
+        `### Introducing Tech Resolutions: Built for Precision\nWe built **Tech Resolutions** to be the exact opposite of the bloated web. Our currency engine is powered by Next.js Edge architecture, meaning it delivers real-time market data with near-zero latency from the world's leading financial APIs.`,
+        `### A Faster, Cleaner Way to Track Markets\nTech Resolutions was designed as a "No-Nonsense" utility hub. By leveraging serverless edge functions, we provide the raw mid-market rate for over 10,000+ pairs, including **${from}/${to}**, without a single advertisement or signup form required.`,
+        `### Why Transparency Matters to Us\nFinancial utility should be a public good. That's why Tech Resolutions is 100% free and open. We don't hide the rate behind a paywall or an email capture form. You get the raw data you need, the moment you need it.`
     ];
 
     const localizedInsight = `
@@ -111,7 +111,7 @@ For users calculating conversions in the **${state.timezone} Time Zone**, it is 
     `;
 
     const howItWorks = [
-        `### How It Works Under the Hood (The Technical Side)\nOur system aggregates high-frequency **Forex trading data** from multiple institutional providers and **liquidity providers**. When you check the **${from} to ${to} exchange rate** on Nevy, you are seeing the same **mid-market price** used by professional traders.`,
+        `### How It Works Under the Hood (The Technical Side)\nOur system aggregates high-frequency **Forex trading data** from multiple institutional providers and **liquidity providers**. When you check the **${from} to ${to} exchange rate** on Tech Resolutions, you are seeing the same **mid-market price** used by professional traders.`,
         `### Engineering for Real-Time Precision\nBy using **Next.js Edge Caching** and **distributed API nodes**, we ensure that while the data is live, the delivery is instantaneous. You get the benefits of a heavy-duty **financial terminal** inside a lightweight interface.`,
         `### Global Data, Local Context\nRegardless of where you are in the world, our **Edge Network** routes your request to the nearest server, ensuring that your **currency conversion** happens in milliseconds. This minimizes the lag between the **spot price** and your calculation.`
     ];
@@ -122,9 +122,9 @@ For users calculating conversions in the **${state.timezone} Time Zone**, it is 
     `;
 
     const cta = [
-        `### Final Verdict\nStop letting banks dictate your financial value. Use a **currency tracking tool** built for the modern age. You can track the **live ${from} to ${to} rate** here: [Open Nevy Currency Hub](https://www.nevy.in/convert/${slug.replace(/\//g, '-')}).`,
-        `### Take Control of Your Strategy\nAccuracy is power. Before your next **international money transfer**, verify the real price. Access the live ${fromName} dashboard on Nevy: [Check Live ${from} Rate](https://www.nevy.in/convert/${slug.replace(/\//g, '-')}).`,
-        `### The Bottom Line\nIf you want the most accurate, ad-free, and lightning-fast tracking for **${from} to ${to}**, Nevy.in is the definitive choice for **forex data** in **${state.name}**.`
+        `### Final Verdict\nStop letting banks dictate your financial value. Use a **currency tracking tool** built for the modern age. You can track the **live ${from} to ${to} rate** here: [Open Tech Resolutions Currency Hub](https://www.nevy.in/convert/${slug.replace(/\//g, '-')}).`,
+        `### Take Control of Your Strategy\nAccuracy is power. Before your next **international money transfer**, verify the real price. Access the live ${fromName} dashboard on Tech Resolutions: [Check Live ${from} Rate](https://www.nevy.in/convert/${slug.replace(/\//g, '-')}).`,
+        `### The Bottom Line\nIf you want the most accurate, ad-free, and lightning-fast tracking for **${from} to ${to}**, Tech Resolutions is the definitive choice for **forex data** in **${state.name}**.`
     ];
 
     const select = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
@@ -132,14 +132,14 @@ For users calculating conversions in the **${state.timezone} Time Zone**, it is 
     const qaSection = `
 ### ❓ Common Questions (Q&A)
 
-**Q: Is the ${from} to ${to} rate on Nevy live?**
+**Q: Is the ${from} to ${to} rate on Tech Resolutions live?**
 A: Yes, we utilize **high-frequency institutional APIs** that refresh every minute to ensure the data is as accurate as a **Bloomberg terminal** or **Reuters feed**.
 
 **Q: How do I avoid hidden fees when converting ${fromName}?**
-A: Always compare the rate offered by your bank against the **raw mid-market rate** shown on Nevy.in. If the bank's rate is lower, they are charging a **hidden spread commission**.
+A: Always compare the rate offered by your bank against the **raw mid-market rate** shown on Tech Resolutions. If the bank's rate is lower, they are charging a **hidden spread commission**.
 
 **Q: Can I track crypto-to-fiat pairs like ${from}/${to}?**
-A: Absolutely. Nevy.in tracks over 10,000 combinations across all major **fiat and cryptocurrencies** globally.
+A: Absolutely. Tech Resolutions tracks over 10,000 combinations across all major **fiat and cryptocurrencies** globally.
     `;
 
     return `
@@ -162,6 +162,6 @@ ${qaSection}
 ${select(cta)}
 
 ---
-*This guide was generated by the Nevy.in Engineering Team to promote financial transparency and high-performance web utility.*
+*This guide was generated by the Tech Resolutions Engineering Team to promote financial transparency and high-performance web utility.*
     `.trim();
 }

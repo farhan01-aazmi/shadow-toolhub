@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Random Number Generator Free Online | Nevy.in',
+    title: 'Random Number Generator Free Online | Tech Resolutions',
     description: 'Free online Random Number Generator tool. No signup required, works instantly in your browser.',
 };
 

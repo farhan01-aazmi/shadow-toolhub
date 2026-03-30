@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Texas Sales Tax Calculator Free Online | Nevy.in',
+    title: 'Texas Sales Tax Calculator Free Online | Tech Resolutions',
     description: 'Free online Texas Sales Tax Calculator tool. No signup required, works instantly in your browser.',
 };
 

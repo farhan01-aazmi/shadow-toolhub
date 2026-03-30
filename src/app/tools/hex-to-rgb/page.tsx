@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Hex To Rgb Free Online | Nevy.in',
+    title: 'Hex To Rgb Free Online | Tech Resolutions',
     description: 'Free online Hex To Rgb tool. No signup required, works instantly in your browser.',
 };
 

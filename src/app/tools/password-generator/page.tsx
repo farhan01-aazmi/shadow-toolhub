@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Password Generator Free Online | Nevy.in',
+    title: 'Password Generator Free Online | Tech Resolutions',
     description: 'Free online Password Generator tool. No signup required, works instantly in your browser.',
 };
 

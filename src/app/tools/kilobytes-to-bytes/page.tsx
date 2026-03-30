@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Kilobytes To Bytes - Free Online Universal Converter | Nevy.in',
+    title: 'Kilobytes To Bytes - Free Online Universal Converter | Tech Resolutions',
     description: 'Convert Kilobytes to Bytes instantly with our free online tool. High accuracy, no signup required, 100% private.',
 };
 

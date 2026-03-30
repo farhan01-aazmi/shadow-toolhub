@@ -4,7 +4,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import { LineChart, ShieldCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Professional Word Counter - Analyze Content Depth | Nevy.in",
+    title: "Professional Word Counter - Analyze Content Depth | Tech Resolutions",
     description: "Free online word counter to analyze text length, character density, and reading time. Optimized for bloggers, students, and SEO content writers in 2026.",
     keywords: ["word counter", "character counter", "sentence counter", "reading time calculator", "content analyzer"],
     alternates: {

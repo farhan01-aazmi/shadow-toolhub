@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Grams To Slugs - Free Online Universal Converter | Nevy.in',
+    title: 'Grams To Slugs - Free Online Universal Converter | Tech Resolutions',
     description: 'Convert Grams to Slugs instantly with our free online tool. High accuracy, no signup required, 100% private.',
 };
 

@@ -71,7 +71,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
         <h3>What This Means for the Average User</h3>
         <p>For users of tools like our <a href="/tools/currency-converter">Currency Converter</a>, CBDCs mean that the "Mid-Market Rate" will become even more transparent. The friction of traditional Forex will decrease, but the need for accurate tracking and planning will only increase.</p>
         
-        <p>At Nevy.in, we are already preparing our data pipelines to ingest direct CBDC protocol feeds, ensuring you always have the institutional edge in a digital-yen, digital-euro, and digital-dollar world.</p>
+        <p>At Tech Resolutions, we are already preparing our data pipelines to ingest direct CBDC protocol feeds, ensuring you always have the institutional edge in a digital-yen, digital-euro, and digital-dollar world.</p>
       </article>
     `
   });
@@ -130,7 +130,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
         </ul>
 
         <h3>Real-World Optimization</h3>
-        <p>We built Nevy.in specifically to showcase what's possible. Our <a href="/tools/image-optimizer">WebP Optimizer</a> is a direct result of our own internal performance research. By converting heavy JPEGs to modern formats, we routinely see a 40% jump in mobile search rankings.</p>
+        <p>We built Tech Resolutions specifically to showcase what's possible. Our <a href="/tools/image-optimizer">WebP Optimizer</a> is a direct result of our own internal performance research. By converting heavy JPEGs to modern formats, we routinely see a 40% jump in mobile search rankings.</p>
 
         <blockquote>"A slow site is a leaking bucket. No amount of great content can fill it."</blockquote>
 
@@ -151,7 +151,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
       tags: [pair, 'Finance', 'Savings'],
       content: `
         <article>
-          <p>If you're tracking <b>${pair}</b>, you know how volatile the market can be in 2026. Global economic shifts and central bank policies have made currency fluctuations more unpredictable than ever. Hidden bank fees often eat up 3% of your value. We built Nevy.in to give you the mid-market edge.</p>
+          <p>If you're tracking <b>${pair}</b>, you know how volatile the market can be in 2026. Global economic shifts and central bank policies have made currency fluctuations more unpredictable than ever. Hidden bank fees often eat up 3% of your value. We built Tech Resolutions to give you the mid-market edge.</p>
           
           <h3>The ${pair} Strategy for 2026</h3>
           <p>In our years of tracking institutional data, we've found that timing your ${pair} exchange can save thousands. Don't rely on airport kiosks; use real-time data from decentralized or commercial API providers.</p>
@@ -170,7 +170,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
             <dt><b>What is the mid-market rate for ${pair}?</b></dt>
             <dd>It is the midpoint between the buy and sell prices of two currencies, the "real" rate you see on Google.</dd>
             <dt><b>Are there hidden fees?</b></dt>
-            <dd>Not on Nevy.in. We provide data-only services, meaning you see the raw market action without the bank's fee overlay.</dd>
+            <dd>Not on Tech Resolutions. We provide data-only services, meaning you see the raw market action without the bank's fee overlay.</dd>
           </dl>
         </article>
       `
@@ -228,7 +228,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
           <p>Mastering <b>${topic}</b> is the difference between an amateur site and an institutional-grade ToolHub. In 2026, Google prioritizes EEAT (Experience, Expertise, Authoritativeness, and Trustworthiness) along with lightning-fast Page Speed scores.</p>
           
           <h3>The ${topic} Blueprint</h3>
-          <p>Our team at Nevy.in uses this exact blueprint to maintain high rankings. We focus on utility and human-first value. When you optimize ${topic}, you aren't just checking a box; you're building a faster user experience.</p>
+          <p>Our team at Tech Resolutions uses this exact blueprint to maintain high rankings. We focus on utility and human-first value. When you optimize ${topic}, you aren't just checking a box; you're building a faster user experience.</p>
 
           <h4>Pro Steps for ${topic}:</h4>
           <ol>
@@ -237,7 +237,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
             <li>Iterate and test with headless agents to verify improvements.</li>
           </ol>
 
-          <p>At Nevy.in, we've automated these steps to ensure every tool we offer is pre-optimized for SEO and user engagement.</p>
+          <p>At Tech Resolutions, we've automated these steps to ensure every tool we offer is pre-optimized for SEO and user engagement.</p>
 
           <div class="cta-box card glass">Audit your site performance with our <a href="/tools/meta-generator">Advanced SEO Tools</a>.</div>
         </article>
@@ -248,7 +248,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
   posts.push({
     slug: 'privacy-utility-toolkit',
     title: 'The Privacy Utility Toolkit: Why Browser-Based Tools are the Future',
-    excerpt: 'In an era of mass surveillance, privacy isn\'t just a feature—it\'s a requirement. Learn why we built Nevy.in to process all your data locally.',
+    excerpt: 'In an era of mass surveillance, privacy isn\'t just a feature—it\'s a requirement. Learn why we built Tech Resolutions to process all your data locally.',
     category: 'Privacy',
     date: '2026-03-27',
     author: 'Tech Resolutions Security',

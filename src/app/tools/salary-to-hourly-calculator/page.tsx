@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Salary To Hourly Calculator Free Online | Nevy.in',
+    title: 'Salary To Hourly Calculator Free Online | Tech Resolutions',
     description: 'Free online Salary To Hourly Calculator tool. No signup required, works instantly in your browser.',
 };
 

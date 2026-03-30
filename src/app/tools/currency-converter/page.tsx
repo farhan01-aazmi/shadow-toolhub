@@ -5,7 +5,7 @@ import ConverterComponent from './ConverterComponent';
 import { ArrowRight, Star, BarChart3, ShieldCheck, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Currency Converter - Real-Time Exchange Rates | Nevy.in",
+  title: "Currency Converter - Real-Time Exchange Rates | Tech Resolutions",
   description: "Convert 150+ currencies with real-time exchange rates. Precise, fast, and free global currency conversion with historical insights.",
   keywords: ["currency converter", "exchange rates", "usd to inr", "forex rates", "money converter", "real time currency"],
   alternates: {
@@ -52,7 +52,7 @@ export default async function CurrencyConverterPage() {
           <ConverterComponent initialRates={data.rates} />
 
           <section className="seo-content card glass">
-            <h2>Why use Nevy.in for Currency Conversion?</h2>
+            <h2>Why use Tech Resolutions for Currency Conversion?</h2>
             <div className="features-grid">
               <div className="feature-item">
                 <Zap size={20} className="text-primary" />

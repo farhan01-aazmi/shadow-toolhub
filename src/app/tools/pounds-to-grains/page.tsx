@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Pounds To Grains - Free Online Universal Converter | Nevy.in',
+    title: 'Pounds To Grains - Free Online Universal Converter | Tech Resolutions',
     description: 'Convert Pounds to Grains instantly with our free online tool. High accuracy, no signup required, 100% private.',
 };
 

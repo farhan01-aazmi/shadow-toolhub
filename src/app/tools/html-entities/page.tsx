@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Html Entities Free Online | Nevy.in',
+    title: 'Html Entities Free Online | Tech Resolutions',
     description: 'Free online Html Entities tool. No signup required, works instantly in your browser.',
 };
 

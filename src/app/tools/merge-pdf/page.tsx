@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Merge Pdf Free Online | Nevy.in',
+    title: 'Merge Pdf Free Online | Tech Resolutions',
     description: 'Free online Merge Pdf tool. No signup required, works instantly in your browser.',
 };
 

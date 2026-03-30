@@ -4,7 +4,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import { Globe, Share2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Meta Tag Generator - SEO & Social Preview Tool | Nevy.in",
+    title: "Meta Tag Generator - SEO & Social Preview Tool | Tech Resolutions",
     description: "Create high-performance meta tags for SEO and social media. Includes live Google preview, Open Graph, and Twitter card generation for 2026 search engines.",
     keywords: ["meta tag generator", "seo tags", "open graph generator", "twitter card generator", "google preview tool"],
     alternates: {

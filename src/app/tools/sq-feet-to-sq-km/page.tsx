@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Sq Feet To Sq Km - Free Online Universal Converter | Nevy.in',
+    title: 'Sq Feet To Sq Km - Free Online Universal Converter | Tech Resolutions',
     description: 'Convert Sq Feet to Sq Km instantly with our free online tool. High accuracy, no signup required, 100% private.',
 };
 

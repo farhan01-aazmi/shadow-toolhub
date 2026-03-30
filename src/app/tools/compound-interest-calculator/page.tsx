@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Compound Interest Calculator Free Online | Nevy.in',
+    title: 'Compound Interest Calculator Free Online | Tech Resolutions',
     description: 'Free online Compound Interest Calculator tool. No signup required, works instantly in your browser.',
 };
 

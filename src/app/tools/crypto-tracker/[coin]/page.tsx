@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!coin) return { title: 'Crypto Detail' };
 
     return {
-        title: `${coin.name} (${coin.symbol.toUpperCase()}) Price - Live Market Cap & Stats | Shadow ToolHub`,
+        title: `${coin.name} (${coin.symbol.toUpperCase()}) Price - Live Market Cap & Stats | Tech Resolutions`,
         description: `Get the real-time ${coin.name} price, market cap, trading volume, and 24h change. Comprehensive ${coin.symbol.toUpperCase()} analysis with institutional-grade data.`,
         alternates: {
             canonical: `https://www.nevy.in/tools/crypto-tracker/${coinId}`,
@@ -128,7 +128,7 @@ export default async function CoinDetailPage({ params }: Props) {
                         <p>
                             Staying informed about <b>{coin.name}</b> can be a full-time job, but we've simplified it.
                             Currently ranked <b>#{coin.market_cap_rank}</b>, {coin.symbol.toUpperCase()} remains a cornerstone of the digital asset world.
-                            Whether you're a long-term "HODLer" or a day trader, having a clean, advertisement-free dashboard like Shadow ToolHub is your biggest advantage.
+                            Whether you're a long-term "HODLer" or a day trader, having a clean, advertisement-free dashboard like Tech Resolutions is your biggest advantage.
                         </p>
                         <p>
                             The current price of ${coin.current_price.toLocaleString()} is just one piece of the puzzle. With a 24h volume of <b>${coin.total_volume.toLocaleString()}</b>,

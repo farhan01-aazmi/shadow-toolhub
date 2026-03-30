@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Uuid Generator Free Online | Nevy.in',
+    title: 'Uuid Generator Free Online | Tech Resolutions',
     description: 'Free online Uuid Generator tool. No signup required, works instantly in your browser.',
 };
 

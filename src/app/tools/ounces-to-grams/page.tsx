@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Ounces To Grams Free Online | Nevy.in',
+    title: 'Ounces To Grams Free Online | Tech Resolutions',
     description: 'Free online Ounces To Grams tool. No signup required, works instantly in your browser.',
 };
 

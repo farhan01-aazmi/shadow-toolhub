@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Feet To Meters Free Online | Nevy.in',
+    title: 'Feet To Meters Free Online | Tech Resolutions',
     description: 'Free online Feet To Meters tool. No signup required, works instantly in your browser.',
 };
 

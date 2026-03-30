@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Word To Pdf Free Online | Nevy.in',
+    title: 'Word To Pdf Free Online | Tech Resolutions',
     description: 'Free online Word To Pdf tool. No signup required, works instantly in your browser.',
 };
 

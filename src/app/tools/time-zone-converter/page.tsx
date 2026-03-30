@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export const metadata: Metadata = {
-    title: 'Time Zone Converter Free Online | Nevy.in',
+    title: 'Time Zone Converter Free Online | Tech Resolutions',
     description: 'Free online Time Zone Converter tool. No signup required, works instantly in your browser.',
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Coulombs To Farads - Free Online Universal Converter | Nevy.in',
+    title: 'Coulombs To Farads - Free Online Universal Converter | Tech Resolutions',
     description: 'Convert Coulombs to Farads instantly with our free online tool. High accuracy, no signup required, 100% private.',
 };
 
