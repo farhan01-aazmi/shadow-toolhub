@@ -58,8 +58,8 @@ const AdSenseUnit: React.FC<AdSenseUnitProps> = ({ type, className = '' }) => {
           fontWeight: 'bold',
           letterSpacing: '2px'
         }}
+        className="ad-slot"
       >
-        {type === 'leaderboard' ? '728x90 TOP UNIT' : type === 'rectangle' ? '300x250 SIDEBAR' : 'FLUID IN-ARTICLE'}
       </div>
 
       {/* 

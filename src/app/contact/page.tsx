@@ -21,8 +21,8 @@ export default function ContactPage() {
         <p style={{ marginTop: '10px' }}>
           For all inquiries, please reach out to us at:
         </p>
-        <a href="mailto:contact@nevy.in" className="btn-a" style={{ display: 'inline-block', marginTop: '20px' }}>
-          contact@nevy.in
+        <a href="mailto:support@nevy.in" className="btn-a" style={{ display: 'inline-block', marginTop: '20px' }}>
+          support@nevy.in
         </a>
       </div>
 

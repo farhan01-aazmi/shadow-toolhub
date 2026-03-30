@@ -15,7 +15,7 @@ export default function AboutPage() {
         <div className="container" style={{ padding: '80px 20px', maxWidth: '800px', margin: '0 auto' }}>
             <h1 style={{ fontSize: '3rem', marginBottom: '20px', textAlign: 'center' }}>About Nevy.in</h1>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', textAlign: 'center', marginBottom: '60px' }}>
-                We believe utility tools should be free, fast, and private.
+                We believe utility tools should be free, fast, and private. Built with precision in 2026.
             </p>
 
             <div style={{ display: 'grid', gap: '30px', marginBottom: '60px' }}>
@@ -32,7 +32,7 @@ export default function AboutPage() {
                     <Globe size={28} style={{ color: 'var(--secondary)', marginBottom: '15px' }} />
                     <h2 style={{ marginBottom: '15px' }}>What We Offer</h2>
                     <p style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-                        Over 150+ free utilities including currency converters, crypto trackers, image optimizers,
+                        Over 1000+ free utilities including currency converters, crypto trackers, image optimizers,
                         EMI calculators, word counters, and SEO tools. All powered by institutional-grade APIs
                         and delivered via Next.js Edge architecture for near-zero latency.
                     </p>
