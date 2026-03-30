@@ -20,12 +20,12 @@ export default function Navbar() {
           <div className="logo-mark">
             <svg viewBox="0 0 42 42" fill="none">
               <defs>
-                <linearGradient id="hexGradFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="hexGradNavUnique" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#f0a500" />
                   <stop offset="100%" stopColor="#ff4500" />
                 </linearGradient>
               </defs>
-              <path d="M21 2 L38 11.5 V30.5 L21 40 L4 30.5 V11.5 L21 2Z" fill="url(#hexGradFoot)" />
+              <path d="M21 2 L38 11.5 V30.5 L21 40 L4 30.5 V11.5 L21 2Z" fill="url(#hexGradNavUnique)" />
               <text x="50%" y="54%" dominantBaseline="middle" textAnchor="middle" fill="#141414" fontSize="13" fontWeight="900" fontFamily="system-ui" letterSpacing="-0.02em">TR</text>
             </svg>
           </div>

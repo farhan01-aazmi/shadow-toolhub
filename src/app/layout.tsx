@@ -20,8 +20,8 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.nevy.in'),
   title: {
-    default: "Nevy.in — Tools that work.",
-    template: "%s | Nevy.in"
+    default: "Tech Resolutions — Tools that work.",
+    template: "%s | Tech Resolutions"
   },
   description: "70+ free online tools for images, PDFs, text, calculators, and more. No signup. No fees. Ever.",
   keywords: ["free online tools", "image compressor", "pdf to word", "emi calculator", "password generator", "word counter", "json formatter"],
