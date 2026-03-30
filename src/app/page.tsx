@@ -5,15 +5,15 @@ import { useEffect, useRef, useState } from 'react';
 import StructuredData from '@/components/seo/StructuredData';
 
 const TOOLS = [
-  { num: '01', ico: '📐', name: 'EMI Calculator', cat: 'Finance', desc: 'Calculate monthly payments for home, car, and personal loans instantly', uses: '1.1L/mo', tag: 'Finance', link: '/tools/loan-calculator' },
-  { num: '02', ico: '🔐', name: 'Password Generator', cat: 'Security', desc: 'Create strong, secure passwords with custom length and complexity settings', uses: '91K/mo', tag: 'Security', link: '/tools/meta-generator' },
-  { num: '03', ico: '🖼️', name: 'Image Compressor', cat: 'Image', desc: 'Compress JPG, PNG, WebP images without losing quality — supports batch processing', uses: '82K/mo', tag: 'Image', link: '/tools/image-optimizer' },
-  { num: '04', ico: '✍️', name: 'Word Counter', cat: 'Text', desc: 'Instant word count, character count, sentence analysis, and reading time', uses: '82K/mo', tag: 'Text', link: '/tools/word-counter' },
-  { num: '05', ico: '💱', name: 'Currency Converter', cat: 'Finance', desc: 'Real-time currency conversion with mid-market exchange rates for 150+ currencies', uses: '67K/mo', tag: 'Finance', link: '/tools/currency-converter' },
-  { num: '06', ico: '₿', name: 'Crypto Tracker', cat: 'Finance', desc: 'Live cryptocurrency prices, market cap, volume, and 24h change tracking', uses: '55K/mo', tag: 'Finance', link: '/tools/crypto-tracker' },
-  { num: '07', ico: '🏷️', name: 'Meta Tag Generator', cat: 'SEO', desc: 'Generate SEO meta tags, Open Graph, and Twitter cards automatically', uses: '43K/mo', tag: 'SEO', link: '/tools/meta-generator' },
-  { num: '08', ico: '🎨', name: 'Image Optimizer', cat: 'Image', desc: 'Optimize images for web — reduce file size while maintaining visual quality', uses: '38K/mo', tag: 'Image', link: '/tools/image-optimizer' },
-  { num: '09', ico: '🇺🇸', name: 'US Tax Calculator', cat: 'Finance', desc: 'Calculate 2024-2025 federal income tax liability with latest IRS brackets', uses: 'New', tag: 'High CPC', link: '/tools/us-income-tax-calculator' },
+  { num: '01', ico: '📐', name: 'EMI Calculator', cat: 'Finance', desc: 'Calculate monthly payments for home, car, and personal loans instantly', uses: '1.1L/mo', tag: 'Finance', link: '/tools/loan-calculator/' },
+  { num: '02', ico: '🔐', name: 'Password Generator', cat: 'Security', desc: 'Create strong, secure passwords with custom length and complexity settings', uses: '91K/mo', tag: 'Security', link: '/tools/password-generator/' },
+  { num: '03', ico: '🖼️', name: 'Image Compressor', cat: 'Image', desc: 'Compress JPG, PNG, WebP images without losing quality — supports batch processing', uses: '82K/mo', tag: 'Image', link: '/tools/image-optimizer/' },
+  { num: '04', ico: '✍️', name: 'Word Counter', cat: 'Text', desc: 'Instant word count, character count, sentence analysis, and reading time', uses: '82K/mo', tag: 'Text', link: '/tools/word-counter/' },
+  { num: '05', ico: '💱', name: 'Currency Converter', cat: 'Finance', desc: 'Real-time currency conversion with mid-market exchange rates for 150+ currencies', uses: '67K/mo', tag: 'Finance', link: '/tools/currency-converter/' },
+  { num: '06', ico: '₿', name: 'Crypto Tracker', cat: 'Finance', desc: 'Live cryptocurrency prices, market cap, volume, and 24h change tracking', uses: '55K/mo', tag: 'Finance', link: '/tools/crypto-tracker/' },
+  { num: '07', ico: '🏷️', name: 'Meta Tag Generator', cat: 'SEO', desc: 'Generate SEO meta tags, Open Graph, and Twitter cards automatically', uses: '43K/mo', tag: 'SEO', link: '/tools/meta-generator/' },
+  { num: '08', ico: '🎨', name: 'Image Optimizer', cat: 'Image', desc: 'Optimize images for web — reduce file size while maintaining visual quality', uses: '38K/mo', tag: 'Image', link: '/tools/image-optimizer/' },
+  { num: '09', ico: '🇺🇸', name: 'US Tax Calculator', cat: 'Finance', desc: 'Calculate 2026 federal income tax liability with latest IRS brackets', uses: 'New', tag: 'High CPC', link: '/tools/us-income-tax-calculator/' },
 ];
 
 const TABS = ['All', 'Text', 'Image', 'PDF', 'Security', 'Dev', 'Finance', 'Design'];
@@ -21,18 +21,18 @@ const TABS = ['All', 'Text', 'Image', 'PDF', 'Security', 'Dev', 'Finance', 'Desi
 const CHIPS = ['Image Compressor', 'PDF to Word', 'EMI Calculator', 'Password Generator', 'Color Picker'];
 
 const BLOG = [
-  { cat: 'Image Tools', catClass: 'c1', date: '05 Mar 2025', title: 'How to 3x Your Website Speed with Image Compression — Complete Guide 2025', excerpt: 'Heavy images slow down your website and hurt SEO rankings. Learn step-by-step how to properly optimize images without losing quality — improve Google rankings and reduce bounce rate.', wide: true },
-  { cat: 'Security', catClass: 'c2', date: '01 Mar 2025', title: 'What Makes a Strong Password in 2025? Complete Security Guide', excerpt: 'Simple, actionable tricks that actually work. Start applying them today.' },
-  { cat: 'PDF Tools', catClass: 'c3', date: '24 Feb 2025', title: 'PDF to Word: 5 Free Methods That Work Even on Slow Internet', excerpt: 'Tested on various network speeds — no login required, no payment needed.' },
-  { cat: 'Finance', catClass: 'c4', date: '10 Feb 2025', title: 'Why You Should Always Use an EMI Calculator Before Buying a Home', excerpt: 'The one calculation you should always do before taking out a home loan.' },
+  { cat: 'Image Tools', catClass: 'c1', date: '05 Mar 2026', title: 'How to 3x Your Website Speed with Image Compression — Complete Guide 2026', excerpt: 'Heavy images slow down your website and hurt SEO rankings. Learn step-by-step how to properly optimize images without losing quality — improve Google rankings and reduce bounce rate.', wide: true, slug: 'page-speed-seo-ranking-factor-2026' },
+  { cat: 'Security', catClass: 'c2', date: '01 Mar 2026', title: 'What Makes a Strong Password in 2026? Complete Security Guide', excerpt: 'Simple, actionable tricks that actually work. Start applying them today.', slug: 'crypto-risk-management-guide-2026' },
+  { cat: 'PDF Tools', catClass: 'c3', date: '24 Feb 2026', title: 'PDF to Word: 5 Free Methods That Work Even on Slow Internet', excerpt: 'Tested on various network speeds — no login required, no payment needed.', slug: 'expert-guide-to-image-optimization' },
+  { cat: 'Finance', catClass: 'c4', date: '10 Feb 2026', title: 'Why You Should Always Use an EMI Calculator Before Buying a Home', excerpt: 'The one calculation you should always do before taking out a home loan.', slug: 'future-of-global-finance-cbdc-2026' },
 ];
 
 const TRENDING = [
-  { rank: '01', ico: '📐', name: 'EMI Calculator', uses: '1.1L uses', link: '/tools/loan-calculator' },
-  { rank: '02', ico: '🔐', name: 'Password Generator', uses: '91K uses', link: '/tools/meta-generator' },
-  { rank: '03', ico: '🖼️', name: 'Image Compressor', uses: '82K uses', link: '/tools/image-optimizer' },
-  { rank: '04', ico: '✍️', name: 'Word Counter', uses: '82K uses', link: '/tools/word-counter' },
-  { rank: '05', ico: '🎨', name: 'Color Picker', uses: '75K uses', link: '/tools/meta-generator' },
+  { rank: '01', ico: '📐', name: 'EMI Calculator', uses: '1.1L uses', link: '/tools/loan-calculator/' },
+  { rank: '02', ico: '🔐', name: 'Password Generator', uses: '91K uses', link: '/tools/password-generator/' },
+  { rank: '03', ico: '🖼️', name: 'Image Compressor', uses: '82K uses', link: '/tools/image-optimizer/' },
+  { rank: '04', ico: '✍️', name: 'Word Counter', uses: '82K uses', link: '/tools/word-counter/' },
+  { rank: '05', ico: '🎨', name: 'Color Picker', uses: '75K uses', link: '/tools/color-picker/' },
 ];
 
 export default function Home() {
@@ -163,7 +163,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-stats rv">
-          <div className="hs"><div className="hs-n amber" ref={counterRef}>0</div><div className="hs-l">Free Tools</div></div>
+          <div className="hs"><div className="hs-n amber" ref={counterRef}>150+</div><div className="hs-l">Free Tools</div></div>
           <div className="hs"><div className="hs-n stroke">2M+</div><div className="hs-l">Monthly Users</div></div>
           <div className="hs"><div className="hs-n amber">10+</div><div className="hs-l">Categories</div></div>
           <div className="hs"><div className="hs-n stroke">$0</div><div className="hs-l">Always Free</div></div>
@@ -173,7 +173,7 @@ export default function Home() {
       {/* ── AD 728x90 ── */}
       <div className="ad-bar">
         <span className="ad-lbl">Ad</span>
-        <div className="ad728">Advertisement · 728 × 90</div>
+        <div className="ad728 ad-slot"></div>
       </div>
 
       {/* ── FEATURED TOOL ── */}
@@ -185,7 +185,7 @@ export default function Home() {
             <p>Compress JPG, PNG, and WebP images without losing quality. Supports batch processing. Files never leave your browser — 100% client-side.</p>
             <div className="btns">
               <Link href="/tools/image-optimizer" className="btn-a">Open Tool →</Link>
-              <Link href="/blog" className="btn-o">How it Works</Link>
+              <Link href="/tools/image-optimizer/#how-it-works" className="btn-o">How it Works</Link>
             </div>
           </div>
           <div className="feat-r">
@@ -213,7 +213,7 @@ export default function Home() {
             <div className="sec-lbl">// tools</div>
             <div className="sec-ttl">Popular Tools</div>
           </div>
-          <Link href="#tools-section" className="link-all">All 150+ Tools</Link>
+          <Link href="/all-tools/" className="link-all">All 150+ Tools</Link>
         </div>
         <div className="tabs">
           {TABS.map(tab => (
@@ -249,11 +249,11 @@ export default function Home() {
               <div className="sec-lbl">// blog &amp; guides</div>
               <div className="sec-ttl">Latest Articles</div>
             </div>
-            <Link href="/blog" className="link-all">All Articles</Link>
+            <Link href="/blog/" className="link-all">All Articles</Link>
           </div>
           <div className="bgrid">
             {BLOG.map((post, i) => (
-              <Link key={i} className={`bpost ${post.wide ? 'wide' : ''}`} href="/blog">
+              <Link key={i} className={`bpost ${post.wide ? 'wide' : ''}`} href={`/blog/${post.slug}`}>
                 <div className="barr">↗</div>
                 <div>
                   <div className="bmeta">
@@ -272,7 +272,7 @@ export default function Home() {
         <aside className="sidebar-bp rv">
           <div className="sw">
             <div className="sw-hd">Advertisement</div>
-            <div className="sw-bd"><div className="ad300">300 × 250</div></div>
+            <div className="sw-bd"><div className="ad300 ad-slot"></div></div>
           </div>
           <div className="sw">
             <div className="sw-hd">Trending</div>
@@ -297,7 +297,7 @@ export default function Home() {
             <div className="sw-hd">Quick Links</div>
             <div className="sw-bd">
               <div className="ql-grid">
-                {[{ n: 'Privacy', h: '/privacy' }, { n: 'About', h: '/about' }, { n: 'Contact', h: '/contact' }, { n: 'Disclaimer', h: '/terms' }, { n: 'Terms', h: '/terms' }, { n: 'Blog', h: '/blog' }].map(link => (
+                {[{ n: 'Privacy', h: '/privacy-policy/' }, { n: 'About', h: '/about/' }, { n: 'Contact', h: '/contact/' }, { n: 'Disclaimer', h: '/disclaimer/' }, { n: 'Terms', h: '/terms-of-service/' }, { n: 'Blog', h: '/blog/' }].map(link => (
                   <Link key={link.n} className="ql" href={link.h}>{link.n}</Link>
                 ))}
               </div>
@@ -305,7 +305,7 @@ export default function Home() {
           </div>
           <div className="sw">
             <div className="sw-hd">Advertisement</div>
-            <div className="sw-bd"><div className="ad300">300 × 250</div></div>
+            <div className="sw-bd"><div className="ad300 ad-slot"></div></div>
           </div>
         </aside>
       </div>

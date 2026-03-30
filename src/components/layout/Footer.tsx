@@ -41,8 +41,8 @@ export default function Footer() {
           <Link href="/about/">About Us</Link>
           <Link href="/blog/">Blog</Link>
           <Link href="/contact/">Contact Us</Link>
-          <Link href="/advertise/">Advertise</Link>
-          <Link href="/submit-tool/">Submit Tool</Link>
+          <Link href="/contact/">Advertise</Link>
+          <Link href="/contact/">Submit Tool</Link>
         </div>
 
         <div className="foot-col">
@@ -50,7 +50,7 @@ export default function Footer() {
           <Link href="/privacy-policy/">Privacy Policy</Link>
           <Link href="/terms-of-service/">Terms of Service</Link>
           <Link href="/disclaimer/">Disclaimer</Link>
-          <Link href="/cookie-policy/">Cookie Policy</Link>
+          <Link href="/privacy-policy/">Cookie Policy</Link>
         </div>
       </div>
 
