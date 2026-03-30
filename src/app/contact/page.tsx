@@ -19,10 +19,10 @@ export default function ContactPage() {
       <div className="card glass" style={{ marginTop: '40px', padding: '40px' }}>
         <h2>Email Us</h2>
         <p style={{ marginTop: '10px' }}>
-          For all inquiries, please reach out to us at:
+          For inquiries or support, reach out to Tech Resolutions at:
         </p>
-        <a href="mailto:support@nevy.in" className="btn-a" style={{ display: 'inline-block', marginTop: '20px' }}>
-          support@nevy.in
+        <a href="mailto:tech00kk@gmail.com" className="btn-a" style={{ display: 'inline-block', marginTop: '20px' }}>
+          tech00kk@gmail.com
         </a>
       </div>
 

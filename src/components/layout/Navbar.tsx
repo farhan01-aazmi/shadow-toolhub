@@ -26,7 +26,7 @@ export default function Navbar() {
               <line x1="8" y1="26" x2="26" y2="26" stroke="rgba(255,255,255,0.07)" strokeWidth="1" />
             </svg>
           </div>
-          <span className="logo-word">nevy<em>.in</em></span>
+          <span className="logo-word">Tech <em>Resolutions</em></span>
         </Link>
 
         <div className="nav-links">

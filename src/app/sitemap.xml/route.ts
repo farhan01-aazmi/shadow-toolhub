@@ -34,8 +34,8 @@ export async function GET() {
         { path: '/blog', priority: '0.8', freq: 'daily' },
         { path: '/about', priority: '0.5', freq: 'monthly' },
         { path: '/contact', priority: '0.5', freq: 'monthly' },
-        { path: '/privacy', priority: '0.3', freq: 'yearly' },
-        { path: '/terms', priority: '0.3', freq: 'yearly' },
+        {path: '/privacy-policy/', priority: '0.3', freq: 'yearly'},
+        {path: '/terms-of-service/', priority: '0.3', freq: 'yearly'},
     ];
 
     // 2. Blog posts

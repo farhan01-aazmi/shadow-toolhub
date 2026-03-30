@@ -32,9 +32,9 @@ export default function AboutPage() {
                     <Globe size={28} style={{ color: 'var(--secondary)', marginBottom: '15px' }} />
                     <h2 style={{ marginBottom: '15px' }}>What We Offer</h2>
                     <p style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-                        Over 1000+ free utilities including currency converters, crypto trackers, image optimizers,
+                        Over 70+ free utilities including currency converters, crypto trackers, image optimizers,
                         EMI calculators, word counters, and SEO tools. All powered by institutional-grade APIs
-                        and delivered via Next.js Edge architecture for near-zero latency.
+                        and delivered via Tech Resolutions infrastructure for near-zero latency.
                     </p>
                 </div>
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
                     <Shield size={28} style={{ color: 'var(--accent)', marginBottom: '15px' }} />
                     <h2 style={{ marginBottom: '15px' }}>Privacy First</h2>
                     <p style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-                        We do not collect personal data, sell information to third parties, or use invasive tracking scripts.
+                        Our team at Tech Resolutions ensures that we do not collect personal data, sell information to third parties, or use invasive tracking scripts.
                         Your calculations, conversions, and file uploads stay in your browser.
                     </p>
                 </div>

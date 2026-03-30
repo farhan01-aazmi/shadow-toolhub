@@ -14,13 +14,13 @@ export default function Footer() {
                 <circle cx="17" cy="17" r="3" fill="#f0a500" />
               </svg>
             </div>
-            <span className="logo-word">nevy<em>.in</em></span>
+            <span className="logo-word">Tech <em>Resolutions</em></span>
           </Link>
-          <p>1000+ free online tools — image, PDF, text, calculators, security. No signup required. No fees. Ever.</p>
+          <p>70+ free online tools — image, PDF, text, calculators, security. No signup required. No fees. Ever.</p>
           <div className="socials">
-            <a className="soc" href="https://x.com" target="_blank" rel="noopener noreferrer">𝕏</a>
-            <a className="soc" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">in</a>
-            <a className="soc" href="https://youtube.com" target="_blank" rel="noopener noreferrer">▶</a>
+            <a className="soc" href="https://x.com/tech_resolutions" target="_blank" rel="noopener noreferrer">𝕏</a>
+            <a className="soc" href="https://linkedin.com/company/tech-resolutions" target="_blank" rel="noopener noreferrer">in</a>
+            <a className="soc" href="https://youtube.com/@tech-resolutions" target="_blank" rel="noopener noreferrer">▶</a>
             <a className="soc" href="https://facebook.com" target="_blank" rel="noopener noreferrer">📘</a>
           </div>
         </div>

@@ -42,7 +42,7 @@ export default function PrivacyPage() {
 
                 <section>
                     <h2 style={{ color: 'var(--text-primary)', marginBottom: '10px' }}>6. Contact</h2>
-                    <p>If you have any questions about this privacy policy, please contact us at contact@nevy.in.</p>
+                    <p>If you have any questions about this privacy policy, please contact Tech Resolutions at tech00kk@gmail.com.</p>
                 </section>
             </div>
         </div>

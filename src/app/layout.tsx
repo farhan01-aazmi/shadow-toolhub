@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     default: "Nevy.in — Tools that work.",
     template: "%s | Nevy.in"
   },
-  description: "150+ free online tools for images, PDFs, text, calculators, and more. No signup. No fees. Ever.",
+  description: "70+ free online tools for images, PDFs, text, calculators, and more. No signup. No fees. Ever.",
   keywords: ["free online tools", "image compressor", "pdf to word", "emi calculator", "password generator", "word counter", "json formatter"],
-  authors: [{ name: "nevy.in" }],
+  authors: [{ name: "Tech Resolutions" }],
   robots: {
     index: true,
     follow: true,
@@ -41,21 +41,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.nevy.in",
-    siteName: "www.nevy.in",
-    title: "Nevy.in — 150+ Free Online Tools",
+    siteName: "Tech Resolutions",
+    title: "Tech Resolutions — 70+ Free Online Tools",
     description: "Image, PDF, text, calculators, security — all tools in one place. No signup required. No fees.",
     images: [
       {
         url: "/api/og",
         width: 1200,
         height: 630,
-        alt: "Nevy.in — Tools that work",
+        alt: "Tech Resolutions — Tools that work",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nevy.in — 150+ Free Online Tools",
+    title: "Tech Resolutions — 70+ Free Online Tools",
     description: "Image, PDF, text, calculators, security — free tools that work.",
     images: ["/api/og"],
   },
