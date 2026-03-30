@@ -1110,8 +1110,8 @@ body {
 
 /* REVEAL ANIMATIONS */
 .rv {
-  opacity: 0;
-  transform: translateY(28px);
+  opacity: 1;
+  transform: none;
   transition: opacity .65s ease, transform .65s ease
 }
 
@@ -1121,8 +1121,8 @@ body {
 }
 
 .rv2 {
-  opacity: 0;
-  transform: translateX(-18px);
+  opacity: 1;
+  transform: none;
   transition: opacity .6s ease, transform .6s ease
 }
 
