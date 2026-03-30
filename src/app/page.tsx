@@ -30,14 +30,6 @@ const BLOG = [
   { cat: 'Finance', catClass: 'c4', date: '10 Feb 2026', title: 'Why You Should Always Use an EMI Calculator Before Buying a Home', excerpt: 'The one calculation you should always do before taking out a home loan.', slug: 'future-of-global-finance-cbdc-2026' },
 ];
 
-const TRENDING = [
-  { rank: '01', ico: '📐', name: 'EMI Calculator', uses: '1.1L uses', link: '/tools/loan-calculator/' },
-  { rank: '02', ico: '🔐', name: 'Password Generator', uses: '91K uses', link: '/tools/password-generator/' },
-  { rank: '03', ico: '🖼️', name: 'Image Compressor', uses: '82K uses', link: '/tools/image-optimizer/' },
-  { rank: '04', ico: '✍️', name: 'Word Counter', uses: '82K uses', link: '/tools/word-counter/' },
-  { rank: '05', ico: '🎨', name: 'Color Picker', uses: '75K uses', link: '/tools/color-picker/' },
-];
-
 export default function Home() {
   const [activeTab, setActiveTab] = useState('All');
   const counterRef = useRef<HTMLDivElement>(null);
@@ -105,21 +97,21 @@ export default function Home() {
       {
         "@type": "Organization",
         "@id": "https://www.nevy.in/#organization",
-        "name": "nevy.in",
+        "name": "Tech Resolutions",
         "url": "https://www.nevy.in",
         "logo": "https://www.nevy.in/logo.png",
-        "description": "70+ free online tools for images, PDFs, text, calculators and more. No signup required. No fees.",
+        "description": "Tech Resolutions provides 70+ free online tools for images, PDFs, text, calculators and more. No signup required. No fees.",
         "sameAs": [
-          "https://x.com/nevy_in",
-          "https://linkedin.com/company/nevy-in",
-          "https://youtube.com/@nevy-in"
+          "https://x.com/tech_resolutions",
+          "https://linkedin.com/company/tech-resolutions",
+          "https://youtube.com/@tech-resolutions"
         ]
       },
       {
         "@type": "WebSite",
         "@id": "https://www.nevy.in/#website",
         "url": "https://www.nevy.in",
-        "name": "Nevy.in",
+        "name": "Tech Resolutions",
         "description": "The Ultimate Free Online Utility Hub",
         "publisher": { "@id": "https://www.nevy.in/#organization" },
         "potentialAction": [{
@@ -140,10 +132,10 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="hero">
-        <div className="hero-bgnumber" aria-hidden="true">150</div>
+        <div className="hero-bgnumber" aria-hidden="true">70</div>
         <div className="hero-top">
           <div className="rv2">
-            <div className="hero-kicker">Free Online Tools — nevy.in</div>
+            <div className="hero-kicker">Free Online Tools — Tech Resolutions</div>
             <h1 className="hero-h1">
               Tools<br />
               <span className="out">that</span><br />
@@ -152,15 +144,15 @@ export default function Home() {
           </div>
           <div className="hero-right rv">
             <p className="hero-desc">
-              70+ free tools for image compression, PDF conversion, password generation, EMI calculation, and more. No signup. No fees. Ever.
+              Over 70+ free tools for image compression, PDF conversion, password generation, EMI calculation, and more. No signup. No fees. Ever.
             </p>
             <div className="hero-search">
-              <input type="text" placeholder="Search tools or guides..." />
+              <input type="text" placeholder="Search tools or guides..." aria-label="Search tools" />
               <button>Search</button>
             </div>
             <div className="chips">
               {CHIPS.map(chip => (
-                <span key={chip} className="chip" onClick={() => handleChip(chip)}>{chip}</span>
+                <span key={chip} className="chip" onClick={() => handleChip(chip)} role="button">{chip}</span>
               ))}
             </div>
           </div>
@@ -172,11 +164,6 @@ export default function Home() {
           <div className="hs"><div className="hs-n stroke">$0</div><div className="hs-l">Always Free</div></div>
         </div>
       </section>
-
-      {/* ── AD 728x90 ── */}
-      <div className="ad-bar" style={{ display: 'none' }}>
-        <div className="ad728 ad-slot"></div>
-      </div>
 
       {/* ── FEATURED TOOL ── */}
       <div className="featured rv">
@@ -240,17 +227,11 @@ export default function Home() {
               <div className="ttag">{tool.tag}</div>
             </Link>
           ))}
-          {TOOLS.filter(tool => activeTab === 'All' || tool.cat === activeTab).length === 0 && (
-            <div style={{ padding: '40px', textAlign: 'center', color: 'var(--sub)' }}>
-              No tools found in this category yet. We are adding more daily!
-            </div>
-          )}
         </div>
       </div>
 
-      {/* ── BLOG + SIDEBAR ── */}
-      <div className="content-area" id="blog-section">
-        <div className="rv">
+      {/* ── BLOG SECTION ── */}
+      <div className="content-area rv" id="blog-section">
           <div className="blog-hd">
             <div>
               <div className="sec-lbl">// blog &amp; guides</div>
@@ -273,14 +254,6 @@ export default function Home() {
               </Link>
             ))}
           </div>
-        </div>
-
-        </div>
-      </div>
-    </>
-  );
-}
-        </div>
       </div>
     </>
   );
