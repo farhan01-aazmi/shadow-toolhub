@@ -275,48 +275,13 @@ export default function Home() {
           </div>
         </div>
 
-        {/* SIDEBAR */}
-        <aside className="sidebar-bp rv">
-          <div className="sw" style={{ display: 'none' }}>
-            <div className="sw-hd"></div>
-            <div className="sw-bd"><div className="ad300 ad-slot"></div></div>
-          </div>
-          <div className="sw">
-            <div className="sw-hd">Trending</div>
-            <div className="sw-bd">
-              <ul className="plist">
-                {TRENDING.map(item => (
-                  <li key={item.rank} className="pitem">
-                    <Link href={item.link}>
-                      <span className="prank">{item.rank}</span>
-                      <span className="picon">{item.ico}</span>
-                      <div>
-                        <span className="pn">{item.name}</span>
-                        <span className="pnum">{item.uses}</span>
-                      </div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="sw">
-            <div className="sw-hd">Quick Links</div>
-            <div className="sw-bd">
-              <div className="ql-grid">
-                {[{ n: 'Privacy', h: '/privacy-policy/' }, { n: 'About', h: '/about/' }, { n: 'Contact', h: '/contact/' }, { n: 'Disclaimer', h: '/disclaimer/' }, { n: 'Terms', h: '/terms-of-service/' }, { n: 'Blog', h: '/blog/' }].map(link => (
-                  <Link key={link.n} className="ql" href={link.h}>{link.n}</Link>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="sw">
-            <div className="sw-hd">Advertisement</div>
-            <div className="sw-bd"><div className="ad300 ad-slot"></div></div>
-          </div>
-        </aside>
+        </div>
       </div>
-
+    </>
+  );
+}
+        </div>
+      </div>
     </>
   );
 }

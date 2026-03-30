@@ -1,50 +1,59 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Privacy Policy - CCPA Compliant | Nevy.in',
-    description: 'Read the Nevy.in CCPA-compliant privacy policy. We are committed to protecting your data. No tracking, no cookies, no personal data collection.',
-    alternates: {
-        canonical: 'https://www.nevy.in/privacy-policy',
-    },
+  title: 'Privacy Policy | Tech Resolutions',
+  description: 'Your privacy is our priority. Learn how Tech Resolutions protects your data and ensures a safe online experience.',
+  alternates: {
+    canonical: 'https://www.nevy.in/privacy-policy',
+  },
 };
 
-export default function PrivacyPage() {
-    return (
-        <div className="container" style={{ padding: '80px 20px', maxWidth: '800px', margin: '0 auto' }}>
-            <h1 style={{ fontSize: '3rem', marginBottom: '40px' }}>Privacy Policy</h1>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '30px' }}>Last updated: March 2026</p>
+export default function PrivacyPolicy() {
+  return (
+    <div className="container" style={{ padding: '80px 20px', maxWidth: '800px', margin: '0 auto' }}>
+        <div className="rv">
+            <h1>Privacy Policy</h1>
+            <p style={{ marginTop: '20px', color: 'var(--text-secondary)' }}>
+                Last updated: March 30, 2026
+            </p>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
-                <section>
-                    <h2 style={{ color: 'var(--text-primary)', marginBottom: '10px' }}>1. Information We Collect</h2>
-                    <p>Nevy.in does not collect any personally identifiable information (PII). We do not require account creation, email addresses, or any form of registration to use our tools.</p>
-                </section>
+            <section style={{ marginTop: '40px' }}>
+                <h2>1. Commitment to Privacy</h2>
+                <p style={{ marginTop: '10px', color: 'var(--text-secondary)' }}>
+                    At Tech Resolutions, we take your privacy seriously. Our tools are designed to process data directly in your browser. We do not store, share, or sell your personal information.
+                </p>
+            </section>
 
-                <section>
-                    <h2 style={{ color: 'var(--text-primary)', marginBottom: '10px' }}>2. Cookies and Tracking</h2>
-                    <p>We do not use cookies, local storage tokens, or any form of browser fingerprinting to track your activity. Your sessions are completely anonymous.</p>
-                </section>
+            <section style={{ marginTop: '30px' }}>
+                <h2>2. Data Collection</h2>
+                <p style={{ marginTop: '10px', color: 'var(--text-secondary)' }}>
+                    We do not collect any personal identification information (PII). Any data entered into our tools (like word counts, currency values, or image uploads) is processed locally on your device.
+                </p>
+            </section>
 
-                <section>
-                    <h2 style={{ color: 'var(--text-primary)', marginBottom: '10px' }}>3. Data Processing</h2>
-                    <p>All tool operations (image compression, word counting, PDF conversions) are processed locally in your browser. No files are uploaded to our servers.</p>
-                </section>
+            <section style={{ marginTop: '30px' }}>
+                <h2>3. Use of Cookies</h2>
+                <p style={{ marginTop: '10px', color: 'var(--text-secondary)' }}>
+                    We use minimal functional cookies to remember your preferences (like dark mode). We do not use invasive tracking or third-party advertising cookies.
+                </p>
+            </section>
 
-                <section>
-                    <h2 style={{ color: 'var(--text-primary)', marginBottom: '10px' }}>4. Third-Party Services</h2>
-                    <p>We use third-party APIs (such as FreeCurrencyAPI and CoinGecko) to fetch real-time market data. These services have their own privacy policies. We do not share any user data with these providers.</p>
-                </section>
+            <section style={{ marginTop: '30px' }}>
+                <h2>4. Third-Party Services</h2>
+                <p style={{ marginTop: '10px', color: 'var(--text-secondary)' }}>
+                    We may use reputable third-party services like Google AdSense to serve ads. These services may use cookies as dictated by their own privacy policies. Our tools themselves remain 100% private.
+                </p>
+            </section>
 
-                <section>
-                    <h2 style={{ color: 'var(--text-primary)', marginBottom: '10px' }}>5. Advertising</h2>
-                    <p>We may use Google AdSense to display advertisements. Google may use cookies to serve ads based on your prior visits. You can opt out of personalized advertising by visiting Google&apos;s Ads Settings.</p>
-                </section>
-
-                <section>
-                    <h2 style={{ color: 'var(--text-primary)', marginBottom: '10px' }}>6. Contact</h2>
-                    <p>If you have any questions about this privacy policy, please contact Tech Resolutions at tech00kk@gmail.com.</p>
-                </section>
+            <div style={{ marginTop: '60px', padding: '40px', background: 'rgba(255,255,255,0.02)', borderRadius: '20px' }}>
+                <h3>Contact Us</h3>
+                <p style={{ marginTop: '10px' }}>
+                    If you have any questions about this Privacy Policy, contact Tech Resolutions at:
+                    <br />
+                    <strong>tech00kk@gmail.com</strong>
+                </p>
             </div>
         </div>
-    );
+    </div>
+  );
 }

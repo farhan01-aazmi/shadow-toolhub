@@ -35,7 +35,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
           content: data.content,
           category: 'Authority Insights',
           date: data.generated_at ? data.generated_at.split('T')[0] : new Date().toISOString().split('T')[0],
-          author: 'Nevy.in Security Team',
+          author: 'Tech Resolutions Security Team',
           tags: data.tags || [],
         });
       }
@@ -245,10 +245,51 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
     });
   });
 
+  posts.push({
+    slug: 'privacy-utility-toolkit',
+    title: 'The Privacy Utility Toolkit: Why Browser-Based Tools are the Future',
+    excerpt: 'In an era of mass surveillance, privacy isn\'t just a feature—it\'s a requirement. Learn why we built Nevy.in to process all your data locally.',
+    category: 'Privacy',
+    date: '2026-03-27',
+    author: 'Tech Resolutions Security',
+    tags: ['Privacy', 'Security', 'Web Tools'],
+    content: `
+      <article>
+        <h2>Your Data, Your Browser, Your Business</h2>
+        <p>Most online tools send your files to a remote server for processing. Whether it\'s a PDF or an image, once it leaves your device, you lose control. At Tech Resolutions, we believe in a better way.</p>
+        
+        <h3>The Architecture of Trust</h3>
+        <p>Our tools are built using modern web standards like WebAssembly and Client-Side JS. This means when you use our <a href="/tools/word-counter">Word Counter</a> or <a href="/tools/image-optimizer">Image Optimizer</a>, the data never leaves your machine. We don\'t just promise privacy; we architect it.</p>
+
+        <ul>
+          <li><b>Zero Server Uploads:</b> No temporary storage, no data breaches.</li>
+          <li><b>Offline Ready:</b> Once loaded, many of our tools work even without an internet connection.</li>
+          <li><b>Institutional Edge:</b> Speed and security combined in one clean interface.</li>
+        </ul>
+        
+        <p>Welcome to the future of utility software. Fast, free, and forever private.</p>
+      </article>
+    `
+  });
+
   return posts;
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const posts = await getProgrammaticPosts();
-  return posts.find(p => p.slug === slug) || null;
+  
+  // 1. Direct match (best case)
+  let post = posts.find(p => p.slug === slug);
+  if (post) return post;
+
+  // 2. Fuzzy match for numbered suffixes (e.g. -15, -42) commonly from old pSEO
+  const match = slug.match(/^(.*?)-\d+$/);
+  if (match) {
+    const baseSlug = match[1];
+    post = posts.find(p => p.slug === baseSlug);
+    if (post) return post;
+  }
+
+  // 3. Fallback: match by title similarity if needed (keeping it simple for now)
+  return null;
 }

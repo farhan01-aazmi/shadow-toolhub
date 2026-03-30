@@ -19,11 +19,8 @@ export default function Navbar() {
         <Link href="/" className="logo">
           <div className="logo-mark">
             <svg viewBox="0 0 34 34" fill="none">
-              <rect width="34" height="34" fill="#141414" />
-              <path d="M8 8L17 8L26 17L17 26L8 26Z" fill="none" stroke="#f0a500" strokeWidth="1.5" />
-              <circle cx="17" cy="17" r="3" fill="#f0a500" />
-              <line x1="8" y1="8" x2="26" y2="8" stroke="rgba(255,255,255,0.07)" strokeWidth="1" />
-              <line x1="8" y1="26" x2="26" y2="26" stroke="rgba(255,255,255,0.07)" strokeWidth="1" />
+              <rect width="34" height="34" rx="8" fill="#f0a500" />
+              <text x="50%" y="54%" dominantBaseline="middle" textAnchor="middle" fill="#141414" fontSize="14" fontWeight="900" fontFamily="system-ui">TR</text>
             </svg>
           </div>
           <span className="logo-word">Tech <em>Resolutions</em></span>
@@ -41,7 +38,6 @@ export default function Navbar() {
           All Tools →
         </Link>
 
-        {/* Mobile hamburger - only visible on small screens via CSS */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           style={{

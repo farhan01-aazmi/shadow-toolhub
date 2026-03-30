@@ -9,9 +9,8 @@ export default function Footer() {
           <Link href="/" className="logo">
             <div className="logo-mark">
               <svg viewBox="0 0 34 34" fill="none">
-                <rect width="34" height="34" fill="#141414" />
-                <path d="M8 8L17 8L26 17L17 26L8 26Z" fill="none" stroke="#f0a500" strokeWidth="1.5" />
-                <circle cx="17" cy="17" r="3" fill="#f0a500" />
+                <rect width="34" height="34" rx="8" fill="#f0a500" />
+                <text x="50%" y="54%" dominantBaseline="middle" textAnchor="middle" fill="#141414" fontSize="14" fontWeight="900" fontFamily="system-ui">TR</text>
               </svg>
             </div>
             <span className="logo-word">Tech <em>Resolutions</em></span>
@@ -21,7 +20,6 @@ export default function Footer() {
             <a className="soc" href="https://x.com/tech_resolutions" target="_blank" rel="noopener noreferrer">𝕏</a>
             <a className="soc" href="https://linkedin.com/company/tech-resolutions" target="_blank" rel="noopener noreferrer">in</a>
             <a className="soc" href="https://youtube.com/@tech-resolutions" target="_blank" rel="noopener noreferrer">▶</a>
-            <a className="soc" href="https://facebook.com" target="_blank" rel="noopener noreferrer">📘</a>
           </div>
         </div>
 
@@ -55,7 +53,7 @@ export default function Footer() {
       </div>
 
       <div className="foot-bottom">
-        <p>© 2026 nevy.in — All rights reserved</p>
+        <p>© 2026 Tech Resolutions — All rights reserved</p>
         <div className="foot-links">
           <Link href="/privacy-policy/">Privacy</Link>
           <Link href="/terms-of-service/">Terms</Link>
