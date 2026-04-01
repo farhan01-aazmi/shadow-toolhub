@@ -20,7 +20,8 @@ jobs:
         run: npm install
         
       - name: Run Autonomous Governor
-        run: npx ts-node --compiler-options '{"module": "commonjs"}' scripts/autonomous-governor.ts
+        run: >
+          npx ts-node --compiler-options '{"module": "commonjs"}' scripts/autonomous-governor.ts
         env:
           NEXT_PUBLIC_SITE_URL: https://nevy.in
           # If we had API keys for Reddit/Pinterest, we would add them here as secrets
