@@ -102,7 +102,7 @@ export default function MetaGeneratorClient() {
                         <span>SEO Excellence</span>
                     </div>
                     <p>
-                        Meta descriptions don't directly influence rankings, but they greatly impact <b>CTR (Click-Through Rate)</b>.
+                        Meta descriptions don't directly influence rankings, but they greatly impact <b>CS (Click-Through Rate)</b>.
                         Write for humans first, bots second.
                     </p>
                 </div>

@@ -1,10 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { getProgrammaticPosts } from '@/lib/blog/generator';
-import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Tech Resolutions Blog - Insights, Tips & Tutorials",
+    title: "Tech Resolutions Blog — Insights, Tips & Tutorials",
     description: "Stay updated with the latest trends in finance, crypto, and web performance. Expert guides on how to use our tools for maximum benefit.",
     alternates: {
         canonical: "https://www.nevy.in/blog",
@@ -14,37 +13,97 @@ export const metadata: Metadata = {
 export default async function BlogListingPage() {
     const posts = await getProgrammaticPosts();
 
+    // Deduplicate by slug — show each article only once
+    const seen = new Set<string>();
+    const uniquePosts = posts.filter(post => {
+        if (seen.has(post.slug)) return false;
+        seen.add(post.slug);
+        return true;
+    });
+
+    // Category color mapping
+    const catColors: Record<string, string> = {
+        'Finance': 'c1',
+        'Crypto': 'c2',
+        'Web': 'c3',
+        'Privacy': 'c4',
+        'Authority Insights': 'c1',
+    };
+
     return (
-        <div className="blog-container">
-            <header className="blog-header">
-                <h1 className="gradient-text">Insights & Guides</h1>
-                <p className="blog-intro">
-                    Expert analysis and tutorials to help you master our suite of tools and
-                    stay ahead in the fast-paced USA markets.
+        <div className="blog-listing-page">
+            {/* ── HERO HEADER ── */}
+            <section className="blog-hero">
+                <div className="blog-hero-bg" aria-hidden="true">BLOG</div>
+                <div className="rv2">
+                    <div className="sec-lbl">// blog &amp; guides</div>
+                    <h1 className="blog-hero-title">
+                        Insights<br />
+                        <span className="out">that</span><br />
+                        <span className="acc">matter.</span>
+                    </h1>
+                </div>
+                <p className="blog-hero-desc">
+                    Expert analysis and tutorials to help you master our suite of 70+ free tools and stay ahead in today&apos;s fast-paced digital world.
                 </p>
-            </header>
+            </section>
 
-            <div className="posts-grid">
-                {posts.map((post) => (
-                    <article key={post.slug} className="post-card card glass">
-                        <div className="post-meta">
-                            <span className="category-tag">{post.category}</span>
-                            <span className="date-meta"><Calendar size={14} /> {new Date(post.date).toLocaleDateString()}</span>
+            {/* ── ARTICLES GRID ── */}
+            <div className="blog-listing-container">
+                <div className="blog-hd">
+                    <div>
+                        <div className="sec-lbl">// all articles</div>
+                        <div className="sec-ttl" style={{ fontSize: '1.4rem' }}>Latest Articles</div>
+                    </div>
+                    <span className="link-all" style={{ opacity: 0.5 }}>
+                        {uniquePosts.length} Articles
+                    </span>
+                </div>
+
+                <div className="bgrid">
+                    {uniquePosts.map((post, i) => (
+                        <Link
+                            key={post.slug}
+                            className={`bpost ${i === 0 ? 'wide' : ''}`}
+                            href={`/blog/${post.slug}`}
+                        >
+                            <div className="barr">↗</div>
+                            <div>
+                                <div className="bmeta">
+                                    <span className={`bcat ${catColors[post.category] || 'c1'}`}>
+                                        {post.category}
+                                    </span>
+                                    <span className="bdate">
+                                        {new Date(post.date).toLocaleDateString('en-US', {
+                                            day: '2-digit',
+                                            month: 'short',
+                                            year: 'numeric',
+                                        })}
+                                    </span>
+                                </div>
+                                <div className="btitle">{post.title}</div>
+                            </div>
+                            <div>
+                                <div className="bexc">{post.excerpt}</div>
+                                <div className="blog-author">
+                                    {post.author}
+                                </div>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+
+                {/* ── CTA ── */}
+                <div className="blog-cta-bar">
+                    <div className="blog-cta-inner">
+                        <div>
+                            <div className="sec-lbl">// explore</div>
+                            <div className="blog-cta-text">Discover 70+ free tools built for speed, privacy, and precision.</div>
                         </div>
-                        <h2 className="post-title">
-                            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                        </h2>
-                        <p className="post-excerpt">{post.excerpt}</p>
-                        <div className="post-footer">
-                            <span className="author-meta"><User size={14} /> {post.author}</span>
-                            <Link href={`/blog/${post.slug}`} className="read-more">
-                                Read Article <ArrowRight size={16} />
-                            </Link>
-                        </div>
-                    </article>
-                ))}
+                        <Link href="/all-tools" className="btn-a">All Tools →</Link>
+                    </div>
+                </div>
             </div>
-
         </div>
     );
 }

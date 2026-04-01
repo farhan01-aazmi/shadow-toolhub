@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import OptimizerComponent from './OptimizerComponent';
-import { ShieldCheck, Zap, Globe, HardDrive } from 'lucide-react';
+import { Zap, Globe, HardDrive } from 'lucide-react';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   Tech Resolutions — BLUEPRINT CSS (EXACT REPLICATION)
+   Shadow — BLUEPRINT CSS (EXACT REPLICATION)
    ═══════════════════════════════════════════════════════ */
 
 *,
@@ -2375,4 +2375,341 @@ button {
   border-color: var(--amber);
   color: var(--amber);
   background: rgba(240, 165, 0, 0.05);
+}
+
+/* ═══════════════════════════════════════════════════════
+   BLOG LISTING PAGE
+   ═══════════════════════════════════════════════════════ */
+
+.blog-listing-page {
+  min-height: 100vh;
+}
+
+.blog-hero {
+  padding: 160px 48px 80px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.blog-hero-bg {
+  position: absolute;
+  right: -20px;
+  bottom: -30px;
+  font-size: clamp(180px, 25vw, 380px);
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.015);
+  letter-spacing: -0.06em;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.blog-hero-title {
+  font-size: clamp(3rem, 6vw, 7rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  max-width: 700px;
+  position: relative;
+  z-index: 1;
+}
+
+.blog-hero-title .out {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+  color: transparent;
+}
+
+.blog-hero-title .acc {
+  color: var(--amber);
+}
+
+.blog-hero-desc {
+  flex-shrink: 0;
+  width: 320px;
+  padding-top: 20px;
+  font-size: 0.95rem;
+  color: var(--sub2);
+  line-height: 1.85;
+  border-left: 2px solid var(--amber);
+  padding-left: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.blog-listing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+.blog-author {
+  margin-top: 12px;
+  font-family: var(--font-dm-mono), 'DM Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sub);
+}
+
+.blog-cta-bar {
+  margin-top: 48px;
+  border: 1px solid var(--line2);
+}
+
+.blog-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 40px;
+  background: var(--bg1);
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-cta-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--amber), var(--red), transparent);
+}
+
+.blog-cta-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 6px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   CONTACT PAGE
+   ═══════════════════════════════════════════════════════ */
+
+.contact-page {
+  min-height: 100vh;
+}
+
+.contact-hero {
+  padding: 160px 48px 80px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-hero-bg {
+  position: absolute;
+  right: -20px;
+  bottom: -30px;
+  font-size: clamp(180px, 25vw, 380px);
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.015);
+  letter-spacing: -0.06em;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.contact-hero-title {
+  font-size: clamp(3rem, 6vw, 7rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  max-width: 700px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-hero-title .out {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+  color: transparent;
+}
+
+.contact-hero-title .acc {
+  color: var(--amber);
+}
+
+.contact-hero-desc {
+  flex-shrink: 0;
+  width: 320px;
+  padding-top: 20px;
+  font-size: 0.95rem;
+  color: var(--sub2);
+  line-height: 1.85;
+  border-left: 2px solid var(--amber);
+  padding-left: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+}
+
+.contact-card {
+  background: var(--bg);
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--amber), var(--red), transparent);
+}
+
+.contact-card-main {
+  background: var(--bg1);
+}
+
+.contact-card-kicker {
+  font-family: var(--font-dm-mono), 'DM Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 18px;
+}
+
+.contact-card-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 14px;
+}
+
+.contact-card-desc {
+  font-size: 0.9rem;
+  color: var(--sub2);
+  line-height: 1.8;
+  max-width: 380px;
+}
+
+.contact-response-time {
+  margin-top: 24px;
+  font-family: var(--font-dm-mono), 'DM Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sub);
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-faq-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-faq-item:last-child {
+  border-bottom: none;
+}
+
+.contact-faq-q {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.contact-faq-a {
+  font-size: 0.8rem;
+  color: var(--sub2);
+  line-height: 1.6;
+}
+
+.contact-cta-bar {
+  margin-top: 48px;
+  border: 1px solid var(--line2);
+}
+
+.contact-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 40px;
+  background: var(--bg1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-cta-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--amber), var(--red), transparent);
+}
+
+.contact-cta-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 6px;
+}
+
+/* ── RESPONSIVE: BLOG + CONTACT ── */
+@media (max-width: 768px) {
+  .blog-hero,
+  .contact-hero {
+    flex-direction: column;
+    padding: 120px 20px 48px;
+    gap: 24px;
+  }
+
+  .blog-hero-desc,
+  .contact-hero-desc {
+    width: 100%;
+  }
+
+  .blog-hero-title,
+  .contact-hero-title {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-cta-inner,
+  .contact-cta-inner {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 28px 20px;
+  }
+
+  .blog-cta-bar,
+  .contact-cta-bar {
+    margin-top: 32px;
+  }
 }

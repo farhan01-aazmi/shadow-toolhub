@@ -46,14 +46,14 @@ export default async function BlogDetailPage({ params }: Props) {
         "datePublished": post.date,
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": `https://nevy.in/blog/${post.slug}`
+            "@id": `https://www.nevy.in/blog/${post.slug}`
         },
         "publisher": {
             "@type": "Organization",
-            "name": "Shadow Event ToolHub",
+            "name": "Tech Resolutions",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://nevy.in/logo.png"
+                "url": "https://www.nevy.in/logo.png"
             }
         }
     };
@@ -66,19 +66,19 @@ export default async function BlogDetailPage({ params }: Props) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://nevy.in"
+                "item": "https://www.nevy.in"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Blog",
-                "item": "https://nevy.in/blog"
+                "item": "https://www.nevy.in/blog"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": post.title,
-                "item": `https://nevy.in/blog/${post.slug}`
+                "item": `https://www.nevy.in/blog/${post.slug}`
             }
         ]
     };

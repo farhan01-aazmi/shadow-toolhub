@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'All Free Online Tools | Tech Resolutions - 150+ Utility Tools',
-    description: 'Browse 150+ free online tools — image compressor, PDF converter, EMI calculator, password generator, word counter, crypto tracker and more. No signup required.',
+    title: 'All Free Online Tools | Tech Resolutions - 70+ Utility Tools',
+    description: 'Browse 70+ free online tools — image compressor, PDF converter, EMI calculator, password generator, word counter, crypto tracker and more. No signup required.',
     alternates: {
         canonical: 'https://www.nevy.in/all-tools',
     },
@@ -141,25 +141,25 @@ export default function ToolsDirectory() {
     const totalTools = CATEGORIES.reduce((sum, cat) => sum + cat.tools.length, 0);
 
     return (
-        <div className="container" style={{ padding: '80px 20px', maxWidth: '1200px', margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                <h1 style={{ fontSize: '3rem', marginBottom: '20px' }}>All Free Tools</h1>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem' }}>
+        <div className="container px-5 py-20 max-w-[1200px] mx-auto">
+            <div className="text-center mb-[60px]">
+                <h1 className="text-[3rem] mb-5">All Free Tools</h1>
+                <p className="text-sub text-[1.2rem]">
                     Browse {totalTools}+ free, high-performance utilities across {CATEGORIES.length} categories. No signup. No fees. Ever.
                 </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '30px' }}>
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-[30px]">
                 {CATEGORIES.map(cat => (
-                    <div key={cat.name} className="card glass rv" style={{ padding: '30px' }}>
-                        <div style={{ fontSize: '2.5rem', marginBottom: '15px' }}>{cat.ico}</div>
-                        <h2 style={{ marginBottom: '8px', fontSize: '1.4rem' }}>{cat.name}</h2>
-                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginBottom: '20px' }}>
+                    <div key={cat.name} className="card glass rv p-[30px]">
+                        <div className="text-[2.5rem] mb-4">{cat.ico}</div>
+                        <h2 className="mb-2 text-[1.4rem]">{cat.name}</h2>
+                        <p className="text-sub text-[0.85rem] mb-5">
                             {cat.tools.length} tools
                         </p>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                        <div className="flex flex-col gap-2">
                             {cat.tools.map(tool => (
-                                <Link key={tool.name} href={tool.link} className="btn-o" style={{ textAlign: 'left', padding: '10px 15px', fontSize: '0.9rem' }}>
+                                <Link key={tool.name} href={tool.link} className="btn-o text-left px-[15px] py-[10px] text-[0.9rem]">
                                     {tool.name} →
                                 </Link>
                             ))}
@@ -168,12 +168,12 @@ export default function ToolsDirectory() {
                 ))}
             </div>
 
-            <div style={{ marginTop: '80px', textAlign: 'center', padding: '40px', background: 'rgba(255,255,255,0.02)', borderRadius: '20px' }}>
-                <h3 style={{ marginBottom: '15px' }}>Need a specific tool?</h3>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '25px' }}>
+            <div className="mt-[80px] text-center p-[40px] bg-white/5 rounded-[20px]">
+                <h3 className="mb-[15px]">Need a specific tool?</h3>
+                <p className="text-sub mb-[25px]">
                     We are constantly adding new utilities to Tech Resolutions. Contact us to request a custom tool.
                 </p>
-                <Link href="/contact/" className="btn-a" style={{ padding: '12px 30px' }}>
+                <Link href="/contact/" className="btn-a px-[30px] py-[12px]">
                     Contact Support
                 </Link>
             </div>

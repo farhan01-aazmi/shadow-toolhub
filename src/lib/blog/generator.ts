@@ -52,7 +52,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
     excerpt: 'As the world shifts towards digital-first economies, understanding CBDCs is crucial for every global citizen. An in-depth analysis of the 2026 financial landscape.',
     category: 'Finance',
     date: '2026-03-07',
-    author: 'Dr. Alistair Shadow',
+    author: 'Tech Resolutions Editorial',
     tags: ['Economy', 'CBDC', 'Banking', 'Digital Finance'],
     content: `
       <article>
@@ -69,7 +69,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
         </ul>
 
         <h3>What This Means for the Average User</h3>
-        <p>For users of tools like our <a href="/tools/currency-converter">Currency Converter</a>, CBDCs mean that the "Mid-Market Rate" will become even more transparent. The friction of traditional Forex will decrease, but the need for accurate tracking and planning will only increase.</p>
+        <p>For users of tools like our <a href="/tools/emi-calculator">EMI Calculator</a>, CBDCs mean that the "Mid-Market Rate" will become even more transparent. The friction of traditional Forex will decrease, but the need for accurate tracking and planning will only increase.</p>
         
         <p>At Tech Resolutions, we are already preparing our data pipelines to ingest direct CBDC protocol feeds, ensuring you always have the institutional edge in a digital-yen, digital-euro, and digital-dollar world.</p>
       </article>
@@ -82,7 +82,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
     excerpt: 'The crypto market has matured, but volatility remains. Learn the institutional strategies used to protect capital in a decentralized world.',
     category: 'Crypto',
     date: '2026-03-06',
-    author: 'Marcus Vane, Senior Analyst',
+    author: 'Tech Resolutions Insights',
     tags: ['Crypto', 'Investing', 'Risk Management', 'Education'],
     content: `
       <article>
@@ -113,7 +113,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
     excerpt: 'Google\'s 2026 update puts User Centric signals at the forefront. Learn how to optimize your Core Web Vitals to beat the competition.',
     category: 'Web',
     date: '2026-03-05',
-    author: 'Elena Rossi, SEO Director',
+    author: 'Tech Resolutions SEO Team',
     tags: ['SEO', 'Page Speed', 'Web Performance', 'Google Ranking'],
     content: `
       <article>
@@ -130,7 +130,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
         </ul>
 
         <h3>Real-World Optimization</h3>
-        <p>We built Tech Resolutions specifically to showcase what's possible. Our <a href="/tools/image-optimizer">WebP Optimizer</a> is a direct result of our own internal performance research. By converting heavy JPEGs to modern formats, we routinely see a 40% jump in mobile search rankings.</p>
+        <p>We built Tech Resolutions specifically to showcase what's possible. Our <a href="/tools/image-compressor">Image Compressor</a> is a direct result of our own internal performance research. By converting heavy JPEGs to modern formats, we routinely see a 40% jump in mobile search rankings.</p>
 
         <blockquote>"A slow site is a leaking bucket. No amount of great content can fill it."</blockquote>
 
@@ -144,10 +144,10 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
     posts.push({
       slug: `mastering-${pair.toLowerCase().replace('/', '-')}-exchange-rates`,
       title: `Mastering ${pair} Exchange Rates in 2026: Expert Guide`,
-      excerpt: `Exchanging ${pair} shouldn't feel like a gamble. Our expert analysis helps you win the exchange game.`,
+      excerpt: `Get institutional-grade tracking for ${pair}. Compare real-time performance to optimize your global financial strategies.`,
       category: 'Finance',
       date: '2026-03-05',
-      author: 'Shadow Finance Team',
+      author: 'Tech Resolutions Finance',
       tags: [pair, 'Finance', 'Savings'],
       content: `
         <article>
@@ -182,10 +182,10 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
     posts.push({
       slug: `${coin.toLowerCase()}-market-clarity-guide`,
       title: `${coin} Market Clarity: How to Track Volatility in 2026`,
-      excerpt: `The ${coin} market never sleeps. Learn our human-first approach to monitoring ${coin} price action.`,
+      excerpt: `Master ${coin} analytics and track institutional liquidity shifts with our dedicated 2026 data dashboard.`,
       category: 'Crypto',
       date: '2026-03-04',
-      author: 'Shadow Tech Expert',
+      author: 'Tech Resolutions Expert',
       tags: [coin, 'Crypto', 'Investing'],
       content: `
         <article>
@@ -194,7 +194,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
           <h3>Why ${coin} Data Precision Matters</h3>
           <p>We've observed that ${coin} often leads market trends. Our professional dashboard removes the noise and gives you the facts: real-time volume, market capitalization, and historical context.</p>
 
-          <blockquote>"In a market full of hype, data is your only anchor." - Shadow Tech Team</blockquote>
+          <blockquote>"In a market full of hype, data is your only anchor." - Tech Resolutions Tech Team</blockquote>
 
           <h4>Optimization Tips for ${coin} Traders:</h4>
           <ul>
@@ -218,10 +218,10 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
     posts.push({
       slug: `expert-guide-to-${topic.toLowerCase().replace(/ /g, '-')}`,
       title: `Expert Guide: Professional ${topic} Mastery`,
-      excerpt: `Learn how to master ${topic} for high-performance websites in 2026. Architectural precision for SEO.`,
+      excerpt: `Implement professional ${topic} strategies to improve Core Web Vitals and maximize organic reach.`,
       category: 'Web',
       date: '2026-03-03',
-      author: 'Shadow SEO Ops',
+      author: 'Tech Resolutions Operations',
       tags: [topic, 'SEO', 'Performance'],
       content: `
         <article>
@@ -259,7 +259,7 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
         <p>Most online tools send your files to a remote server for processing. Whether it\'s a PDF or an image, once it leaves your device, you lose control. At Tech Resolutions, we believe in a better way.</p>
         
         <h3>The Architecture of Trust</h3>
-        <p>Our tools are built using modern web standards like WebAssembly and Client-Side JS. This means when you use our <a href="/tools/word-counter">Word Counter</a> or <a href="/tools/image-optimizer">Image Optimizer</a>, the data never leaves your machine. We don\'t just promise privacy; we architect it.</p>
+        <p>Our tools are built using modern web standards like WebAssembly and Client-Side JS. This means when you use our <a href="/tools/advanced-word-counter">Word Counter</a> or <a href="/tools/image-compressor">Image Compressor</a>, the data never leaves your machine. We don't just promise privacy; we architect it.</p>
 
         <ul>
           <li><b>Zero Server Uploads:</b> No temporary storage, no data breaches.</li>
@@ -272,7 +272,9 @@ export async function getProgrammaticPosts(): Promise<BlogPost[]> {
     `
   });
 
-  return posts;
+  // 4. ENSURE UNIQUE SLUGS (Fix for Error 1)
+  const uniquePosts = Array.from(new Map(posts.map(p => [p.slug, p]) ).values());
+  return uniquePosts;
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {

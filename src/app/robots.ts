@@ -1,12 +1,14 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-    return {
-        rules: {
-            userAgent: '*',
-            allow: '/',
-            disallow: '/private/',
-        },
-        sitemap: 'https://www.nevy.in/sitemap.xml',
-    };
+  const baseUrl = 'https://www.nevy.in';
+
+  return {
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: ['/api/', '/_next/'],
+    },
+    sitemap: `${baseUrl}/sitemap.xml`,
+  };
 }

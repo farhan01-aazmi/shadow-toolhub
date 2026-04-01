@@ -6,7 +6,7 @@ import { US_STATES_DATA } from '@/lib/data/us-states';
 import { generateIntroParagraph, generateHistoricalAnalysis, generateLongFormArticle, generateFAQSchema } from '@/lib/seo/spintax';
 import ConverterComponent from '../ConverterComponent';
 import Link from 'next/link';
-import { ArrowRight, Info, CheckCircle, TrendingDown, TrendingUp, ShieldCheck, Zap, Lightbulb, MessageSquare } from 'lucide-react';
+import { ArrowRight, Lightbulb, MessageSquare, ShieldCheck, TrendingUp, Clock, AlertTriangle } from 'lucide-react';
 import StructuredData from '@/components/seo/StructuredData';
 
 interface Props {
@@ -111,29 +111,31 @@ export default async function CurrencyPairPage({ params }: Props) {
 
             <div className="tool-layout">
                 <div className="tool-main">
-                    {/* Pre-fill the converter with this pair */}
                     <ConverterComponent initialRates={data.rates} />
 
-                    <article className="automated-article card glass">
+                    <div className="card p-6 border border-[#222] mb-8">
+                        <Clock className="amber mb-4" size={28} />
+                        <h4 className="font-bold mb-2">High-Frequency Refreshes</h4>
+                        <p className="text-sm text-sub leading-relaxed">
+                            Data pipelines ensure the {from}/{to} chart reflects the latest macroeconomic shifts almost instantly. You&apos;re currently viewing the real-time institutional exchange rate for {from} to {to}. This is the pure data feed, before any bank or consumer financial institution adds their retail markup.
+                        </p>
+                    </div>
 
+                    <article className="automated-article card glass">
                         <div className="expert-vault card shadow-sm mb-8">
                             <div className="vault-header">
                                 <Lightbulb className="text-secondary" size={24} />
-                                <h3>Expert Insight: Timing Your ${from} Swap</h3>
+                                <h3>Expert Insight: Timing Your {from} Swap</h3>
                             </div>
                             <p>
-                                When exchanging {fromName} for {toName}, we've noticed that market volatility often peaks during the crossover of the London and New York trading sessions.
+                                When exchanging {fromName} for {toName}, we&apos;ve noticed that market volatility often peaks during the crossover of the London and New York trading sessions.
                                 <b>Pro Tip:</b> If your transaction isn't urgent, compare rates over a 24-hour period to catch the most favorable mid-market dip.
                                 Our tool refreshes every hour to help you spot these trends accurately.
                             </p>
                         </div>
 
                         <h2>Understanding the {from} to {to} Exchange Rate</h2>
-                        <p>
-                            Exchanging <b>{fromName}</b> for <b>{toName}</b> is more than just a number—it's about getting the best value for your hard-earned money.
-                            Whether you're sending money home to family, paying an international invoice, or planning a trip to a {toName}-using region,
-                            understanding the "Mid-Market Rate" is your best defense against unfair bank fees.
-                        </p>
+                            Exchanging <b>{fromName}</b> for <b>{toName}</b> is more than just a number—it&apos;s about getting the best value for your hard-earned money.
 
                         <div className="insights-grid">
                             <div className="insight-card">
@@ -152,26 +154,43 @@ export default async function CurrencyPairPage({ params }: Props) {
                             </div>
                         </div>
 
+                        <div className="card glass relative overflow-hidden my-8 min-h-[300px]">
+                            <div className="absolute top-4 right-4 text-xs font-mono text-amber/60 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                                LIVE SPREAD
+                            </div>
+                            <h3 className="text-xl font-bold mb-4">Historical & Market Context</h3>
+                            <div className="bg-[#1a1a1a] p-5 rounded-lg border border-[#333] mb-6">
+                                <h4 className="flex items-center gap-2 text-md font-bold mb-3">
+                                    <AlertTriangle size={18} className="amber" />
+                                    The &quot;Zero Fee&quot; Trap
+                                </h4>
+                                <p className="text-sm text-sub leading-relaxed">
+                                    Many airport kiosks and traditional banks advertise &quot;0% Commission&quot;. They make their profit by adjusting the rate above the mid-market value you see here. Always check this dashboard before committing to a {from} transfer.
+                                </p>
+                            </div>
+                        </div>
+
                         <div className="programmatic-prose mt-8 mb-8" dangerouslySetInnerHTML={{ __html: article.replace(/\n/g, '<br/>') }} />
 
                         <section className="faq-section">
                             <h3>Common Questions We Get About {from}/{to}</h3>
                             <div className="faq-item">
-                                <p className="q">"What's the best way to get 1 {from} into {to} without losing money?"</p>
+                                <p className="q">&quot;What&apos;s the best way to get 1 {from} into {to} without losing money?&quot;</p>
                                 <p className="a">
-                                    The "best" way is almost always the one with the lowest fee on top of the mid-market rate (the rate you see on this page).
+                                    The &quot;best&quot; way is almost always the one with the lowest fee on top of the mid-market rate (the rate you see on this page).
                                     Today, that rate is <b>{rate.toFixed(4)}</b>. Use this as your benchmark when comparing transfer services.
                                 </p>
                             </div>
                             <div className="faq-item">
-                                <p className="q">"How much will I actually get in {to}?"</p>
+                                <p className="q">&quot;How much will I actually get in {to}?&quot;</p>
                                 <p className="a">
-                                    If you convert 1 {fromName} right now at our mid-market rate, you'd get {rate.toFixed(4)} {toName}.
+                                    If you convert 1 {fromName} right now at our mid-market rate, you&apos;d get {rate.toFixed(4)} {toName}.
                                     Keep in mind that most banks will take a 2-5% cut, so always use our calculator to see what you *should* be getting.
                                 </p>
                             </div>
                             <div className="faq-item">
-                                <p className="q">"Is the {from} to {to} market volatile right now?"</p>
+                                <p className="q">&quot;Is the {from} to {to} market volatile right now?&quot;</p>
                                 <p className="a">
                                     Currency markets never sleep. While the {from}/{to} pair is generally stable, global economic shifts can cause sudden moves.
                                     Bookmark this page to stay updated on the latest hourly shifts.
@@ -225,7 +244,7 @@ export default async function CurrencyPairPage({ params }: Props) {
                         <ShieldCheck size={24} className="text-secondary" />
                         <div>
                             <h3>100% Client-Side Privacy</h3>
-                            <p>We process your {from} conversion locally in your browser. We don't log your location or the amounts you are calculating, ensuring complete financial anonymity.</p>
+                            <p>We process your {from} conversion locally in your browser. We don&apos;t log your location or the amounts you are calculating, ensuring complete financial anonymity.</p>
                         </div>
                     </div>
                 </div>
@@ -235,11 +254,11 @@ export default async function CurrencyPairPage({ params }: Props) {
                 <div className="pro-content">
                     <h3>Guide: Getting the Best {from} to {to} Exchange Rate</h3>
                     <p>
-                        When converting <b>{from} to {to}</b>, the biggest mistake most consumers and small businesses make is accepting the rate offered by their retail bank or an airport kiosk. These institutions systematically apply a "spread"—a hidden markup ranging from 2% to 6% on top of the actual market rate.
+                        When converting <b>{from} to {to}</b>, the biggest mistake most consumers and small businesses make is accepting the rate offered by their retail bank or an airport kiosk. These institutions systematically apply a &quot;spread&quot;—a hidden markup ranging from 2% to 6% on top of the actual market rate.
                     </p>
                     <p>
                         <b>Understanding the Mid-Market Rate:</b><br />
-                        The rate you see on our <b>{from} to {to} Currency Converter</b> is the "mid-market rate". This is the midpoint between global buy and sell rates derived from wholesale currency markets. By knowing this exact figure, you can compare it against the rate your bank or transfer service offers to uncover exactly how much they are charging you in hidden margins.
+                        The rate you see on our <b>{from} to {to} Currency Converter</b> is the &quot;mid-market rate&quot;. This is the midpoint between global buy and sell rates derived from wholesale currency markets. By knowing this exact figure, you can compare it against the rate your bank or transfer service offers to uncover exactly how much they are charging you in hidden margins.
                     </p>
                     <p>
                         <b>Security and Privacy Benefits:</b><br />

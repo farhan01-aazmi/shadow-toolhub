@@ -43,7 +43,7 @@ export class AssetGenerator {
     generateCryptoPins(coins: CryptoCoin[]): PinAsset[] {
         return coins.slice(0, 5).map(coin => ({
             title: `Live ${coin.name} (${coin.symbol.toUpperCase()}) Price Tracker`,
-            description: `Track ${coin.name} prices, market cap, and 24h change in real-time. Stay ahead of the crypto market with Shadow Event's premium dashboard. #Crypto #Bitcoin #Investing`,
+            description: `Track ${coin.name} prices, market cap, and 24h change in real-time. Stay ahead of the crypto market with Tech Resolutions's premium dashboard. #Crypto #Bitcoin #Investing`,
             altText: `${coin.name} price chart and data dashboard`,
             link: `${this.baseUrl}/tools/crypto-tracker/${coin.id}`
         }));

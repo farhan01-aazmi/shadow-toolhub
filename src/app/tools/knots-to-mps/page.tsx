@@ -8,22 +8,22 @@ export const metadata: Metadata = {
 
 export default function ToolPage() {
     return (
-        <div className="container" style={{ padding: '80px 20px', maxWidth: '800px', margin: '0 auto' }}>
+        <div className="container px-5 py-20 max-w-3xl mx-auto">
             <div className="rv">
-                <div className="sec-lbl">// converter</div>
-                <h1 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Knots To Mps</h1>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '40px' }}>
+                <div className="sec-lbl">{/* converter */}</div>
+                <h1 className="text-4xl mb-5">Knots To Mps</h1>
+                <p className="text-sub mb-10">
                     Quick and accurate knots to mps utility. Perfect for students, engineers, and professionals.
                 </p>
-                <div className="card glass" style={{ padding: '40px', textAlign: 'center' }}>
-                    <p style={{ marginBottom: '20px', fontSize: '1.2rem' }}>Tool logic is initializing...</p>
-                    <div style={{ padding: '20px', border: '1px dashed var(--sub)', borderRadius: '10px', color: 'var(--sub)' }}>
+                <div className="card glass p-10 text-center">
+                    <p className="mb-5 text-xl">Tool logic is initializing...</p>
+                    <div className="p-5 border border-dashed border-sub rounded-lg text-sub">
                         Interactive UI component loading from Edge...
                     </div>
                 </div>
-                <div style={{ marginTop: '60px' }}>
+                <div className="mt-16">
                     <h2>About Knots To Mps</h2>
-                    <p style={{ marginTop: '20px', color: 'var(--text-secondary)', lineHeight: '1.8' }}>
+                    <p className="mt-5 text-sub leading-relaxed">
                         This tool allows you to convert between different units with ease. Simply enter your value and get the result instantly.
                         All processing is done in your browser for maximum privacy.
                     </p>

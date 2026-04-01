@@ -16,7 +16,7 @@ export const fiatCurrencies = [
     { code: 'NZD', name: 'New Zealand Dollar', symbol: 'NZ$' },
     { code: 'HKD', name: 'Hong Kong Dollar', symbol: 'HK$' },
     { code: 'ZAR', name: 'South African Rand', symbol: 'R' },
-    { code: 'TRY', name: 'Turkish Lira', symbol: '₺' },
+    { code: 'SY', name: 'Turkish Lira', symbol: '₺' },
     { code: 'SEK', name: 'Swedish Krona', symbol: 'kr' },
     { code: 'NOK', name: 'Norwegian Krone', symbol: 'kr' },
     { code: 'DKK', name: 'Danish Krone', symbol: 'kr' },

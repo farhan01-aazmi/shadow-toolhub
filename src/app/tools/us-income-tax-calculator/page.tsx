@@ -104,8 +104,11 @@ export default function USTaxCalculatorPage() {
                         A common misconception in the US tax system is that moving into a higher tax bracket increases the tax rate on your entire income. In reality, the American system is progressive. This means only the part of your income that falls within the new bracket is taxed at that higher rate. Our tool helps visualize this by showing both your marginal rate (the tax on your last dollar earned) and your effective rate (the overall percentage of your income paid in taxes).
                     </p>
                     <p className="mt-4">
-                        Understanding this distinction is vital for making decisions about bonuses, raises, or overtime work. You can work with confidence knowing that a raise will never result in less take-home pay due to tax bracket shifts.
+                        While standard deductions apply to everyone, tracking your exact tax bracket allows you to make informed decisions about pre-tax contributions (like 401k or IRA) to lower your taxable income. Don't wait until April to find out your tax liability.
                     </p>
+                    <div className="cta-box card glass mt-8">
+                        Ready to take control? Use our free <a href="/tools/emi-calculator" className="text-amber">"EMI Calculator"</a> to plan your big purchases based on your net income.
+                    </div>
                 </article>
 
                 <article className="p-6 card glass">

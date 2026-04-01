@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
                 <p style={{ marginTop: '10px' }}>
                     If you have any questions about this Privacy Policy, contact Tech Resolutions at:
                     <br />
-                    <strong>tech00kk@gmail.com</strong>
+                    <strong>support@nevy.in</strong>
                 </p>
             </div>
         </div>

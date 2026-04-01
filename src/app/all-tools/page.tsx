@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'All Free Online Tools | Tech Resolutions - 150+ Utility Tools',
-    description: 'Browse 150+ free online tools — image compressor, PDF converter, EMI calculator, password generator, word counter, crypto tracker and more. No signup required.',
+    title: 'All Free Online Tools | Tech Resolutions - 70+ Utility Tools',
+    description: 'Browse 70+ free online tools — image compressor, PDF converter, EMI calculator, password generator, word counter, crypto tracker and more. No signup required.',
     alternates: {
         canonical: 'https://www.nevy.in/all-tools',
     },
@@ -15,51 +15,51 @@ const CATEGORIES = [
         name: 'Finance & Money',
         ico: '📐',
         tools: [
-            { name: 'EMI Calculator', link: '/tools/loan-calculator/' },
-            { name: 'Currency Converter', link: '/tools/currency-converter/' },
-            { name: 'Crypto Tracker', link: '/tools/crypto-tracker/' },
-            { name: 'US Income Tax Calculator', link: '/tools/us-income-tax-calculator/' },
-            { name: 'GST Calculator', link: '/tools/gst-calculator/' },
-            { name: 'Percentage Calculator', link: '/tools/percentage-calculator/' },
-            { name: 'Tip Calculator', link: '/tools/tip-calculator/' },
-            { name: 'Salary to Hourly Calculator', link: '/tools/salary-to-hourly-calculator/' },
-            { name: 'Compound Interest Calculator', link: '/tools/compound-interest-calculator/' },
-            { name: 'Mortgage Calculator', link: '/tools/mortgage-calculator/' },
+            { name: 'EMI Calculator', link: '/tools/emi-calculator' },
+            { name: 'Currency Converter', link: '/tools/currency-converter' },
+            { name: 'Crypto Tracker', link: '/tools/crypto-tracker' },
+            { name: 'US Income Tax Calculator', link: '/tools/us-income-tax-calculator' },
+            { name: 'GST Calculator', link: '/tools/gst-calculator' },
+            { name: 'Percentage Calculator', link: '/tools/percentage-calculator' },
+            { name: 'Tip Calculator', link: '/tools/tip-calculator' },
+            { name: 'Salary to Hourly Calculator', link: '/tools/salary-to-hourly-calculator' },
+            { name: 'Compound Interest Calculator', link: '/tools/compound-interest-calculator' },
+            { name: 'Mortgage Calculator', link: '/tools/mortgage-calculator' },
         ]
     },
     {
         name: 'Text & Content',
         ico: '✍️',
         tools: [
-            { name: 'Word Counter', link: '/tools/word-counter/' },
-            { name: 'Character Counter', link: '/tools/character-counter/' },
-            { name: 'Case Converter', link: '/tools/case-converter/' },
-            { name: 'Lorem Ipsum Generator', link: '/tools/lorem-ipsum-generator/' },
-            { name: 'Text to Speech', link: '/tools/text-to-speech/' },
-            { name: 'Reading Time Calculator', link: '/tools/reading-time-calculator/' },
-            { name: 'Sentence Counter', link: '/tools/sentence-counter/' },
+            { name: 'Word Counter', link: '/tools/advanced-word-counter' },
+            { name: 'Character Counter', link: '/tools/character-counter' },
+            { name: 'Case Converter', link: '/tools/case-converter' },
+            { name: 'Lorem Ipsum Generator', link: '/tools/lorem-ipsum-generator' },
+            { name: 'Text to Speech', link: '/tools/text-to-speech' },
+            { name: 'Reading Time Calculator', link: '/tools/reading-time-calculator' },
+            { name: 'Sentence Counter', link: '/tools/sentence-counter' },
         ]
     },
     {
         name: 'Images & Media',
         ico: '🖼️',
         tools: [
-            { name: 'Image Compressor', link: '/tools/image-optimizer/' },
-            { name: 'Image Resizer', link: '/tools/image-resizer/' },
-            { name: 'YouTube Thumbnail Downloader', link: '/tools/youtube-thumbnail-downloader/' },
-            { name: 'QR Code Generator', link: '/tools/qr-code-generator/' },
-            { name: 'Hex to RGB Converter', link: '/tools/hex-to-rgb/' },
-            { name: 'Color Picker', link: '/tools/color-picker/' },
+            { name: 'Image Compressor', link: '/tools/image-compressor' },
+            { name: 'Image Resizer', link: '/tools/image-resizer' },
+            { name: 'YouTube Thumbnail Downloader', link: '/tools/youtube-thumbnail-downloader' },
+            { name: 'QR Code Generator', link: '/tools/qr-code-generator' },
+            { name: 'Hex to RGB Converter', link: '/tools/hex-to-rgb' },
+            { name: 'Color Picker', link: '/tools/color-picker' },
         ]
     },
     {
         name: 'PDF Tools',
         ico: '📄',
         tools: [
-            { name: 'PDF to Word', link: '/tools/pdf-to-word/' },
-            { name: 'Word to PDF', link: '/tools/word-to-pdf/' },
-            { name: 'Merge PDF', link: '/tools/merge-pdf/' },
-            { name: 'Compress PDF', link: '/tools/compress-pdf/' },
+            { name: 'PDF to Word', link: '/tools/pdf-to-word' },
+            { name: 'Word to PDF', link: '/tools/word-to-pdf' },
+            { name: 'Merge PDF', link: '/tools/merge-pdf' },
+            { name: 'Compress PDF', link: '/tools/compress-pdf' },
         ]
     },
     {

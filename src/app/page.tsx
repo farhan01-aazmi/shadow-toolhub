@@ -3,20 +3,21 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import StructuredData from '@/components/seo/StructuredData';
+import Sidebar from '@/components/layout/Sidebar';
 
 const TOOLS = [
-  { num: '01', ico: '📐', name: 'EMI Calculator', cat: 'Finance', desc: 'Calculate monthly payments for home, car, and personal loans instantly', uses: '1.1L/mo', tag: 'Finance', link: '/tools/loan-calculator/' },
-  { num: '02', ico: '🔐', name: 'Password Generator', cat: 'Security', desc: 'Create strong, secure passwords with custom length and complexity settings', uses: '91K/mo', tag: 'Security', link: '/tools/password-generator/' },
-  { num: '03', ico: '🖼️', name: 'Image Compressor', cat: 'Image', desc: 'Compress JPG, PNG, WebP images without losing quality — supports batch processing', uses: '82K/mo', tag: 'Image', link: '/tools/image-optimizer/' },
-  { num: '04', ico: '✍️', name: 'Word Counter', cat: 'Text', desc: 'Instant word count, character count, sentence analysis, and reading time', uses: '82K/mo', tag: 'Text', link: '/tools/word-counter/' },
-  { num: '05', ico: '💱', name: 'Currency Converter', cat: 'Finance', desc: 'Real-time currency conversion with mid-market exchange rates for 150+ currencies', uses: '67K/mo', tag: 'Finance', link: '/tools/currency-converter/' },
-  { num: '06', ico: '₿', name: 'Crypto Tracker', cat: 'Finance', desc: 'Live cryptocurrency prices, market cap, volume, and 24h change tracking', uses: '55K/mo', tag: 'Finance', link: '/tools/crypto-tracker/' },
-  { num: '07', ico: '🏷️', name: 'Meta Tag Generator', cat: 'SEO', desc: 'Generate SEO meta tags, Open Graph, and Twitter cards automatically', uses: '43K/mo', tag: 'SEO', link: '/tools/meta-generator/' },
-  { num: '08', ico: '🎨', name: 'Image Optimizer', cat: 'Image', desc: 'Optimize images for web — reduce file size while maintaining visual quality', uses: '38K/mo', tag: 'Image', link: '/tools/image-optimizer/' },
-  { num: '09', ico: '🇺🇸', name: 'US Tax Calculator', cat: 'Finance', desc: 'Calculate 2026 federal income tax liability with latest IRS brackets', uses: 'New', tag: 'High CPC', link: '/tools/us-income-tax-calculator/' },
-  { num: '10', ico: '📄', name: 'PDF to Word', cat: 'PDF', desc: 'Convert PDF documents to editable Microsoft Word files accurately', uses: '45K', tag: 'Hot', link: '/tools/pdf-to-word/' },
-  { num: '11', ico: '🔢', name: 'JSON Formatter', cat: 'Dev', desc: 'Clean, format, and validate JSON data with syntax highlighting', uses: '32K', tag: 'Dev', link: '/tools/json-formatter/' },
-  { num: '12', ico: '⏰', name: 'Pomodoro Timer', cat: 'Design', desc: 'Boost productivity with 25/5 work-break cycles and audio alerts', uses: '28K', tag: 'Utility', link: '/tools/pomodoro-timer/' },
+  { num: '01', ico: '📐', name: 'EMI Calculator', cat: 'Finance', desc: 'Calculate monthly payments for home, car, and personal loans instantly', uses: '1.1L/mo', tag: 'Finance', link: '/tools/emi-calculator' },
+  { num: '02', ico: '🔐', name: 'Password Generator', cat: 'Security', desc: 'Create strong, secure passwords with custom length and complexity settings', uses: '91K/mo', tag: 'Security', link: '/tools/password-generator' },
+  { num: '03', ico: '🖼️', name: 'Image Compressor', cat: 'Image', desc: 'Compress JPG, PNG, WebP images without losing quality — supports batch processing', uses: '82K/mo', tag: 'Image', link: '/tools/image-compressor' },
+  { num: '04', ico: '✍️', name: 'Word Counter', cat: 'Text', desc: 'Instant word count, character count, sentence analysis, and reading time', uses: '82K/mo', tag: 'Text', link: '/tools/advanced-word-counter' },
+  { num: '05', ico: '💱', name: 'Currency Converter', cat: 'Finance', desc: 'Real-time currency conversion with mid-market exchange rates for 150+ currencies', uses: '67K/mo', tag: 'Finance', link: '/tools/currency-converter' },
+  { num: '06', ico: '₿', name: 'Crypto Tracker', cat: 'Finance', desc: 'Live cryptocurrency prices, market cap, volume, and 24h change tracking', uses: '55K/mo', tag: 'Finance', link: '/tools/crypto-tracker' },
+  { num: '07', ico: '🏷️', name: 'Meta Tag Generator', cat: 'SEO', desc: 'Generate SEO meta tags, Open Graph, and Twitter cards automatically', uses: '43K/mo', tag: 'SEO', link: '/tools/meta-generator' },
+  { num: '08', ico: '🎨', name: 'Image Optimizer', cat: 'Image', desc: 'Optimize images for web — reduce file size while maintaining visual quality', uses: '38K/mo', tag: 'Image', link: '/tools/image-compressor' },
+  { num: '09', ico: '🇺🇸', name: 'US Tax Calculator', cat: 'Finance', desc: 'Calculate 2026 federal income tax liability with latest IRS brackets', uses: 'New', tag: 'High CPC', link: '/tools/us-income-tax-calculator' },
+  { num: '10', ico: '📄', name: 'PDF to Word', cat: 'PDF', desc: 'Convert PDF documents to editable Microsoft Word files accurately', uses: '45K', tag: 'Hot', link: '/tools/pdf-to-word' },
+  { num: '11', ico: '🔢', name: 'JSON Formatter', cat: 'Dev', desc: 'Clean, format, and validate JSON data with syntax highlighting', uses: '32K', tag: 'Dev', link: '/tools/json-formatter' },
+  { num: '12', ico: '⏰', name: 'Pomodoro Timer', cat: 'Design', desc: 'Boost productivity with 25/5 work-break cycles and audio alerts', uses: '28K', tag: 'Utility', link: '/tools/pomodoro-timer' },
 ];
 
 const TABS = ['All', 'Text', 'Image', 'PDF', 'Security', 'Dev', 'Finance', 'Design'];
@@ -43,28 +44,7 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const el = counterRef.current;
-    if (!el) return;
-    const co = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          let start: number | null = null;
-          const run = (ts: number) => {
-            if (!start) start = ts;
-            const p = Math.min((ts - start) / 1800, 1);
-            const ease = 1 - Math.pow(1 - p, 4);
-            el.textContent = Math.floor(ease * 70) + '+';
-            if (p < 1) requestAnimationFrame(run);
-          };
-          requestAnimationFrame(run);
-          co.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    co.observe(el);
-    return () => co.disconnect();
-  }, []);
+  // Removed automated counter per user request (Error 4)
 
   useEffect(() => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%';
@@ -158,102 +138,112 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-stats rv">
-          <div className="hs"><div className="hs-n amber" ref={counterRef}>70+</div><div className="hs-l">Free Tools</div></div>
+          <div className="hs"><div className="hs-n amber">70+</div><div className="hs-l">Free Tools</div></div>
           <div className="hs"><div className="hs-n stroke">New</div><div className="hs-l">Fast Growing</div></div>
           <div className="hs"><div className="hs-n amber">10+</div><div className="hs-l">Categories</div></div>
           <div className="hs"><div className="hs-n stroke">$0</div><div className="hs-l">Always Free</div></div>
         </div>
       </section>
 
-      {/* ── FEATURED TOOL ── */}
-      <div className="featured rv">
-        <div className="feat-box">
-          <div className="feat-l">
-            <div className="feat-kicker">Tool of the Week</div>
-            <h2>Image<br /><em>Compressor</em></h2>
-            <p>Compress JPG, PNG, and WebP images without losing quality. Supports batch processing. Files never leave your browser — 100% client-side.</p>
-            <div className="btns">
-              <Link href="/tools/image-optimizer" className="btn-a">Open Tool →</Link>
-              <Link href="/tools/image-optimizer/#how-it-works" className="btn-o">How it Works</Link>
-            </div>
-          </div>
-          <div className="feat-r">
-            <div className="feat-list">
-              {[
-                { n: '01', t: 'Instant Processing', d: 'Runs entirely in your browser — no upload wait time' },
-                { n: '02', t: 'Batch Mode', d: 'Compress up to 20 images simultaneously' },
-                { n: '03', t: 'Quality Slider', d: 'Fine-tune the balance between quality and file size' },
-                { n: '04', t: '100% Private', d: 'Your files never leave your device or touch any server' },
-              ].map(item => (
-                <div key={item.n} className="feat-item">
-                  <span className="feat-num">{item.n}</span>
-                  <div><div className="feat-name">{item.t}</div><div className="feat-desc">{item.d}</div></div>
+      <div className="container" style={{ padding: '0 20px', maxWidth: '1200px', margin: '0 auto' }}>
+        <div className="tool-layout">
+          <div className="tool-main">
+            {/* ── FEATURED TOOL ── */}
+            <div className="featured rv" style={{ margin: 0 }}>
+              <div className="feat-box">
+                <div className="feat-l">
+                  <div className="feat-kicker">Tool of the Week</div>
+                  <h2>Image<br /><em>Compressor</em></h2>
+                  <p>Compress JPG, PNG, and WebP images without losing quality. Supports batch processing. Files never leave your browser — 100% client-side.</p>
+                  <div className="btns">
+                    <Link href="/tools/image-compressor" className="btn-a">Open Tool →</Link>
+                    <Link href="/tools/image-compressor#how-it-works" className="btn-o">How it Works</Link>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── TOOLS SECTION ── */}
-      <div className="tools-sec rv" id="tools-section">
-        <div className="sec-head">
-          <div>
-            <div className="sec-lbl">// tools</div>
-            <h2 className="sec-ttl" style={{ fontSize: '1.4rem' }}>Popular Tools</h2>
-          </div>
-          <Link href="/all-tools" className="link-all" style={{ opacity: 0.7 }}>All 70+ Tools →</Link>
-        </div>
-        <div className="tabs">
-          {TABS.map(tab => (
-            <div key={tab} className={`tab ${activeTab === tab ? 'on' : ''}`} onClick={() => setActiveTab(tab)}>
-              {tab}
-            </div>
-          ))}
-        </div>
-        <div className="ttable">
-          {TOOLS.filter(tool => activeTab === 'All' || tool.cat === activeTab).map(tool => (
-            <Link key={tool.num} className="trow" href={tool.link}>
-              <span className="tnum">{tool.num}</span>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '13px' }}>
-                <span className="tico">{tool.ico}</span>
-                <div>
-                  <div className="tname">{tool.name}</div>
-                  <div className="tsub">{tool.cat}</div>
+                <div className="feat-r">
+                  <div className="feat-list">
+                    {[
+                      { n: '01', t: 'Instant Processing', d: 'Runs entirely in your browser — no upload wait time' },
+                      { n: '02', t: 'Batch Mode', d: 'Compress up to 20 images simultaneously' },
+                      { n: '03', t: 'Quality Slider', d: 'Fine-tune the balance between quality and file size' },
+                      { n: '04', t: '100% Private', d: 'Your files never leave your device or touch any server' },
+                    ].map(item => (
+                      <div key={item.n} className="feat-item">
+                        <span className="feat-num">{item.n}</span>
+                        <div><div className="feat-name">{item.t}</div><div className="feat-desc">{item.d}</div></div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div className="tdesc">{tool.desc}</div>
-              <div className="tuses">{tool.uses}</div>
-              <div className="ttag">{tool.tag}</div>
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* ── BLOG SECTION ── */}
-      <div className="content-area rv" id="blog-section">
-          <div className="blog-hd">
-            <div>
-              <div className="sec-lbl">// blog &amp; guides</div>
-              <div className="sec-ttl">Latest Articles</div>
             </div>
-            <Link href="/blog/" className="link-all">All Articles</Link>
-          </div>
-          <div className="bgrid">
-            {BLOG.map((post, i) => (
-              <Link key={i} className={`bpost ${post.wide ? 'wide' : ''}`} href={`/blog/${post.slug}`}>
-                <div className="barr">↗</div>
+
+            {/* ── TOOLS SECTION ── */}
+            <div className="tools-sec rv" id="tools-section">
+              <div className="sec-head">
                 <div>
-                  <div className="bmeta">
-                    <span className={`bcat ${post.catClass}`}>{post.cat}</span>
-                    <span className="bdate">{post.date}</span>
-                  </div>
-                  <div className="btitle">{post.title}</div>
+                  <div className="sec-lbl">// tools</div>
+                  <h2 className="sec-ttl" style={{ fontSize: '1.4rem' }}>Popular Tools</h2>
                 </div>
-                {post.excerpt && <div><div className="bexc">{post.excerpt}</div></div>}
-              </Link>
-            ))}
+                <Link href="/all-tools" className="link-all" style={{ opacity: 0.7 }}>All 70+ Tools →</Link>
+              </div>
+              <div className="tabs">
+                {TABS.map(tab => (
+                  <div key={tab} className={`tab ${activeTab === tab ? 'on' : ''}`} onClick={() => setActiveTab(tab)}>
+                    {tab}
+                  </div>
+                ))}
+              </div>
+              <div className="ttable">
+                {TOOLS.filter(tool => activeTab === 'All' || tool.cat === activeTab).map(tool => (
+                  <Link key={tool.num} className="trow" href={tool.link}>
+                    <span className="tnum">{tool.num}</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '13px' }}>
+                      <span className="tico">{tool.ico}</span>
+                      <div>
+                        <div className="tname">{tool.name}</div>
+                        <div className="tsub">{tool.cat}</div>
+                      </div>
+                    </div>
+                    <div className="tdesc">{tool.desc}</div>
+                    <div className="tuses">{tool.uses}</div>
+                    <div className="ttag">{tool.tag}</div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* ── BLOG SECTION ── */}
+            <div className="content-area rv" id="blog-section" style={{ border: 'none', background: 'none', padding: 0 }}>
+                <div className="blog-hd">
+                  <div>
+                    <div className="sec-lbl">// blog &amp; guides</div>
+                    <div className="sec-ttl">Latest Articles</div>
+                  </div>
+                  <Link href="/blog" className="link-all">All Articles</Link>
+                </div>
+                <div className="bgrid">
+                  {BLOG.map((post, i) => (
+                    <Link key={i} className={`bpost ${post.wide ? 'wide' : ''}`} href={`/blog/${post.slug}`}>
+                      <div className="barr">↗</div>
+                      <div>
+                        <div className="bmeta">
+                          <span className={`bcat ${post.catClass}`}>{post.cat}</span>
+                          <span className="bdate">{post.date}</span>
+                        </div>
+                        <div className="btitle">{post.title}</div>
+                      </div>
+                      {post.excerpt && <div><div className="bexc">{post.excerpt}</div></div>}
+                    </Link>
+                  ))}
+                </div>
+            </div>
           </div>
+          
+          <div className="tool-sidebar">
+             <Sidebar />
+          </div>
+        </div>
       </div>
     </>
   );

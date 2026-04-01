@@ -21,7 +21,7 @@ export default function ToolPage() {
                         Interactive UI component loading from Edge...
                     </div>
                 </div>
-                <div style={{ marginTop: '60px' }}>
+                <div className="mt-16">
                     <h2>About Months To Days</h2>
                     <p style={{ marginTop: '20px', color: 'var(--text-secondary)', lineHeight: '1.8' }}>
                         This tool allows you to convert between different units with ease. Simply enter your value and get the result instantly.

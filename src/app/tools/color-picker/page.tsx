@@ -1,42 +1,57 @@
 import React from 'react';
 import { Metadata } from 'next';
-import AdSenseUnit from '@/components/ads/AdSenseUnit';
+import ColorPicker from './ColorPicker';
+import { Palette, Code, Layers } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Color Picker Free Online | Tech Resolutions',
-    description: 'Free online Color Picker tool. No signup required, works instantly in your browser.',
+    title: 'Color Picker Free Online | HEX to RGB Converter | Tech Resolutions',
+    description: 'Advanced online color picker and converter. Get HEX, RGB, and HSL codes instantly. Perfect for designers and developers in 2026.',
 };
 
 export default function ColorPickerPage() {
     return (
-        <div className="container" style={{ padding: '60px 20px', maxWidth: '900px', margin: '0 auto', minHeight: '70vh' }}>
-            <div style={{ marginBottom: '30px' }}>
-                <span style={{ color: 'var(--sub)', fontSize: '0.9rem' }}>Home &gt; Tools &gt; Color Picker</span>
+        <div className="container" style={{ padding: '60px 48px', maxWidth: '1200px', margin: '0 auto', minHeight: '100vh' }}>
+            <div style={{ marginBottom: '30px', fontFamily: 'var(--font-dm-mono)', fontSize: '0.72rem', textTransform: 'uppercase', color: 'var(--sub)' }}>
+                Home &gt; Tools &gt; Color Picker
             </div>
             
-            <h1 style={{ fontSize: '2.5rem', marginBottom: '10px', color: 'var(--amber)' }}>Color Picker</h1>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '40px' }}>
-                Free online Color Picker. Fast, secure, and runs entirely in your browser.
-            </p>
+            <header className="mb-12">
+                <div className="hero-kicker mb-4">{/* Tool: Design Utility */}</div>
+                <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '20px' }}>
+                    Visual <span className="amber">Color</span><br />Explorer.
+                </h1>
+                <p style={{ color: 'var(--sub2)', fontSize: '1.1rem', maxWidth: '600px', lineHeight: 1.8 }}>
+                    Find the perfect shade for your project. Pick colors, convert between HEX and RGB formats, and build beautiful palettes instantly.
+                </p>
+            </header>
 
-            <AdSenseUnit type="leaderboard" className="mb-8" />
+            <ColorPicker />
 
-            <div className="card glass" style={{ padding: '40px', textAlign: 'center', margin: '40px 0' }}>
-                <div style={{ fontSize: '3rem', marginBottom: '20px' }}>⚙️</div>
-                <h3>Tool interface is loading...</h3>
-                <p style={{ color: 'var(--sub)' }}>This utility is being optimized for Next.js Edge and will be deployed in the next 24 hours.</p>
+            <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="card glass p-8 border-l-4 border-amber">
+                    <Palette size={32} className="text-amber mb-6" />
+                    <h3 className="mb-4">Live Preview</h3>
+                    <p className="text-sub text-sm leading-relaxed">See how colors look in real-time as you navigate the wheel or enter specific values.</p>
+                </div>
+                <div className="card glass p-8 border-l-4 border-accent">
+                    <Code size={32} className="text-accent mb-6" />
+                    <h3 className="mb-4">Dev Friendly</h3>
+                    <p className="text-sub text-sm leading-relaxed">Copy production-ready HEX and RGB strings directly to your clipboard in one click.</p>
+                </div>
+                <div className="card glass p-8 border-l-4 border-primary">
+                    <Layers size={32} className="text-primary mb-6" />
+                    <h3 className="mb-4">Design Trends</h3>
+                    <p className="text-sub text-sm leading-relaxed">Stay updated with 2026 design standards by using our curated quick-select palette.</p>
+                </div>
             </div>
 
-            <AdSenseUnit type="rectangle" className="mt-8" />
-            
-            <div style={{ marginTop: '60px' }}>
-                <h2 style={{ marginBottom: '20px' }}>How It Works</h2>
-                <ol style={{ paddingLeft: '20px', color: 'var(--sub)' }}>
-                    <li style={{ marginBottom: '10px' }}>Upload or enter your input data.</li>
-                    <li style={{ marginBottom: '10px' }}>Our client-side scripts process the data instantly.</li>
-                    <li style={{ marginBottom: '10px' }}>Download or copy the formatted result.</li>
-                </ol>
-            </div>
+            <section className="mt-24 pt-24 border-t border-line">
+                <h2 style={{ fontSize: '2.2rem', fontWeight: 800, letterSpacing: '-0.03em', marginBottom: '40px' }}>Design Resource</h2>
+                <div className="pro-content">
+                    <p className="text-sub leading-relaxed mb-6">In modern web development, color is more than aesthetics—it defines user interaction and accessibility. Our <b>Color Picker</b> is designed to be a high-performance utility that bridges the gap between creative vision and technical implementation.</p>
+                    <p className="text-sub leading-relaxed">By providing both HEX and RGB outputs, we support a wide range of development workflows, from CSS-in-JS to traditional stylesheets. Our 2026 optimized engine ensures smooth, lag-free selection even on high-DPI displays.</p>
+                </div>
+            </section>
         </div>
     );
 }

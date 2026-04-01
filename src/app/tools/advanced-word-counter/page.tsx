@@ -32,6 +32,16 @@ export default function WordCounterPage() {
                     Analyze your content with precision. Get instant statistics on word count,
                     character density, and estimated reading time. 100% private.
                 </p>
+                <h3 className="text-lg font-bold mb-3 mt-6">Why It Matters for SEO</h3>
+                <p className="text-sub leading-relaxed mb-4">
+                    Google&apos;s algorithms look for natural, authoritative content. Keyword stuffing (using the same word too often) will get you penalized. By keeping an eye on your density, you ensure your content remains readable while still hitting the right signals.
+                </p>
+
+                <div className="cta-box card glass mt-6 bg-amber/5 border-amber/20 border">
+                    <p className="mb-0 text-sm">
+                        <strong>Pro Tip:</strong> Pair your optimized content with the right tags. Use our <a href="/tools/meta-generator" className="text-amber hover:underline">&quot;Meta Generator&quot;</a> to create perfect Ahrefs-compliant snippets for your newly optimized text.
+                    </p>
+                </div>
                 <StructuredData data={{
                     "@context": "https://schema.org",
                     "@type": "SoftwareApplication",
@@ -83,7 +93,7 @@ export default function WordCounterPage() {
                         <ShieldCheck size={24} className="text-accent" />
                         <div>
                             <h3>100% Local Processing</h3>
-                            <p>Writing a confidential novel, an academic thesis, or private marketing copy? Your text never leaves your computer. We process everything in your browser's memory for absolute privacy.</p>
+                            <p>Writing a confidential novel, an academic thesis, or private marketing copy? Your text never leaves your computer. We process everything in your browser&apos;s memory for absolute privacy.</p>
                         </div>
                     </div>
                 </div>
@@ -99,7 +109,7 @@ export default function WordCounterPage() {
                         <b>1. Word Count vs. Character Count:</b> While blog posts and articles are measured in thousands of words, platforms like Twitter, SMS campaigns, and SEO Meta Titles rely entirely on strict character counts. Our tool provides both metrics simultaneously, including specific breakdowns of characters with and without spaces, giving you total control over the physical length of your text.
                     </p>
                     <p>
-                        <b>2. The Reading Time Metric:</b> Modern web design often includes an "estimated reading time" at the top of articles. This UX feature significantly reduces bounce rates. We calculate this automatically based on the standard average reading speed of 225 words per minute. Knowing this helps you gauge whether your piece is a quick update or a deep-dive comprehensive guide.
+                        <b>2. The Reading Time Metric:</b> Modern web design often includes an &quot;estimated reading time&quot; at the top of articles. This UX feature significantly reduces bounce rates. We calculate this automatically based on the standard average reading speed of 225 words per minute. Knowing this helps you gauge whether your piece is a quick update or a deep-dive comprehensive guide.
                     </p>
                     <p>
                         <b>3. Security Guarantee:</b> We believe that your intellectual property is yours alone. Many free online tools upload your text to their servers to process it—potentially exposing your unreleased work or sensitive documents. Our application architecture is entirely <b>client-side</b>. When you paste your text into our tool, it is analyzed by JavaScript executing locally on your machine. We cannot read, store, or see your content.

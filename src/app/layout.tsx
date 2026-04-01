@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.nevy.in",
     siteName: "Tech Resolutions",
-    title: "Tech Resolutions — 70+ Free Online Tools",
+    title: "Tech Resolutions — 70+ free online tools",
     description: "Image, PDF, text, calculators, security — all tools in one place. No signup required. No fees.",
     images: [
       {
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tech Resolutions — 70+ Free Online Tools",
+    title: "Tech Resolutions — 70+ free online tools",
     description: "Image, PDF, text, calculators, security — free tools that work.",
     images: ["/api/og"],
   },

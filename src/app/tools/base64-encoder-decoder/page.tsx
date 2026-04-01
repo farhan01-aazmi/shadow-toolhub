@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function Base64EncoderDecoderPage() {
     return (
-        <div className="container" style={{ padding: '60px 20px', maxWidth: '900px', margin: '0 auto', minHeight: '70vh' }}>
-            <div style={{ marginBottom: '30px' }}>
+        <div className="container px-5 py-16 max-w-4xl mx-auto min-h-[70vh]">
+            <div className="mb-8">
                 <span style={{ color: 'var(--sub)', fontSize: '0.9rem' }}>Home &gt; Tools &gt; Base64 Encoder Decoder</span>
             </div>
             
@@ -21,20 +21,20 @@ export default function Base64EncoderDecoderPage() {
 
             <AdSenseUnit type="leaderboard" className="mb-8" />
 
-            <div className="card glass" style={{ padding: '40px', textAlign: 'center', margin: '40px 0' }}>
-                <div style={{ fontSize: '3rem', marginBottom: '20px' }}>⚙️</div>
+            <div className="card glass" className="card glass p-10 text-center my-10">
+                <div className="text-5xl mb-5">⚙️</div>
                 <h3>Tool interface is loading...</h3>
                 <p style={{ color: 'var(--sub)' }}>This utility is being optimized for Next.js Edge and will be deployed in the next 24 hours.</p>
             </div>
 
             <AdSenseUnit type="rectangle" className="mt-8" />
             
-            <div style={{ marginTop: '60px' }}>
-                <h2 style={{ marginBottom: '20px' }}>How It Works</h2>
+            <div className="mt-16">
+                <h2 className="mb-5">How It Works</h2>
                 <ol style={{ paddingLeft: '20px', color: 'var(--sub)' }}>
-                    <li style={{ marginBottom: '10px' }}>Upload or enter your input data.</li>
-                    <li style={{ marginBottom: '10px' }}>Our client-side scripts process the data instantly.</li>
-                    <li style={{ marginBottom: '10px' }}>Download or copy the formatted result.</li>
+                    <li className="mb-3">Upload or enter your input data.</li>
+                    <li className="mb-3">Our client-side scripts process the data instantly.</li>
+                    <li className="mb-3">Download or copy the formatted result.</li>
                 </ol>
             </div>
         </div>
