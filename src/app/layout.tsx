@@ -72,6 +72,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bricolage.variable} ${dmMono.variable}`}>
       <head>
+        <meta name="google-site-verification" content="HPkUACF_q2-iC1jpltw59K7gKpFTQaKcdg5xjGqGCHM" />
         <script 
           async 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2623046574772198"
