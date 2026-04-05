@@ -59,9 +59,9 @@ export const metadata: Metadata = {
     description: "Image, PDF, text, calculators, security — free tools that work.",
     images: ["/api/og"],
   },
-  alternates: {
-    canonical: "https://www.nevy.in",
-  }
+  verification: {
+    google: "HPkUACF_q2-iC1jpltw59K7gKpFTQaKcdg5xjGqGCHM",
+  },
 };
 
 export default function RootLayout({
