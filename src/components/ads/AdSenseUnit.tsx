@@ -3,17 +3,28 @@
 import React from 'react';
 
 interface AdSenseUnitProps {
-  type: 'leaderboard' | 'rectangle' | 'in-article';
+  type: 'leaderboard' | 'rectangle' | 'in-article' | 'mobile-rectangle';
   className?: string;
 }
 
-/**
- * AdSenseUnit component
- * Temporarily disabled to meet AdSense quality standards by removing all ad placeholders.
- * Once the site is approved, the logic for rendering actual ads will be restored here.
- */
-const AdSenseUnit: React.FC<AdSenseUnitProps> = () => {
-  return null;
+const adSlots: Record<string, string> = {
+  'leaderboard': '2623046574772198',
+  'rectangle': '2623046574772198', 
+  'in-article': '2623046574772198',
+  'mobile-rectangle': '2623046574772198',
+};
+
+const AdSenseUnit: React.FC<AdSenseUnitProps> = ({ type = 'rectangle', className = '' }) => {
+  return (
+    <ins
+      className={`adsbygoogle ${className}`}
+      style={{ display: 'block' }}
+      data-ad-client="ca-pub-2623046574772198"
+      data-ad-slot={adSlots[type]}
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    />
+  );
 };
 
 export default AdSenseUnit;

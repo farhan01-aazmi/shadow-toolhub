@@ -1,9 +1,15 @@
 import Link from 'next/link';
+import AdSenseUnit from '@/components/ads/AdSenseUnit';
 
 export default function Footer() {
   return (
     <footer className="footer-bp">
       <div className="foot-line"></div>
+      
+      <div style={{ padding: '20px', textAlign: 'center' }}>
+        <AdSenseUnit type="leaderboard" />
+      </div>
+
       <div className="foot-inner">
         <div className="foot-brand">
           <Link href="/" className="logo">
